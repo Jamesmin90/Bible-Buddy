@@ -10,35 +10,37 @@ import SwiftUI
 
 struct ContentView: View {
     
-    var body: some View {
-        NavigationView {
-            VStack{
-                Divider()
-                Spacer()
-                mainNavi()
-                Spacer()
-                HStack(spacing: 220){
-                        Text("Reigster")
-                            .font(.system(size: 25, weight: .bold))
-                            .padding(10.0)
-                        Text("Login")
-                            .font(.system(size: 25, weight: .bold))
-                            .padding(5.0)
-                    }
-            }
-            .navigationBarItems(leading:
-                HStack(spacing: 190){
-                    Text("Home")
-                        .font(.system(size: 35, weight: .bold))
-                        .padding(5.0)
-                    Image("people").resizable()
-                        .frame(width: 80.0, height: 50.0)
-                        .cornerRadius(8.0)
-                        .padding(5.0)
-            })
-        }
+    @State var showSideMenu = false
     
+    var body: some View {
         
+        NavigationView {
+            
+            ZStack {
+                
+                HomeView()
+                
+                GeometryReader { _ in
+                    HStack {
+                        SideMenuView()
+                            .offset(x: self.showSideMenu ? 0 : -UIScreen.main.bounds.width)
+                            .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+                        Spacer()
+                    }
+                }.background(Color.black.opacity(self.showSideMenu ? 0.5 : 0).edgesIgnoringSafeArea(.bottom))
+                
+            }.navigationBarTitle("Home", displayMode: .inline)
+             .navigationBarItems(leading: Button(action: {
+                self.showSideMenu.toggle()}) {
+                    if (self.showSideMenu) {
+                        Image(systemName: "arrow.left").font(.body)
+                    }
+                    else {
+                        Image(systemName: "line.horizontal.3")
+                    }
+                }
+            )
+        }
     }
 }
 
