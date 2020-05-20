@@ -10,23 +10,15 @@ import SwiftUI
 
 struct BlogView: View {
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center){
-                Text("Blog")
-                
-            }
-            .navigationBarItems(leading:
-                HStack(spacing: 220){
-                    Text("Blog")
-                        .font(.system(size: 35, weight: .bold))
-                        .padding(5.0)
-                    Image("people").resizable()
-                        .frame(width: 80.0, height: 50.0)
-                        .cornerRadius(8.0)
-                        .padding(5.0)
-            })
+        
+        VStack(alignment: .center){
+            Text("Blog")
+            
         }
+        .navigationBarTitle(Text("Blog"), displayMode: .inline)
+        
     }
+    
 }
 
 struct BlogView_Previews: PreviewProvider {

@@ -3,10 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842DD9032474644800D62BC8 /* DataFire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DD9022474644800D62BC8 /* DataFire.swift */; };
+		842DD9052474692900D62BC8 /* MessagePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DD9042474692900D62BC8 /* MessagePage.swift */; };
+		842DD90724746A8A00D62BC8 /* ListMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DD90624746A8A00D62BC8 /* ListMessage.swift */; };
+		842DD90924746D2A00D62BC8 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DD90824746D2A00D62BC8 /* ImagePicker.swift */; };
+		843CCFA82471620700C41C45 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFA72471620700C41C45 /* RegisterView.swift */; };
+		843CCFAC2471A59300C41C45 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 843CCFAB2471A59300C41C45 /* GoogleService-Info.plist */; };
+		843CCFAE2471AFFC00C41C45 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFAD2471AFFC00C41C45 /* Message.swift */; };
+		843CCFB02471BF3600C41C45 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFAF2471BF3600C41C45 /* LogInView.swift */; };
+		843CCFB2247315D400C41C45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFB1247315D400C41C45 /* Constants.swift */; };
 		84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05C246C1D760018296F /* AppDelegate.swift */; };
 		84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05E246C1D760018296F /* SceneDelegate.swift */; };
 		84BFF061246C1D760018296F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF060246C1D760018296F /* ContentView.swift */; };
@@ -17,9 +26,22 @@
 		84BFF075246C1DDE0018296F /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF074246C1DDE0018296F /* EventsView.swift */; };
 		84BFF077246C1E020018296F /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF076246C1E020018296F /* BibleView.swift */; };
 		84BFF079246C1E220018296F /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF078246C1E220018296F /* BlogView.swift */; };
+		F8DD118AF94B7A64D4E8B2A8 /* libPods-Bible Buddy.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E3013247D382AD53E00ACD /* libPods-Bible Buddy.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50E896D529EE9F68C0C744D8 /* Pods-Bible Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.release.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		604916110C3BB2B23D2C8C72 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		65E3013247D382AD53E00ACD /* libPods-Bible Buddy.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bible Buddy.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		842DD9022474644800D62BC8 /* DataFire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFire.swift; sourceTree = "<group>"; };
+		842DD9042474692900D62BC8 /* MessagePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagePage.swift; sourceTree = "<group>"; };
+		842DD90624746A8A00D62BC8 /* ListMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListMessage.swift; sourceTree = "<group>"; };
+		842DD90824746D2A00D62BC8 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		843CCFA72471620700C41C45 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		843CCFAB2471A59300C41C45 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		843CCFAD2471AFFC00C41C45 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		843CCFAF2471BF3600C41C45 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
+		843CCFB1247315D400C41C45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		84BFF059246C1D760018296F /* Bible Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFF05C246C1D760018296F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFF05E246C1D760018296F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,17 +61,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8DD118AF94B7A64D4E8B2A8 /* libPods-Bible Buddy.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AFE9535B44C997746ADAE0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				604916110C3BB2B23D2C8C72 /* Pods-Bible Buddy.debug.xcconfig */,
+				50E896D529EE9F68C0C744D8 /* Pods-Bible Buddy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		71D6A9E94138FDA0DC716C19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				65E3013247D382AD53E00ACD /* libPods-Bible Buddy.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		84BFF050246C1D760018296F = {
 			isa = PBXGroup;
 			children = (
 				84BFF05B246C1D760018296F /* Bible Buddy */,
 				84BFF05A246C1D760018296F /* Products */,
+				3AFE9535B44C997746ADAE0F /* Pods */,
+				71D6A9E94138FDA0DC716C19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,14 +106,16 @@
 		84BFF05B246C1D760018296F /* Bible Buddy */ = {
 			isa = PBXGroup;
 			children = (
-				84BFF070246C1D8D0018296F /* Model */,
 				84BFF05C246C1D760018296F /* AppDelegate.swift */,
 				84BFF05E246C1D760018296F /* SceneDelegate.swift */,
+				84BFF070246C1D8D0018296F /* Model */,
 				84BFF071246C1D9F0018296F /* Views */,
 				84BFF062246C1D770018296F /* Assets.xcassets */,
 				84BFF067246C1D770018296F /* LaunchScreen.storyboard */,
 				84BFF06A246C1D770018296F /* Info.plist */,
+				843CCFAB2471A59300C41C45 /* GoogleService-Info.plist */,
 				84BFF064246C1D770018296F /* Preview Content */,
+				843CCFB1247315D400C41C45 /* Constants.swift */,
 			);
 			path = "Bible Buddy";
 			sourceTree = "<group>";
@@ -88,6 +132,10 @@
 			isa = PBXGroup;
 			children = (
 				84BFF072246C1DB90018296F /* MainNavi.swift */,
+				843CCFAD2471AFFC00C41C45 /* Message.swift */,
+				842DD9022474644800D62BC8 /* DataFire.swift */,
+				842DD90624746A8A00D62BC8 /* ListMessage.swift */,
+				842DD90824746D2A00D62BC8 /* ImagePicker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -99,6 +147,9 @@
 				84BFF074246C1DDE0018296F /* EventsView.swift */,
 				84BFF076246C1E020018296F /* BibleView.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
+				842DD9042474692900D62BC8 /* MessagePage.swift */,
+				843CCFA72471620700C41C45 /* RegisterView.swift */,
+				843CCFAF2471BF3600C41C45 /* LogInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,9 +161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BFF06D246C1D770018296F /* Build configuration list for PBXNativeTarget "Bible Buddy" */;
 			buildPhases = (
+				CD11496B4E60555327D240ED /* [CP] Check Pods Manifest.lock */,
 				84BFF055246C1D760018296F /* Sources */,
 				84BFF056246C1D760018296F /* Frameworks */,
 				84BFF057246C1D760018296F /* Resources */,
+				896D5084AD8F511C1FEECE66 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -162,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BFF069246C1D770018296F /* LaunchScreen.storyboard in Resources */,
+				843CCFAC2471A59300C41C45 /* GoogleService-Info.plist in Resources */,
 				84BFF066246C1D770018296F /* Preview Assets.xcassets in Resources */,
 				84BFF063246C1D770018296F /* Assets.xcassets in Resources */,
 			);
@@ -169,16 +223,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		896D5084AD8F511C1FEECE66 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CD11496B4E60555327D240ED /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bible Buddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84BFF055246C1D760018296F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				84BFF073246C1DB90018296F /* MainNavi.swift in Sources */,
+				843CCFB2247315D400C41C45 /* Constants.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
+				843CCFAE2471AFFC00C41C45 /* Message.swift in Sources */,
+				842DD90724746A8A00D62BC8 /* ListMessage.swift in Sources */,
+				842DD9052474692900D62BC8 /* MessagePage.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
+				843CCFA82471620700C41C45 /* RegisterView.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
+				843CCFB02471BF3600C41C45 /* LogInView.swift in Sources */,
+				842DD9032474644800D62BC8 /* DataFire.swift in Sources */,
+				842DD90924746D2A00D62BC8 /* ImagePicker.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
 			);
@@ -314,10 +418,12 @@
 		};
 		84BFF06E246C1D770018296F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604916110C3BB2B23D2C8C72 /* Pods-Bible Buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = MXGR5AABXL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,10 +439,12 @@
 		};
 		84BFF06F246C1D770018296F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E896D529EE9F68C0C744D8 /* Pods-Bible Buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = MXGR5AABXL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -350,6 +458,162 @@
 			};
 			name = Release;
 		};
+		84D9586D247559B200119317 /* Debug_James */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug_James;
+		};
+		84D9586E247559B200119317 /* Debug_James */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604916110C3BB2B23D2C8C72 /* Pods-Bible Buddy.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = MXGR5AABXL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Bible Buddy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PIOSE-Gruppe03.Bible-Buddy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug_James;
+		};
+		84D9586F247559EF00119317 /* Release_James */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release_James;
+		};
+		84D95870247559EF00119317 /* Release_James */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50E896D529EE9F68C0C744D8 /* Pods-Bible Buddy.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = MXGR5AABXL;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Bible Buddy/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "PIOSE-Gruppe03.Bible-Buddy";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release_James;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -357,7 +621,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84BFF06B246C1D770018296F /* Debug */,
+				84D9586D247559B200119317 /* Debug_James */,
 				84BFF06C246C1D770018296F /* Release */,
+				84D9586F247559EF00119317 /* Release_James */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -366,7 +632,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				84BFF06E246C1D770018296F /* Debug */,
+				84D9586E247559B200119317 /* Debug_James */,
 				84BFF06F246C1D770018296F /* Release */,
+				84D95870247559EF00119317 /* Release_James */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

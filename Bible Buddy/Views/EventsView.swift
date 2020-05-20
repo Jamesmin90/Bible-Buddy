@@ -11,14 +11,13 @@ import SwiftUI
 struct EventsView: View {
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center){
-                Text("Events")
-                
-            }
-            .navigationBarTitle(Text("Events"), displayMode: .inline)
+        
+        VStack(alignment: .center){
+            Text("Events")
+            
         }
-    
+        .navigationBarTitle(Text("Events"), displayMode: .inline)
+        
         
     }
 }
