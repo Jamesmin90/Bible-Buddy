@@ -16,8 +16,7 @@ struct WelcomeTextView: View {
                 .font(.system(size:35))
                 .background(Color.white)
                 .cornerRadius(10)
-                
-        }
+        }.padding(.top, 60)
     }
 }
 
