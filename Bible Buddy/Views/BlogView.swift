@@ -8,23 +8,20 @@
 
 import SwiftUI
 
-struct BlogView: View {
+struct BlogView: View {	
+    @ObservedObject var posts = FirestoreBlogPostRepository()
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center){
-                Text("Blog")
-                
+        ZStack{
+            
+            Color(#colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 0.22)).edgesIgnoringSafeArea(.all)
+            List(posts.blogposts){ post in
+                NavigationLink(destination: BlogPostDetailView(post: post)){
+                    BlogPostCard(post: post)
+                }
+            }.navigationBarTitle("Blog", displayMode: .inline)
+                .onAppear {
+                    UITableView.appearance().separatorStyle = .none
             }
-            .navigationBarItems(leading:
-                HStack(spacing: 220){
-                    Text("Blog")
-                        .font(.system(size: 35, weight: .bold))
-                        .padding(5.0)
-                    Image("people").resizable()
-                        .frame(width: 80.0, height: 50.0)
-                        .cornerRadius(8.0)
-                        .padding(5.0)
-            })
         }
     }
 }

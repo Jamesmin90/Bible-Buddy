@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F1248056EA00680B54 /* BlogPostRepository.swift */; };
+		11B975F42480584700680B54 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F32480584700680B54 /* BlogPost.swift */; };
+		11B975F62480625700680B54 /* FirestoreBlogPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */; };
+		11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F72480F14F00680B54 /* BlogPostCard.swift */; };
+		11B975FA2480FC5900680B54 /* BlogPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F92480FC5900680B54 /* BlogPostDetailView.swift */; };
+		11B975FD24812A6D00680B54 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11B975FB24812A6C00680B54 /* .gitignore */; };
+		11B975FE24812A6D00680B54 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 11B975FC24812A6D00680B54 /* .gitattributes */; };
 		699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
 		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
@@ -35,6 +42,13 @@
 
 /* Begin PBXFileReference section */
 		06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11B975F1248056EA00680B54 /* BlogPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostRepository.swift; sourceTree = "<group>"; };
+		11B975F32480584700680B54 /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreBlogPostRepository.swift; sourceTree = "<group>"; };
+		11B975F72480F14F00680B54 /* BlogPostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostCard.swift; sourceTree = "<group>"; };
+		11B975F92480FC5900680B54 /* BlogPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostDetailView.swift; sourceTree = "<group>"; };
+		11B975FB24812A6C00680B54 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		11B975FC24812A6D00680B54 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
 		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -96,6 +110,8 @@
 		84BFF050246C1D760018296F = {
 			isa = PBXGroup;
 			children = (
+				11B975FC24812A6D00680B54 /* .gitattributes */,
+				11B975FB24812A6C00680B54 /* .gitignore */,
 				84BFF05B246C1D760018296F /* Bible Buddy */,
 				84BFF05A246C1D760018296F /* Products */,
 				7261FE6EE7A164B5328CFB1D /* Pods */,
@@ -139,8 +155,11 @@
 		84BFF070246C1D8D0018296F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				11B975F32480584700680B54 /* BlogPost.swift */,
 				84BFF072246C1DB90018296F /* MainNavi.swift */,
 				84DCE469247A7CCE005AA691 /* SessionStore.swift */,
+				11B975F1248056EA00680B54 /* BlogPostRepository.swift */,
+				11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -163,6 +182,8 @@
 				848CC58824754BE00000A1F3 /* SignInUpView.swift */,
 				848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */,
 				848CC5902476753F0000A1F3 /* ErrorText.swift */,
+				11B975F72480F14F00680B54 /* BlogPostCard.swift */,
+				11B975F92480FC5900680B54 /* BlogPostDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -234,6 +255,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B975FD24812A6D00680B54 /* .gitignore in Resources */,
+				11B975FE24812A6D00680B54 /* .gitattributes in Resources */,
 				84BFF069246C1D770018296F /* LaunchScreen.storyboard in Resources */,
 				848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */,
 				84BFF066246C1D770018296F /* Preview Assets.xcassets in Resources */,
@@ -291,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
+				11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
 				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
@@ -298,7 +322,9 @@
 				84BFF073246C1DB90018296F /* MainNavi.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
+				11B975F62480625700680B54 /* FirestoreBlogPostRepository.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
+				11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
@@ -306,7 +332,9 @@
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
 				848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */,
+				11B975FA2480FC5900680B54 /* BlogPostDetailView.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
+				11B975F42480584700680B54 /* BlogPost.swift in Sources */,
 				848CC57D247534050000A1F3 /* TestView.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
 			);

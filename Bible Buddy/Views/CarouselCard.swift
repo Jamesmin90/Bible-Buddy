@@ -18,7 +18,7 @@ struct CarouselCard: View {
     
     var body: some View {
         
-        NavigationLink(destination: TestView()) {
+        //NavigationLink(destination: TestView()) {
             
             VStack {
                 
@@ -41,7 +41,7 @@ struct CarouselCard: View {
              .shadow(color: shadowColorCard, radius: 30)
              .background(backgroundColorCard).cornerRadius(15)
             
-        }.padding(10)
+        //}.padding(10)
     }
 }
 
