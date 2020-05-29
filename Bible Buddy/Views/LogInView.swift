@@ -56,7 +56,7 @@ struct LogInView: View {
                     }
                     
                 }){
-                    LogInButton()
+                    LogInButton1()
                 }
                 
                 
@@ -109,7 +109,7 @@ struct UserImage: View {
     }
 }
 
-struct LogInButton: View {
+struct LogInButton1: View {
     var body: some View {
         Text("Log In")
             .font(.headline)

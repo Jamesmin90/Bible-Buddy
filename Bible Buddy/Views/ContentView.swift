@@ -7,48 +7,44 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ContentView: View {
-    @State private var selection: Int? = nil
+    
+    @State var showSideMenu = false
     
     var body: some View {
-        NavigationView {
-            VStack{
-                Divider()
-                Spacer()
-                mainNavi()
-                Spacer()
-                HStack(){
-                    NavigationLink(destination: RegisterView(), tag:1, selection: self.$selection){
-                                   Text("")
-                               }
-                    NavigationLink(destination: LogInView(), tag:2, selection: self.$selection){
-                        Text("")
-                    }
-                    
-                    Button("Register"){
-                        self.selection = 1
-                    }
-                    Spacer()
-                    Button("Login"){
-                        self.selection = 2
-                    }
-                        /*Text("Reigster")
-                            .font(.system(size: 25, weight: .bold))
-                            .padding(10.0)*/
-                        /*Text("Login")
-                            .font(.system(size: 25, weight: .bold))
-                            .padding(5.0)*/
-                    }
-            }
-            .navigationBarTitle(Text("Home"), displayMode: .inline)
-         
-
-        }
-    
         
+        NavigationView {
+            
+            ZStack {
+                
+                HomeView()
+                
+                GeometryReader { _ in
+                    HStack {
+                        SideMenuView()
+                            .offset(x: self.showSideMenu ? 0 : -UIScreen.main.bounds.width)
+                            .animation(.interactiveSpring(response: 0.6, dampingFraction: 0.6, blendDuration: 0.6))
+                        Spacer()
+                    }
+                }.background(Color.black.opacity(self.showSideMenu ? 0.5 : 0).edgesIgnoringSafeArea(.bottom))
+                
+            }.navigationBarTitle("Home", displayMode: .inline)
+             .navigationBarItems(leading: Button(action: {
+                self.showSideMenu.toggle()}) {
+                    if (self.showSideMenu) {
+                        Image(systemName: "arrow.left").font(.body)
+                    }
+                    else {
+                        Image(systemName: "line.horizontal.3")
+                    }
+                }
+            )
+        }.accentColor(.white)
     }
 }
+// make all the navigation bar to have the same color
 extension UINavigationController{
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -57,7 +53,9 @@ extension UINavigationController{
         standardAppearance.backgroundColor = .some(UIColor(red: 0.22, green: 0.28, blue: 0.31, alpha: 1.00))
         standardAppearance.titleTextAttributes = [.foregroundColor: UIColor.white]
         navigationBar.standardAppearance = standardAppearance
-    }
+        
+        
+}
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -67,13 +65,5 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-/*.navigationBarItems(leading:
-    HStack(spacing: 190){
-        Text("Home")
-            .font(.system(size: 35, weight: .bold))
-            .padding(5.0)
-        Image("people").resizable()
-            .frame(width: 80.0, height: 50.0)
-            .cornerRadius(8.0)
-            .padding(5.0)
-})*/
+
+

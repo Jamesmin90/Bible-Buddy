@@ -5,6 +5,7 @@ target 'Bible Buddy' do
   
 
   # Pods for Bible Buddy
+  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Storage'

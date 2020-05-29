@@ -8,6 +8,9 @@
 
 import UIKit
 import Firebase
+//import FirebaseCore
+//import FirebaseStorage
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        
         FirebaseApp.configure()
         let db = Firestore.firestore()
+        let storage = Storage.storage()
+
         print(db)
         
         let appearance = UINavigationBarAppearance()

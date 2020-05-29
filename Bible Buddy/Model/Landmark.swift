@@ -14,6 +14,7 @@ class Landmark: NSObject, MKAnnotation {
   let subtitle: String?
   let coordinate: CLLocationCoordinate2D
 
+
   init(
     title: String?,
     subtitle: String?,
@@ -24,11 +25,6 @@ class Landmark: NSObject, MKAnnotation {
     self.coordinate = coordinate
 
   }
-
-    static func requestMockData()-> [Landmark]{
-        return [
-            Landmark(title: "LMU", subtitle: "Bible Study", coordinate: .init(latitude: 48.149996544187985, longitude: 11.594266891479492))
-        ]
-    }
+    
 }
 

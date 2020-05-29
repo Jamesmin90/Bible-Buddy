@@ -1,6 +1,61 @@
 {
-    "type": "MultiPolygon",
-    "coordinates": [
-        
-    ]
+    {
+        "name":"Bible Study",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/bible-buddy-3cc17.appspot.com/o/Events%2FBible%20Study.jpg?alt=media&token=bef710ca-f4b8-4ae1-9dec-bb9dd4e599ea",
+        "geo" : [{
+            "latitude": "48.149996544187985",
+            "longitude": "11.594266891479492"
+        }],
+        "date" : "Date/Time: Donnerstag Abende // 19:30-21:00",
+        "location": "Location: LMU",
+        "signup": "Sign up:",
+        "description": "Jede Woche genießen wir die Gemeinschaft miteinander und beschäftigen uns mit Themen, die für unser christliches Leben wesentlich sind, um unseren Glauben zu stärken."
+    },
+    {
+        "name":"Worship",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/bible-buddy-3cc17.appspot.com/o/Events%2Fworship.jpg?alt=media&token=a2c535e9-a0b9-47bd-83e6-53a6e187cb10",
+        "geo" : [{
+            "latitude": "48.17487205077273",
+            "longitude": "11.550010442733763"
+        }],
+        "date" : "Date/Time: Freitag, 24. Juli 2020, 19:30-21:00",
+        "location": "Location: Olympiahalle",
+        "signup": "Sign up:",
+        "description": "Johannes 4,24 sagt Gott ist Geist, und die ihn anbeten, müssen in Geist und Wahrheit anbeten. Kommt und seht euch das an! "
+    },
+    {
+        "name":"BBQ",
+        "imageURL" : "https://firebasestorage.googleapis.com/v0/b/bible-buddy-3cc17.appspot.com/o/Events%2Fbbq.jpg?alt=media&token=278b2fa2-906a-4286-a1aa-876d6f745475",
+        "geo" : [{
+            "latitude": "48.14780612036986",
+            "longitude": "11.512963771820068"
+        }],
+        "date" : "Date/Time: 08. August 2020, 12:00-15:00",
+        "location": "Location: Hirschgarten, Munich",
+        "signup": "Sign up:",
+        "description": "BBQ, Kameradschaft, Getränke, Fussball, Frisbee, etc."
+    },
+    {
+           "name":"Summer Retreat",
+           "imageURL" : "https://firebasestorage.googleapis.com/v0/b/bible-buddy-3cc17.appspot.com/o/Events%2Fretreat.jpg?alt=media&token=c7283036-2c76-4d12-a3f5-9e01fcb56764",
+           "geo" : [{
+               "latitude": "51.38084806997714",
+               "longitude": "5.6919801235198975"
+           }],
+           "date" : "Date: 28. August - 31. August 2020",
+           "location": "Location: De Hoof 18, 5712 LM Someren",
+           "signup": "Sign up:",
+           "description": "350 Uni-Studenten aus Deutschland, Großbritannien, Frankreich, Spanien, Italien, den Niederlanden, Polen, Lettland, der Slowakei und Kroatien. 4 Hauptsitzungen, 3 Breakout-Sitzungen, 2 Vormittagsmissionen und 1 Vision."
+       },
+    {
+           "name":"Church History Trip",
+           "imageURL" : "https://firebasestorage.googleapis.com/v0/b/bible-buddy-3cc17.appspot.com/o/Events%2Fchurch%20history.jpg?alt=media&token=ef3380b3-a633-4113-82f3-88bab589d2eb",
+           "geo" : "",
+           "date" : "Date: Date: 1. September - 15. September 2020",
+           "location": "Rome, Cambridge, London, Eisenach, Herrnhut, Gut Elim, Konstanz, Prague",
+           "signup": "Sign up:",
+           "description": "Begleiten Sie uns auf unserer Reise durch Europa und sehen Sie, wie Gott sich in den letzten 500 Jahren in der Kirche bewegt hat."
+       },
+    
+    
 }
