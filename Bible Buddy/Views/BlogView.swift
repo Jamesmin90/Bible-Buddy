@@ -9,14 +9,16 @@
 import SwiftUI
 
 struct BlogView: View {	
-    @ObservedObject var posts = FirestoreBlogPostRepository()
+    @ObservedObject var postlistVM = BlogPostListVM()
     var body: some View {
         ZStack{
             
             Color(#colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 0.22)).edgesIgnoringSafeArea(.all)
-            List(posts.blogposts){ post in
-                NavigationLink(destination: BlogPostDetailView(post: post)){
-                    BlogPostCard(post: post)
+            List{
+                ForEach(postlistVM.blogPostVMs) { postVM in
+                    NavigationLink(destination: BlogPostDetailView(postVM: postVM)) {
+                        BlogPostCard(postVM: postVM)
+                    }
                 }
             }.navigationBarTitle("Blog", displayMode: .inline)
                 .onAppear {

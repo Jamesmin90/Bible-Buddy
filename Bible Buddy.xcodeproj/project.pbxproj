@@ -14,6 +14,8 @@
 		11B975FA2480FC5900680B54 /* BlogPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F92480FC5900680B54 /* BlogPostDetailView.swift */; };
 		11B975FD24812A6D00680B54 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11B975FB24812A6C00680B54 /* .gitignore */; };
 		11B975FE24812A6D00680B54 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 11B975FC24812A6D00680B54 /* .gitattributes */; };
+		11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910B24814246000C8ED6 /* BlogPostListVM.swift */; };
+		11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910D2481425F000C8ED6 /* BlogPostVM.swift */; };
 		699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
 		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
@@ -49,6 +51,8 @@
 		11B975F92480FC5900680B54 /* BlogPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostDetailView.swift; sourceTree = "<group>"; };
 		11B975FB24812A6C00680B54 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		11B975FC24812A6D00680B54 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		11FE910B24814246000C8ED6 /* BlogPostListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostListVM.swift; sourceTree = "<group>"; };
+		11FE910D2481425F000C8ED6 /* BlogPostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostVM.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
 		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -90,6 +94,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		11FE910A24813E31000C8ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11FE910B24814246000C8ED6 /* BlogPostListVM.swift */,
+				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		14F7261D3AF6BF5BCCFFB449 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +143,7 @@
 		84BFF05B246C1D760018296F /* Bible Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				11FE910A24813E31000C8ED6 /* ViewModel */,
 				84DCE46B247A7E87005AA691 /* ViewController */,
 				84BFF070246C1D8D0018296F /* Model */,
 				84BFF05C246C1D760018296F /* AppDelegate.swift */,
@@ -316,6 +330,8 @@
 				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
 				11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
+				11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */,
+				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
 				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,

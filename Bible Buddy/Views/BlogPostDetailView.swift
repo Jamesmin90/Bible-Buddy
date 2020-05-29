@@ -9,11 +9,11 @@
 import SwiftUI
 
 struct BlogPostDetailView: View {
-    var post: BlogPost
+    @ObservedObject var postVM: BlogPostVM
     
     var body: some View {
         VStack() {
-            Image(post.image)
+            Image(postVM.post.image)
             .resizable()
                 //.edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
@@ -32,15 +32,15 @@ struct BlogPostDetailView: View {
                 
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text(post.category)
+                    Text(postVM.post.category)
                         .font(.headline)
                         .foregroundColor(.secondary)
-                    Text(post.title)
+                    Text(postVM.post.title)
                         .font(.title)
                         .fontWeight(.black)
                         .foregroundColor(.primary)
                         .lineLimit(3)
-                    Text(post.userName.uppercased())
+                    Text(postVM.post.userName.uppercased())
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -61,7 +61,7 @@ struct BlogPostDetailView: View {
             }.padding()
             
             HStack(){
-                Text(post.body)
+                Text(postVM.post.body)
                     .multilineTextAlignment(.leading)
                 Spacer()
             }.padding()
@@ -74,7 +74,7 @@ struct BlogPostDetailView: View {
 
 struct BlogPostDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BlogPostDetailView(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum bla bla blaa", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people"))
+        BlogPostDetailView(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum bla bla blaa", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people")))
     }
 }
 

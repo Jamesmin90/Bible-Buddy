@@ -10,26 +10,26 @@ import SwiftUI
 
 struct BlogPostCard: View {
     
-    var post: BlogPost
+    @ObservedObject var postVM: BlogPostVM
     
     var body: some View {
         
         VStack {
-            Image(post.image)
+            Image(postVM.post.image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
-                    Text(post.category)
+                    Text(postVM.post.category)
                         .font(.headline)
                         .foregroundColor(.secondary)
-                    Text(post.title)
+                    Text(postVM.post.title)
                         .font(.title)
                         .fontWeight(.black)
                         .foregroundColor(.primary)
                         .lineLimit(3)
-                    Text(post.userName.uppercased())
+                    Text(postVM.post.userName.uppercased())
                         .font(.caption)
                         .foregroundColor(.secondary)
                 }
@@ -60,6 +60,6 @@ struct BlogPostCard: View {
 
 struct BlogPostCard_Previews: PreviewProvider {
     static var previews: some View {
-        BlogPostCard(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people"))
+        BlogPostCard(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people")))
     }
 }
