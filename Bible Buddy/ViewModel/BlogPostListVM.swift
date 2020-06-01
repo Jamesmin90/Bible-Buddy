@@ -23,4 +23,8 @@ class BlogPostListVM: ObservableObject {
         }.assign(to: \.blogPostVMs, on: self)
         .store(in: &cancellables)
     }
+    
+    func addPost(post: BlogPost) {
+        repository.addBlogPost(post)
+    }
 }

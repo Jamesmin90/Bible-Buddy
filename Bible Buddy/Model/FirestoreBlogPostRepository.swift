@@ -13,7 +13,12 @@ import FirebaseFirestoreSwift
 
 class FirestoreBlogPostRepository: BaseBlogPostRepository, BlogPostRepository, ObservableObject {
     func addBlogPost(_ blogpost: BlogPost) {
-        //
+        do {
+            let _ = try db.collection("blogposts").addDocument(from: blogpost)
+        }
+        catch {
+            print("Error while storing post to firestore.")	
+        }
     }
     
     func removeBlogPost(_ blogpost: BlogPost) {

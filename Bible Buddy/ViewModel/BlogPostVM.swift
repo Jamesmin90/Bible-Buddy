@@ -24,4 +24,8 @@ class BlogPostVM: ObservableObject, Identifiable {
         .assign(to: \.id, on: self)
         .store(in: &cancellables)
     }
+    
+    static func newBlogPost() -> BlogPostVM {
+        BlogPostVM(post: BlogPost(title: "", body: "", userName: "", userID: "", category: "", image: ""))
+    }
 }
