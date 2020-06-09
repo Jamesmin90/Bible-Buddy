@@ -3,10 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */; };
+		842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */; };
+		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
+		848CC579247534050000A1F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeView.swift */; };
+		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
+		848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC573247534050000A1F3 /* CarouselCard.swift */; };
+		848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC574247534050000A1F3 /* SideMenuView.swift */; };
+		848CC57D247534050000A1F3 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC575247534050000A1F3 /* TestView.swift */; };
+		848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC576247534050000A1F3 /* SideMenuItem.swift */; };
+		848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */; };
+		848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848CC582247539590000A1F3 /* GoogleService-Info.plist */; };
+		848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC58824754BE00000A1F3 /* SignInUpView.swift */; };
+		848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC5902476753F0000A1F3 /* ErrorText.swift */; };
 		84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05C246C1D760018296F /* AppDelegate.swift */; };
 		84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05E246C1D760018296F /* SceneDelegate.swift */; };
 		84BFF061246C1D760018296F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF060246C1D760018296F /* ContentView.swift */; };
@@ -17,9 +30,33 @@
 		84BFF075246C1DDE0018296F /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF074246C1DDE0018296F /* EventsView.swift */; };
 		84BFF077246C1E020018296F /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF076246C1E020018296F /* BibleView.swift */; };
 		84BFF079246C1E220018296F /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF078246C1E220018296F /* BlogView.swift */; };
+		84C574592484FF9A006057C2 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C574582484FF9A006057C2 /* TextMessage.swift */; };
+		84C5745B24850020006057C2 /* PasswordField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5745A24850020006057C2 /* PasswordField.swift */; };
+		84C5745D2485008D006057C2 /* ManageUserButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C5745C2485008D006057C2 /* ManageUserButton.swift */; };
+		84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DCE469247A7CCE005AA691 /* SessionStore.swift */; };
+		84E174D824841477007E6A54 /* ProfilePageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174D724841477007E6A54 /* ProfilePageView.swift */; };
+		84E174DA248414A1007E6A54 /* UpdateEmailPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174D9248414A1007E6A54 /* UpdateEmailPasswordView.swift */; };
+		84E174DC248414FC007E6A54 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */; };
+		84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */; };
+		84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */; };
+		84E174E224845523007E6A54 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174E124845523007E6A54 /* EmailField.swift */; };
+		84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemIsActive.swift; sourceTree = "<group>"; };
+		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
+		848CC571247534050000A1F3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
+		848CC573247534050000A1F3 /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
+		848CC574247534050000A1F3 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		848CC575247534050000A1F3 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		848CC576247534050000A1F3 /* SideMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
+		848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLink.swift; sourceTree = "<group>"; };
+		848CC582247539590000A1F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		848CC58824754BE00000A1F3 /* SignInUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpView.swift; sourceTree = "<group>"; };
+		848CC5902476753F0000A1F3 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		84BFF059246C1D760018296F /* Bible Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFF05C246C1D760018296F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFF05E246C1D760018296F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +69,19 @@
 		84BFF074246C1DDE0018296F /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		84BFF076246C1E020018296F /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		84BFF078246C1E220018296F /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		84C574582484FF9A006057C2 /* TextMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
+		84C5745A24850020006057C2 /* PasswordField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordField.swift; sourceTree = "<group>"; };
+		84C5745C2485008D006057C2 /* ManageUserButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageUserButton.swift; sourceTree = "<group>"; };
+		84DCE469247A7CCE005AA691 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		84E174D724841477007E6A54 /* ProfilePageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageView.swift; sourceTree = "<group>"; };
+		84E174D9248414A1007E6A54 /* UpdateEmailPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateEmailPasswordView.swift; sourceTree = "<group>"; };
+		84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuItem.swift; sourceTree = "<group>"; };
+		84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProfileView.swift; sourceTree = "<group>"; };
+		84E174E124845523007E6A54 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLinkIsActive.swift; sourceTree = "<group>"; };
+		A89BFC6D0D44DE9A1378E886 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
+		D102427F36231BC1D05F3489 /* Pods-Bible Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.release.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,17 +89,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14F7261D3AF6BF5BCCFFB449 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7261FE6EE7A164B5328CFB1D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A89BFC6D0D44DE9A1378E886 /* Pods-Bible Buddy.debug.xcconfig */,
+				D102427F36231BC1D05F3489 /* Pods-Bible Buddy.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		84BFF050246C1D760018296F = {
 			isa = PBXGroup;
 			children = (
 				84BFF05B246C1D760018296F /* Bible Buddy */,
 				84BFF05A246C1D760018296F /* Products */,
+				7261FE6EE7A164B5328CFB1D /* Pods */,
+				14F7261D3AF6BF5BCCFFB449 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,12 +134,14 @@
 		84BFF05B246C1D760018296F /* Bible Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				84DCE46B247A7E87005AA691 /* ViewController */,
 				84BFF070246C1D8D0018296F /* Model */,
 				84BFF05C246C1D760018296F /* AppDelegate.swift */,
 				84BFF05E246C1D760018296F /* SceneDelegate.swift */,
 				84BFF071246C1D9F0018296F /* Views */,
 				84BFF062246C1D770018296F /* Assets.xcassets */,
 				84BFF067246C1D770018296F /* LaunchScreen.storyboard */,
+				848CC582247539590000A1F3 /* GoogleService-Info.plist */,
 				84BFF06A246C1D770018296F /* Info.plist */,
 				84BFF064246C1D770018296F /* Preview Content */,
 			);
@@ -88,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				84BFF072246C1DB90018296F /* MainNavi.swift */,
+				84DCE469247A7CCE005AA691 /* SessionStore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,12 +168,40 @@
 		84BFF071246C1D9F0018296F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				848CC572247534050000A1F3 /* Carousel.swift */,
+				848CC573247534050000A1F3 /* CarouselCard.swift */,
+				848CC571247534050000A1F3 /* HomeView.swift */,
+				848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */,
+				84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */,
+				848CC576247534050000A1F3 /* SideMenuItem.swift */,
+				842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */,
+				848CC574247534050000A1F3 /* SideMenuView.swift */,
+				848CC575247534050000A1F3 /* TestView.swift */,
+				848CC570247534050000A1F3 /* WelcomeTextView.swift */,
 				84BFF060246C1D760018296F /* ContentView.swift */,
 				84BFF074246C1DDE0018296F /* EventsView.swift */,
 				84BFF076246C1E020018296F /* BibleView.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
+				848CC58824754BE00000A1F3 /* SignInUpView.swift */,
+				848CC5902476753F0000A1F3 /* ErrorText.swift */,
+				84E174D724841477007E6A54 /* ProfilePageView.swift */,
+				84E174D9248414A1007E6A54 /* UpdateEmailPasswordView.swift */,
+				84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */,
+				84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */,
+				84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */,
+				84E174E124845523007E6A54 /* EmailField.swift */,
+				84C574582484FF9A006057C2 /* TextMessage.swift */,
+				84C5745A24850020006057C2 /* PasswordField.swift */,
+				84C5745C2485008D006057C2 /* ManageUserButton.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		84DCE46B247A7E87005AA691 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,9 +211,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BFF06D246C1D770018296F /* Build configuration list for PBXNativeTarget "Bible Buddy" */;
 			buildPhases = (
+				6D97DE361D428C38C37D3344 /* [CP] Check Pods Manifest.lock */,
 				84BFF055246C1D760018296F /* Sources */,
 				84BFF056246C1D760018296F /* Frameworks */,
 				84BFF057246C1D760018296F /* Resources */,
+				EF61379C5BA45688736E26B1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -162,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84BFF069246C1D770018296F /* LaunchScreen.storyboard in Resources */,
+				848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */,
 				84BFF066246C1D770018296F /* Preview Assets.xcassets in Resources */,
 				84BFF063246C1D770018296F /* Assets.xcassets in Resources */,
 			);
@@ -169,17 +273,81 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D97DE361D428C38C37D3344 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bible Buddy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF61379C5BA45688736E26B1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84BFF055246C1D760018296F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
+				84E174D824841477007E6A54 /* ProfilePageView.swift in Sources */,
+				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
+				848CC579247534050000A1F3 /* HomeView.swift in Sources */,
+				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
+				84C5745D2485008D006057C2 /* ManageUserButton.swift in Sources */,
+				84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */,
 				84BFF073246C1DB90018296F /* MainNavi.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
+				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
+				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
+				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
+				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
+				84E174DC248414FC007E6A54 /* ForgotPasswordView.swift in Sources */,
+				84C574592484FF9A006057C2 /* TextMessage.swift in Sources */,
+				84E174DA248414A1007E6A54 /* UpdateEmailPasswordView.swift in Sources */,
+				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
+				84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */,
+				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
+				842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */,
+				84E174E224845523007E6A54 /* EmailField.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
+				84C5745B24850020006057C2 /* PasswordField.swift in Sources */,
+				848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
+				848CC57D247534050000A1F3 /* TestView.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +482,7 @@
 		};
 		84BFF06E246C1D770018296F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A89BFC6D0D44DE9A1378E886 /* Pods-Bible Buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -333,6 +502,7 @@
 		};
 		84BFF06F246C1D770018296F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D102427F36231BC1D05F3489 /* Pods-Bible Buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
