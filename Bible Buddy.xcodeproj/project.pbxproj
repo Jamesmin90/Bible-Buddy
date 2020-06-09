@@ -7,10 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */; };
+		07746FFFC56752292BC4F921 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */; };
+		11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F1248056EA00680B54 /* BlogPostRepository.swift */; };
+		11B975F42480584700680B54 /* BlogPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F32480584700680B54 /* BlogPost.swift */; };
+		11B975F62480625700680B54 /* FirestoreBlogPostRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */; };
+		11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F72480F14F00680B54 /* BlogPostCard.swift */; };
+		11B975FA2480FC5900680B54 /* BlogPostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B975F92480FC5900680B54 /* BlogPostDetailView.swift */; };
+		11B975FD24812A6D00680B54 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 11B975FB24812A6C00680B54 /* .gitignore */; };
+		11B975FE24812A6D00680B54 /* .gitattributes in Resources */ = {isa = PBXBuildFile; fileRef = 11B975FC24812A6D00680B54 /* .gitattributes */; };
+		11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910B24814246000C8ED6 /* BlogPostListVM.swift */; };
+		11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910D2481425F000C8ED6 /* BlogPostVM.swift */; };
+		11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */; };
+		11FE9112248526FC000C8ED6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE9111248526FC000C8ED6 /* TextView.swift */; };
+		11FE911424868B57000C8ED6 /* UserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911324868B57000C8ED6 /* UserProfileRepository.swift */; };
+		11FE911624868BE0000C8ED6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911524868BE0000C8ED6 /* UserProfile.swift */; };
+		11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */; };
+		11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */; };
+		11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911B248A8172000C8ED6 /* URLImage.swift */; };
 		842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
-		848CC579247534050000A1F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeView.swift */; };
+		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
 		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
 		848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC573247534050000A1F3 /* CarouselCard.swift */; };
 		848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC574247534050000A1F3 /* SideMenuView.swift */; };
@@ -19,6 +35,7 @@
 		848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */; };
 		848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848CC582247539590000A1F3 /* GoogleService-Info.plist */; };
 		848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC58824754BE00000A1F3 /* SignInUpView.swift */; };
+		848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */; };
 		848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC5902476753F0000A1F3 /* ErrorText.swift */; };
 		84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05C246C1D760018296F /* AppDelegate.swift */; };
 		84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05E246C1D760018296F /* SceneDelegate.swift */; };
@@ -26,7 +43,6 @@
 		84BFF063246C1D770018296F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BFF062246C1D770018296F /* Assets.xcassets */; };
 		84BFF066246C1D770018296F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BFF065246C1D770018296F /* Preview Assets.xcassets */; };
 		84BFF069246C1D770018296F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BFF067246C1D770018296F /* LaunchScreen.storyboard */; };
-		84BFF073246C1DB90018296F /* MainNavi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF072246C1DB90018296F /* MainNavi.swift */; };
 		84BFF075246C1DDE0018296F /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF074246C1DDE0018296F /* EventsView.swift */; };
 		84BFF077246C1E020018296F /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF076246C1E020018296F /* BibleView.swift */; };
 		84BFF079246C1E220018296F /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF078246C1E220018296F /* BlogView.swift */; };
@@ -44,10 +60,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		11B975F1248056EA00680B54 /* BlogPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostRepository.swift; sourceTree = "<group>"; };
+		11B975F32480584700680B54 /* BlogPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPost.swift; sourceTree = "<group>"; };
+		11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreBlogPostRepository.swift; sourceTree = "<group>"; };
+		11B975F72480F14F00680B54 /* BlogPostCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostCard.swift; sourceTree = "<group>"; };
+		11B975F92480FC5900680B54 /* BlogPostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostDetailView.swift; sourceTree = "<group>"; };
+		11B975FB24812A6C00680B54 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		11B975FC24812A6D00680B54 /* .gitattributes */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		11FE910B24814246000C8ED6 /* BlogPostListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostListVM.swift; sourceTree = "<group>"; };
+		11FE910D2481425F000C8ED6 /* BlogPostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostVM.swift; sourceTree = "<group>"; };
+		11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostEditView.swift; sourceTree = "<group>"; };
+		11FE9111248526FC000C8ED6 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		11FE911324868B57000C8ED6 /* UserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRepository.swift; sourceTree = "<group>"; };
+		11FE911524868BE0000C8ED6 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserProfileRepository.swift; sourceTree = "<group>"; };
+		11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
+		11FE911B248A8172000C8ED6 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
+		7B1D545D5132C8DC09B714C3 /* Pods-Bible Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.release.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.release.xcconfig"; sourceTree = "<group>"; };
 		842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemIsActive.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
-		848CC571247534050000A1F3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		848CC573247534050000A1F3 /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		848CC574247534050000A1F3 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -56,6 +88,7 @@
 		848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLink.swift; sourceTree = "<group>"; };
 		848CC582247539590000A1F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		848CC58824754BE00000A1F3 /* SignInUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpView.swift; sourceTree = "<group>"; };
+		848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedIn.swift; sourceTree = "<group>"; };
 		848CC5902476753F0000A1F3 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		84BFF059246C1D760018296F /* Bible Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFF05C246C1D760018296F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,7 +98,6 @@
 		84BFF065246C1D770018296F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84BFF068246C1D770018296F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84BFF06A246C1D770018296F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		84BFF072246C1DB90018296F /* MainNavi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavi.swift; sourceTree = "<group>"; };
 		84BFF074246C1DDE0018296F /* EventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
 		84BFF076246C1E020018296F /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		84BFF078246C1E220018296F /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
@@ -80,8 +112,8 @@
 		84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProfileView.swift; sourceTree = "<group>"; };
 		84E174E124845523007E6A54 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
 		84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLinkIsActive.swift; sourceTree = "<group>"; };
-		A89BFC6D0D44DE9A1378E886 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
-		D102427F36231BC1D05F3489 /* Pods-Bible Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.release.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F045A889704DBB1F54D8EAD6 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,26 +121,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */,
+				07746FFFC56752292BC4F921 /* Pods_Bible_Buddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14F7261D3AF6BF5BCCFFB449 /* Frameworks */ = {
+		0F249CC151EE67B74A041FF3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */,
+				C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11FE910A24813E31000C8ED6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11FE910B24814246000C8ED6 /* BlogPostListVM.swift */,
+				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
+				11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		7261FE6EE7A164B5328CFB1D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A89BFC6D0D44DE9A1378E886 /* Pods-Bible Buddy.debug.xcconfig */,
-				D102427F36231BC1D05F3489 /* Pods-Bible Buddy.release.xcconfig */,
+				F045A889704DBB1F54D8EAD6 /* Pods-Bible Buddy.debug.xcconfig */,
+				7B1D545D5132C8DC09B714C3 /* Pods-Bible Buddy.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -116,10 +158,12 @@
 		84BFF050246C1D760018296F = {
 			isa = PBXGroup;
 			children = (
+				11B975FC24812A6D00680B54 /* .gitattributes */,
+				11B975FB24812A6C00680B54 /* .gitignore */,
 				84BFF05B246C1D760018296F /* Bible Buddy */,
 				84BFF05A246C1D760018296F /* Products */,
 				7261FE6EE7A164B5328CFB1D /* Pods */,
-				14F7261D3AF6BF5BCCFFB449 /* Frameworks */,
+				0F249CC151EE67B74A041FF3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +178,7 @@
 		84BFF05B246C1D760018296F /* Bible Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				11FE910A24813E31000C8ED6 /* ViewModel */,
 				84DCE46B247A7E87005AA691 /* ViewController */,
 				84BFF070246C1D8D0018296F /* Model */,
 				84BFF05C246C1D760018296F /* AppDelegate.swift */,
@@ -159,8 +204,14 @@
 		84BFF070246C1D8D0018296F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				84BFF072246C1DB90018296F /* MainNavi.swift */,
+				11B975F32480584700680B54 /* BlogPost.swift */,
+				11FE911524868BE0000C8ED6 /* UserProfile.swift */,
 				84DCE469247A7CCE005AA691 /* SessionStore.swift */,
+				11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */,
+				11B975F1248056EA00680B54 /* BlogPostRepository.swift */,
+				11FE911324868B57000C8ED6 /* UserProfileRepository.swift */,
+				11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */,
+				11FE911B248A8172000C8ED6 /* URLImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,11 +221,11 @@
 			children = (
 				848CC572247534050000A1F3 /* Carousel.swift */,
 				848CC573247534050000A1F3 /* CarouselCard.swift */,
-				848CC571247534050000A1F3 /* HomeView.swift */,
-				848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */,
 				84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */,
-				848CC576247534050000A1F3 /* SideMenuItem.swift */,
 				842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */,
+				848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */,
+				848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */,
+				848CC576247534050000A1F3 /* SideMenuItem.swift */,
 				848CC574247534050000A1F3 /* SideMenuView.swift */,
 				848CC575247534050000A1F3 /* TestView.swift */,
 				848CC570247534050000A1F3 /* WelcomeTextView.swift */,
@@ -183,7 +234,6 @@
 				84BFF076246C1E020018296F /* BibleView.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
 				848CC58824754BE00000A1F3 /* SignInUpView.swift */,
-				848CC5902476753F0000A1F3 /* ErrorText.swift */,
 				84E174D724841477007E6A54 /* ProfilePageView.swift */,
 				84E174D9248414A1007E6A54 /* UpdateEmailPasswordView.swift */,
 				84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */,
@@ -193,6 +243,12 @@
 				84C574582484FF9A006057C2 /* TextMessage.swift */,
 				84C5745A24850020006057C2 /* PasswordField.swift */,
 				84C5745C2485008D006057C2 /* ManageUserButton.swift */,
+				848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */,
+				848CC5902476753F0000A1F3 /* ErrorText.swift */,
+				11B975F72480F14F00680B54 /* BlogPostCard.swift */,
+				11B975F92480FC5900680B54 /* BlogPostDetailView.swift */,
+				11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */,
+				11FE9111248526FC000C8ED6 /* TextView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,11 +267,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84BFF06D246C1D770018296F /* Build configuration list for PBXNativeTarget "Bible Buddy" */;
 			buildPhases = (
-				6D97DE361D428C38C37D3344 /* [CP] Check Pods Manifest.lock */,
+				6A61D0ED6F8A3A4EBDED250E /* [CP] Check Pods Manifest.lock */,
 				84BFF055246C1D760018296F /* Sources */,
 				84BFF056246C1D760018296F /* Frameworks */,
 				84BFF057246C1D760018296F /* Resources */,
-				EF61379C5BA45688736E26B1 /* [CP] Embed Pods Frameworks */,
+				7551B00F9E589A70F6584341 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -264,6 +320,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11B975FD24812A6D00680B54 /* .gitignore in Resources */,
+				11B975FE24812A6D00680B54 /* .gitattributes in Resources */,
 				84BFF069246C1D770018296F /* LaunchScreen.storyboard in Resources */,
 				848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */,
 				84BFF066246C1D770018296F /* Preview Assets.xcassets in Resources */,
@@ -274,7 +332,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6D97DE361D428C38C37D3344 /* [CP] Check Pods Manifest.lock */ = {
+		6A61D0ED6F8A3A4EBDED250E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -296,7 +354,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EF61379C5BA45688736E26B1 /* [CP] Embed Pods Frameworks */ = {
+		7551B00F9E589A70F6584341 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -323,11 +381,10 @@
 				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
 				84E174D824841477007E6A54 /* ProfilePageView.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
-				848CC579247534050000A1F3 /* HomeView.swift in Sources */,
+				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				84C5745D2485008D006057C2 /* ManageUserButton.swift in Sources */,
 				84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */,
-				84BFF073246C1DB90018296F /* MainNavi.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
 				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
@@ -347,6 +404,35 @@
 				84C5745B24850020006057C2 /* PasswordField.swift in Sources */,
 				848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
+				11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */,
+				11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */,
+				11FE911624868BE0000C8ED6 /* UserProfile.swift in Sources */,
+				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
+				11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */,
+				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
+				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
+				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
+				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
+				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
+				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
+				11FE911424868B57000C8ED6 /* UserProfileRepository.swift in Sources */,
+				11B975F62480625700680B54 /* FirestoreBlogPostRepository.swift in Sources */,
+				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
+				11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */,
+				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
+				11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */,
+				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
+				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
+				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
+				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
+				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
+				11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */,
+				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
+				848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */,
+				11B975FA2480FC5900680B54 /* BlogPostDetailView.swift in Sources */,
+				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
+				11B975F42480584700680B54 /* BlogPost.swift in Sources */,
+				11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */,
 				848CC57D247534050000A1F3 /* TestView.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
 			);
@@ -482,7 +568,7 @@
 		};
 		84BFF06E246C1D770018296F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A89BFC6D0D44DE9A1378E886 /* Pods-Bible Buddy.debug.xcconfig */;
+			baseConfigurationReference = F045A889704DBB1F54D8EAD6 /* Pods-Bible Buddy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,7 +588,7 @@
 		};
 		84BFF06F246C1D770018296F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D102427F36231BC1D05F3489 /* Pods-Bible Buddy.release.xcconfig */;
+			baseConfigurationReference = 7B1D545D5132C8DC09B714C3 /* Pods-Bible Buddy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -18,13 +18,15 @@ struct Carousel: View {
         ScrollView(.horizontal, showsIndicators: false) {
             
             HStack {
-                
-                CarouselCard(image: "bible", title: "Bibel", backgroundColorCard: Color(#colorLiteral(red: 0.2522913464, green: 0.2399643849, blue: 0.8064919099, alpha: 0.3844178082)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
-                
-                CarouselCard(image: "blog", title: "Blog", backgroundColorCard: Color(#colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 0.6243846318)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
-                
-                CarouselCard(image: "event", title: "Events", backgroundColorCard: Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 0.3774614726)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
-                
+                NavigationLink(destination: BibleView()){
+                    CarouselCard(image: "bible", title: "Bibel", backgroundColorCard: Color(#colorLiteral(red: 0.2522913464, green: 0.2399643849, blue: 0.8064919099, alpha: 0.3844178082)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
+                }.padding(10)
+                NavigationLink(destination: BlogView()){
+                    CarouselCard(image: "blog", title: "Blog", backgroundColorCard: Color(#colorLiteral(red: 0.5808190107, green: 0.0884276256, blue: 0.3186392188, alpha: 0.6243846318)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
+                }.padding(10)
+                NavigationLink(destination: EventsView()){
+                    CarouselCard(image: "event", title: "Events", backgroundColorCard: Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 0.3774614726)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
+                }.padding(10)
             }
         }
     }
