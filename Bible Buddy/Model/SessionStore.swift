@@ -13,6 +13,7 @@ import Combine
 class SessionStore: ObservableObject {
     
     var didChange = PassthroughSubject<SessionStore, Never>()
+
     
     @Published var moveToRootView: Bool = false
     
@@ -47,6 +48,7 @@ class SessionStore: ObservableObject {
         }
     }
     
+
     func resetPassword(email: String, handler: @escaping SendPasswordResetCallback) {
         Auth.auth().sendPasswordReset(withEmail: email, completion: handler)
     }

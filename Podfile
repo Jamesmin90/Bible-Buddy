@@ -9,5 +9,9 @@ target 'Bible Buddy' do
 
     pod 'Firebase/Analytics'
     pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
+    pod 'FirebaseFirestoreSwift'
+    pod 'Firebase/Storage'
+    
 
 end

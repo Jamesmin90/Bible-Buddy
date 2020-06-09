@@ -80,3 +80,11 @@ struct SignInUpView: View {
         }
     }
 }
+
+
+struct SignInUpView_Previews: PreviewProvider {
+    static var previews: some View {
+        SignInUpView(continueText: "123", buttonText: "Sign In")
+    }
+}
+

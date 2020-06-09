@@ -23,6 +23,7 @@ struct ContentView: View {
             NavigationView {
                 
                 ZStack {
+
                     HomeView(isActive: self.$isSignInViewActive)
                     
                     GeometryReader { _ in
@@ -54,5 +55,13 @@ struct ContentView: View {
                 )
             }
         }.onAppear(perform: session.listen)
+    }
+}
+
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+
     }
 }
