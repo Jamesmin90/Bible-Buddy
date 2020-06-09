@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -27,9 +27,11 @@
 		843CCFAE2471AFFC00C41C45 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFAD2471AFFC00C41C45 /* Message.swift */; };
 		843CCFB02471BF3600C41C45 /* LogInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFAF2471BF3600C41C45 /* LogInView.swift */; };
 		843CCFB2247315D400C41C45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843CCFB1247315D400C41C45 /* Constants.swift */; };
+		84A9BF9F248FC1DA00B44EEF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9BF9E248FC1DA00B44EEF /* ContentView.swift */; };
+		84A9BFA1248FC1F000B44EEF /* BlogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9BFA0248FC1F000B44EEF /* BlogView.swift */; };
+		84A9BFA3248FC21F00B44EEF /* BibleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A9BFA2248FC21F00B44EEF /* BibleView.swift */; };
 		84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05C246C1D760018296F /* AppDelegate.swift */; };
 		84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05E246C1D760018296F /* SceneDelegate.swift */; };
-		84BFF061246C1D760018296F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF060246C1D760018296F /* ContentView.swift */; };
 		84BFF063246C1D770018296F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BFF062246C1D770018296F /* Assets.xcassets */; };
 		84BFF066246C1D770018296F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84BFF065246C1D770018296F /* Preview Assets.xcassets */; };
 		84BFF069246C1D770018296F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84BFF067246C1D770018296F /* LaunchScreen.storyboard */; };
@@ -63,10 +65,12 @@
 		843CCFAD2471AFFC00C41C45 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		843CCFAF2471BF3600C41C45 /* LogInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInView.swift; sourceTree = "<group>"; };
 		843CCFB1247315D400C41C45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84A9BF9E248FC1DA00B44EEF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		84A9BFA0248FC1F000B44EEF /* BlogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogView.swift; sourceTree = "<group>"; };
+		84A9BFA2248FC21F00B44EEF /* BibleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleView.swift; sourceTree = "<group>"; };
 		84BFF059246C1D760018296F /* Bible Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFF05C246C1D760018296F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFF05E246C1D760018296F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84BFF060246C1D760018296F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		84BFF062246C1D770018296F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84BFF065246C1D770018296F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84BFF068246C1D770018296F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -173,7 +177,6 @@
 				8434CE8A24782EC900F2B27D /* SideMenuItem.swift */,
 				8434CE8C24782EDF00F2B27D /* SideMenuView.swift */,
 				8434CE8E24782EFF00F2B27D /* WelcomeTextView.swift */,
-				84BFF060246C1D760018296F /* ContentView.swift */,
 				84BFF076246C1E020018296F /* BibleView.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
 				842DD9042474692900D62BC8 /* MessagePage.swift */,
@@ -182,6 +185,9 @@
 				8434CE8824782EAA00F2B27D /* LogInButton.swift */,
 				8434CE9024782F1600F2B27D /* MapView.swift */,
 				84CF5144247E9EDF00DC4E64 /* EventsDetail.swift */,
+				84A9BF9E248FC1DA00B44EEF /* ContentView.swift */,
+				84A9BFA0248FC1F000B44EEF /* BlogView.swift */,
+				84A9BFA2248FC21F00B44EEF /* BibleView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -275,6 +281,7 @@
 				84CF5141247E8AB100DC4E64 /* ImageLoader.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
 				843CCFAE2471AFFC00C41C45 /* Message.swift in Sources */,
+				84A9BFA3248FC21F00B44EEF /* BibleView.swift in Sources */,
 				842DD90724746A8A00D62BC8 /* ListMessage.swift in Sources */,
 				842DD9052474692900D62BC8 /* MessagePage.swift in Sources */,
 				8434CE8B24782EC900F2B27D /* SideMenuItem.swift in Sources */,
@@ -290,12 +297,13 @@
 				842DD9032474644800D62BC8 /* DataFire.swift in Sources */,
 				842DD90924746D2A00D62BC8 /* ImagePicker.swift in Sources */,
 				8433633424811536009FC87B /* EventsApi.swift in Sources */,
+				84A9BFA1248FC1F000B44EEF /* BlogView.swift in Sources */,
 				8434CE8524782E7E00F2B27D /* CarouselCard.swift in Sources */,
 				8434CE8F24782EFF00F2B27D /* WelcomeTextView.swift in Sources */,
 				8434CE8324782E5B00F2B27D /* Carousel.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
+				84A9BF9F248FC1DA00B44EEF /* ContentView.swift in Sources */,
 				84CF513D247E536900DC4E64 /* Events.swift in Sources */,
-				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
 				84CF513F247E592200DC4E64 /* EventsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
