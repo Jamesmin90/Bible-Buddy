@@ -18,6 +18,11 @@
 		11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910D2481425F000C8ED6 /* BlogPostVM.swift */; };
 		11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */; };
 		11FE9112248526FC000C8ED6 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE9111248526FC000C8ED6 /* TextView.swift */; };
+		11FE911424868B57000C8ED6 /* UserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911324868B57000C8ED6 /* UserProfileRepository.swift */; };
+		11FE911624868BE0000C8ED6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911524868BE0000C8ED6 /* UserProfile.swift */; };
+		11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */; };
+		11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */; };
+		11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911B248A8172000C8ED6 /* URLImage.swift */; };
 		699C3A41EF8D0B164F5682A5 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BC8381737CE83260EC93FC /* Pods_Bible_Buddy.framework */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
 		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
@@ -57,6 +62,11 @@
 		11FE910D2481425F000C8ED6 /* BlogPostVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostVM.swift; sourceTree = "<group>"; };
 		11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlogPostEditView.swift; sourceTree = "<group>"; };
 		11FE9111248526FC000C8ED6 /* TextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextView.swift; sourceTree = "<group>"; };
+		11FE911324868B57000C8ED6 /* UserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileRepository.swift; sourceTree = "<group>"; };
+		11FE911524868BE0000C8ED6 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserProfileRepository.swift; sourceTree = "<group>"; };
+		11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
+		11FE911B248A8172000C8ED6 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
 		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -103,6 +113,7 @@
 			children = (
 				11FE910B24814246000C8ED6 /* BlogPostListVM.swift */,
 				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
+				11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -174,10 +185,14 @@
 			isa = PBXGroup;
 			children = (
 				11B975F32480584700680B54 /* BlogPost.swift */,
+				11FE911524868BE0000C8ED6 /* UserProfile.swift */,
 				84BFF072246C1DB90018296F /* MainNavi.swift */,
 				84DCE469247A7CCE005AA691 /* SessionStore.swift */,
+				11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */,
 				11B975F1248056EA00680B54 /* BlogPostRepository.swift */,
+				11FE911324868B57000C8ED6 /* UserProfileRepository.swift */,
 				11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */,
+				11FE911B248A8172000C8ED6 /* URLImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,7 +349,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
+				11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */,
 				11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */,
+				11FE911624868BE0000C8ED6 /* UserProfile.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
 				11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */,
 				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
@@ -344,15 +361,18 @@
 				84BFF073246C1DB90018296F /* MainNavi.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
+				11FE911424868B57000C8ED6 /* UserProfileRepository.swift in Sources */,
 				11B975F62480625700680B54 /* FirestoreBlogPostRepository.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
 				11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
+				11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
+				11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
 				848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */,
 				11B975FA2480FC5900680B54 /* BlogPostDetailView.swift in Sources */,

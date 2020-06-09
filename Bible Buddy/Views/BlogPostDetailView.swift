@@ -10,6 +10,7 @@ import SwiftUI
 
 struct BlogPostDetailView: View {
     @ObservedObject var postVM: BlogPostVM
+    	
     
     var body: some View {
         VStack() {
@@ -18,7 +19,7 @@ struct BlogPostDetailView: View {
                 //.edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
             
-            Image("userdummy")
+            Image(uiImage: UIImage(data: postVM.userProfileVM.profilepicture) ?? UIImage())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .background(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/)
@@ -61,6 +62,7 @@ struct BlogPostDetailView: View {
             }.padding()
             
             HStack(){
+                Text(postVM.userProfile.profilePictureID)
                 Text(postVM.post.body)
                     .multilineTextAlignment(.leading)
                 Spacer()
