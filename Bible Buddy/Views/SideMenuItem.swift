@@ -8,14 +8,21 @@
 
 import SwiftUI
 
-struct SideMenuItem: View {
+struct SideMenuItem<Content: View>: View {
     
     var image: String
     var title: String
+    var destinationView: Content
+    
+    init(image: String, title: String, destinationView: Content) {
+        self.image = image
+        self.title = title
+        self.destinationView = destinationView
+    }
     
     var body: some View {
         
-        NavigationLink(destination: TestView()) {
+        NavigationLink(destination: destinationView) {
             
             HStack() {
                 
@@ -35,6 +42,6 @@ struct SideMenuItem: View {
 
 struct SideMenuItem_Previews: PreviewProvider {
     static var previews: some View {
-        SideMenuItem(image: "bible", title: "Bibel")
+        SideMenuItem(image: "bible", title: "Bibel", destinationView: BibleView())
     }
 }

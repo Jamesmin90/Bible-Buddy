@@ -10,26 +10,27 @@ import SwiftUI
 
 struct SideMenuView: View {
     
+    @EnvironmentObject var session: SessionStore
+    
+    @Binding var isActive: Bool
+    
     var body: some View {
         
         VStack(alignment: .leading) {
             
-            SideMenuItem(image: "bible", title: "Bibel")
-            SideMenuItem(image: "blog", title: "Blog")
-            SideMenuItem(image: "event", title: "Events")
+            SideMenuItem(image: "bible", title: "Bibel", destinationView: BibleView())
+            SideMenuItem(image: "blog", title: "Blog", destinationView: BlogView())
+            SideMenuItem(image: "event", title: "Events", destinationView: EventsView())
+            
+            if (session.session != nil) {
+                SideMenuItemIsActive(image: "profile", title: "Profil", destinationView: ProfilePageView(), isActive: self.$isActive)
+            }
             
             Spacer()
             
-        }.padding(20)
-         .frame(minWidth: 150)
-         .background(Color.white.edgesIgnoringSafeArea(.bottom))
-         
-         
-    }
-}
-
-struct SideMenuView_Previews: PreviewProvider {
-    static var previews: some View {
-        SideMenuView()
+        }
+        .padding(20)
+        .frame(minWidth: 150)
+        .background(Color.white.edgesIgnoringSafeArea(.bottom))
     }
 }
