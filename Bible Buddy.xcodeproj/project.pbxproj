@@ -25,6 +25,13 @@
 		11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */; };
 		11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911B248A8172000C8ED6 /* URLImage.swift */; };
 		842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */; };
+		845FDF0824912A5700A0CF33 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0724912A5700A0CF33 /* Events.swift */; };
+		845FDF0A24912A6600A0CF33 /* EventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0924912A6600A0CF33 /* EventsDetail.swift */; };
+		845FDF0C24912A6D00A0CF33 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0B24912A6D00A0CF33 /* Landmark.swift */; };
+		845FDF0E24912A7C00A0CF33 /* EventsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0D24912A7C00A0CF33 /* EventsApi.swift */; };
+		845FDF1024912A8700A0CF33 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0F24912A8700A0CF33 /* MapView.swift */; };
+		845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1124912A8F00A0CF33 /* RemoteImage.swift */; };
+		845FDF1424912BE400A0CF33 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1324912BE400A0CF33 /* ImageLoader.swift */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
 		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
 		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
@@ -78,6 +85,13 @@
 		11FE911B248A8172000C8ED6 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		7B1D545D5132C8DC09B714C3 /* Pods-Bible Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.release.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.release.xcconfig"; sourceTree = "<group>"; };
 		842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemIsActive.swift; sourceTree = "<group>"; };
+		845FDF0724912A5700A0CF33 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		845FDF0924912A6600A0CF33 /* EventsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetail.swift; path = "Bible Buddy/Views/EventsDetail.swift"; sourceTree = SOURCE_ROOT; };
+		845FDF0B24912A6D00A0CF33 /* Landmark.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		845FDF0D24912A7C00A0CF33 /* EventsApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsApi.swift; path = "Bible Buddy/EventsApi.swift"; sourceTree = SOURCE_ROOT; };
+		845FDF0F24912A8700A0CF33 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = "Bible Buddy/ViewModel/MapView.swift"; sourceTree = SOURCE_ROOT; };
+		845FDF1124912A8F00A0CF33 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		845FDF1324912BE400A0CF33 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
 		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -139,6 +153,7 @@
 		11FE910A24813E31000C8ED6 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				845FDF1124912A8F00A0CF33 /* RemoteImage.swift */,
 				11FE910B24814246000C8ED6 /* BlogPostListVM.swift */,
 				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
 				11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */,
@@ -204,7 +219,12 @@
 		84BFF070246C1D8D0018296F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				845FDF0F24912A8700A0CF33 /* MapView.swift */,
+				845FDF0D24912A7C00A0CF33 /* EventsApi.swift */,
+				845FDF0B24912A6D00A0CF33 /* Landmark.swift */,
+				845FDF0924912A6600A0CF33 /* EventsDetail.swift */,
 				11B975F32480584700680B54 /* BlogPost.swift */,
+				845FDF0724912A5700A0CF33 /* Events.swift */,
 				11FE911524868BE0000C8ED6 /* UserProfile.swift */,
 				84DCE469247A7CCE005AA691 /* SessionStore.swift */,
 				11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */,
@@ -212,6 +232,7 @@
 				11FE911324868B57000C8ED6 /* UserProfileRepository.swift */,
 				11B975F52480625700680B54 /* FirestoreBlogPostRepository.swift */,
 				11FE911B248A8172000C8ED6 /* URLImage.swift */,
+				845FDF1324912BE400A0CF33 /* ImageLoader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -387,6 +408,7 @@
 				84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
+				845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */,
 				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
@@ -402,6 +424,7 @@
 				84E174E224845523007E6A54 /* EmailField.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
 				84C5745B24850020006057C2 /* PasswordField.swift in Sources */,
+				845FDF0824912A5700A0CF33 /* Events.swift in Sources */,
 				848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
 				11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */,
@@ -414,10 +437,12 @@
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
+				845FDF1424912BE400A0CF33 /* ImageLoader.swift in Sources */,
 				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
 				11FE911424868B57000C8ED6 /* UserProfileRepository.swift in Sources */,
 				11B975F62480625700680B54 /* FirestoreBlogPostRepository.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
+				845FDF1024912A8700A0CF33 /* MapView.swift in Sources */,
 				11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
 				11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */,
@@ -425,6 +450,7 @@
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
+				845FDF0E24912A7C00A0CF33 /* EventsApi.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
 				11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
@@ -435,6 +461,8 @@
 				11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */,
 				848CC57D247534050000A1F3 /* TestView.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
+				845FDF0A24912A6600A0CF33 /* EventsDetail.swift in Sources */,
+				845FDF0C24912A6D00A0CF33 /* Landmark.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
