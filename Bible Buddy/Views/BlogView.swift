@@ -8,23 +8,46 @@
 
 import SwiftUI
 
-struct BlogView: View {
+struct BlogView: View {	
+    @ObservedObject var postlistVM = BlogPostListVM()
+    @State var showAddPost: Bool = false
+    
     var body: some View {
-        NavigationView {
-            VStack(alignment: .center){
-                Text("Blog")
-                
-            }
-            .navigationBarItems(leading:
-                HStack(spacing: 220){
-                    Text("Blog")
-                        .font(.system(size: 35, weight: .bold))
-                        .padding(5.0)
-                    Image("people").resizable()
-                        .frame(width: 80.0, height: 50.0)
-                        .cornerRadius(8.0)
-                        .padding(5.0)
-            })
+        ZStack{
+            
+            Color(#colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 0.22)).edgesIgnoringSafeArea(.all)
+            List{
+                ForEach(postlistVM.blogPostVMs) { postVM in
+                    NavigationLink(destination: BlogPostDetailView(postVM: postVM)) {
+                        BlogPostCard(postVM: postVM)
+                    }
+                }
+            }.navigationBarTitle("Blog", displayMode: .inline)
+                .onAppear {
+                    UITableView.appearance().separatorStyle = .none
+//            }.navigationBarItems(trailing: Button(action: {
+//                self.showAddPost.toggle()
+//            }){
+//                Text("Add")
+//            }).sheet(isPresented: $showAddPost) {
+//                BlogPostEditView()
+//            }
+            }.navigationBarItems(trailing:
+                HStack{
+                NavigationLink(
+                    destination: BlogPostEditView(showSelf: $showAddPost).environmentObject(postlistVM),
+                    isActive: $showAddPost ){
+                            //Text("Add")
+                        EmptyView()
+                }
+                Button(action: {
+                    self.showAddPost.toggle()
+                }) {
+                    Image(systemName: "plus.circle")
+                }
+                }
+            )
+            
         }
     }
 }

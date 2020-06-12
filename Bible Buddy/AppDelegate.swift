@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .font: UIFont.monospacedSystemFont(ofSize: 36, weight: .black)]
         appearance.largeTitleTextAttributes = attrs
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        FirebaseApp.configure()
         return true
     }
 
