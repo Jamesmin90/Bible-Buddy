@@ -14,7 +14,7 @@ struct BlogPostDetailView: View {
     
     var body: some View {
         VStack() {
-            Image(postVM.post.image)
+            Image(uiImage: UIImage(data: postVM.blogImage) ?? UIImage())
             .resizable()
                 //.edgesIgnoringSafeArea(.top)
                 .frame(height: 300)
@@ -62,7 +62,6 @@ struct BlogPostDetailView: View {
             }.padding()
             
             HStack(){
-                Text(postVM.userProfile.profilePictureID)
                 Text(postVM.post.body)
                     .multilineTextAlignment(.leading)
                 Spacer()
@@ -76,7 +75,7 @@ struct BlogPostDetailView: View {
 
 struct BlogPostDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        BlogPostDetailView(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum bla bla blaa", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people")))
+        BlogPostDetailView(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum bla bla blaa", userName: "Jannis G.", userID: "123", category: "Bible study", imageURL: "")))
     }
 }
 

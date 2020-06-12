@@ -14,7 +14,7 @@ import FirebaseFirestoreSwift
 
 class UserProfileVM: ObservableObject {
 
-    @Published var profile: UserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureID: "", profilePictureURL: "")
+    @Published var profile: UserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureURL: "")
     @Published var profilepicture: Data = Data()
     
     var repository: FirestoreUserProfileRepository
@@ -25,6 +25,7 @@ class UserProfileVM: ObservableObject {
     init(userID: String) {
         self.repository = FirestoreUserProfileRepository(userId: userID)
         //getUserProfileById(userId: userID)
+        
         repository.$currentUserProfile.sink { value in
             print("UserVM updated for \(value.userName)")
             self.profile = value

@@ -15,7 +15,6 @@ struct UserProfile: Codable, Identifiable {
     var name: String
     var surName: String
     var userName: String
-    var profilePictureID: String
     var profilePictureURL: String
     @ServerTimestamp var createdTime: Timestamp?
 }

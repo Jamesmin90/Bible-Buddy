@@ -15,7 +15,8 @@ struct BlogPostCard: View {
     var body: some View {
         
         VStack {
-            Image(postVM.post.image)
+            
+            Image(uiImage: UIImage(data: postVM.blogImage) ?? UIImage())
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             
@@ -60,6 +61,6 @@ struct BlogPostCard: View {
 
 struct BlogPostCard_Previews: PreviewProvider {
     static var previews: some View {
-        BlogPostCard(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people")))
+        BlogPostCard(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum", userName: "Jannis G.", userID: "123", category: "Bible study", imageURL: "people")))
     }
 }

@@ -13,7 +13,9 @@ class BlogPostVM: ObservableObject, Identifiable {
     @Published var post: BlogPost
     //@Published
     var userProfileVM: UserProfileVM
-    @Published var userProfile: UserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureID: "", profilePictureURL: "")
+    @Published var userProfile: UserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureURL: "")
+    
+    @Published var blogImage: Data = Data()
     
     var id = ""
     
@@ -34,9 +36,13 @@ class BlogPostVM: ObservableObject, Identifiable {
             self.userProfile = value
         }.store(in: &cancellables)
         
+        URLImage(urlString: post.imageURL).$data.sink{ data in
+            self.blogImage = data
+        }.store(in: &cancellables)
+        
     }
     
     static func newBlogPost() -> BlogPostVM {
-        BlogPostVM(post: BlogPost(title: "", body: "", userName: "", userID: "", category: "", image: ""))
+        BlogPostVM(post: BlogPost(title: "", body: "", userName: "", userID: "", category: "", imageURL: ""))
     }
 }

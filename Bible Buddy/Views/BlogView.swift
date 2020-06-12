@@ -8,7 +8,10 @@
 
 import SwiftUI
 
-struct BlogView: View {	
+struct BlogView: View {
+    
+    @EnvironmentObject var session: SessionStore
+    
     @ObservedObject var postlistVM = BlogPostListVM()
     @State var showAddPost: Bool = false
     
@@ -25,29 +28,32 @@ struct BlogView: View {
             }.navigationBarTitle("Blog", displayMode: .inline)
                 .onAppear {
                     UITableView.appearance().separatorStyle = .none
-//            }.navigationBarItems(trailing: Button(action: {
-//                self.showAddPost.toggle()
-//            }){
-//                Text("Add")
-//            }).sheet(isPresented: $showAddPost) {
-//                BlogPostEditView()
-//            }
-            }.navigationBarItems(trailing:
-                HStack{
-                NavigationLink(
-                    destination: BlogPostEditView(showSelf: $showAddPost).environmentObject(postlistVM),
-                    isActive: $showAddPost ){
-                            //Text("Add")
-                        EmptyView()
-                }
-                Button(action: {
-                    self.showAddPost.toggle()
-                }) {
-                    Image(systemName: "plus.circle")
-                }
-                }
+                    //            }.navigationBarItems(trailing: Button(action: {
+                    //                self.showAddPost.toggle()
+                    //            }){
+                    //                Text("Add")
+                    //            }).sheet(isPresented: $showAddPost) {
+                    //                BlogPostEditView()
+                    //            }
+            } .navigationBarItems(trailing: session.session != nil ? AnyView(self.addButton) : AnyView(EmptyView())
             )
             
+        }
+    }
+    
+    var addButton: some View {
+        HStack{
+            NavigationLink(
+                destination: BlogPostEditView(showSelf: $showAddPost, postlistVM: postlistVM), //.environmentObject(postlistVM),
+            isActive: $showAddPost) {
+                //Text("Add")
+                EmptyView()
+            }
+            Button(action: {
+                self.showAddPost.toggle()
+            }) {
+                Image(systemName: "plus.circle")
+            }
         }
     }
 }
