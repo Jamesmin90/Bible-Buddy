@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,10 @@
 		845FDF1024912A8700A0CF33 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0F24912A8700A0CF33 /* MapView.swift */; };
 		845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1124912A8F00A0CF33 /* RemoteImage.swift */; };
 		845FDF1424912BE400A0CF33 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1324912BE400A0CF33 /* ImageLoader.swift */; };
+		845FDF17249561ED00A0CF33 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF16249561ED00A0CF33 /* ImagePicker.swift */; };
+		845FDF192495621800A0CF33 /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF182495621800A0CF33 /* CreateUser.swift */; };
+		845FDF1B2495640E00A0CF33 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1A2495640E00A0CF33 /* CreateAccount.swift */; };
+		848609EC24956B3D00C72648 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 848609EB24956B3D00C72648 /* SDWebImageSwiftUI */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
 		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
 		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
@@ -92,6 +96,9 @@
 		845FDF0F24912A8700A0CF33 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = "Bible Buddy/ViewModel/MapView.swift"; sourceTree = SOURCE_ROOT; };
 		845FDF1124912A8F00A0CF33 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		845FDF1324912BE400A0CF33 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		845FDF16249561ED00A0CF33 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		845FDF182495621800A0CF33 /* CreateUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
+		845FDF1A2495640E00A0CF33 /* CreateAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
 		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -135,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848609EC24956B3D00C72648 /* SDWebImageSwiftUI in Frameworks */,
 				07746FFFC56752292BC4F921 /* Pods_Bible_Buddy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -170,6 +178,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		845FDF15249561B400A0CF33 /* ProfilePage */ = {
+			isa = PBXGroup;
+			children = (
+				845FDF16249561ED00A0CF33 /* ImagePicker.swift */,
+				845FDF182495621800A0CF33 /* CreateUser.swift */,
+				845FDF1A2495640E00A0CF33 /* CreateAccount.swift */,
+			);
+			path = ProfilePage;
+			sourceTree = "<group>";
+		};
 		84BFF050246C1D760018296F = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +211,7 @@
 		84BFF05B246C1D760018296F /* Bible Buddy */ = {
 			isa = PBXGroup;
 			children = (
+				845FDF15249561B400A0CF33 /* ProfilePage */,
 				11FE910A24813E31000C8ED6 /* ViewModel */,
 				84DCE46B247A7E87005AA691 /* ViewController */,
 				84BFF070246C1D8D0018296F /* Model */,
@@ -299,6 +318,9 @@
 			dependencies = (
 			);
 			name = "Bible Buddy";
+			packageProductDependencies = (
+				848609EB24956B3D00C72648 /* SDWebImageSwiftUI */,
+			);
 			productName = "Bible Buddy";
 			productReference = 84BFF059246C1D760018296F /* Bible Buddy.app */;
 			productType = "com.apple.product-type.application";
@@ -327,6 +349,9 @@
 				Base,
 			);
 			mainGroup = 84BFF050246C1D760018296F;
+			packageReferences = (
+				848609EA24956B3D00C72648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 84BFF05A246C1D760018296F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -399,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				845FDF1B2495640E00A0CF33 /* CreateAccount.swift in Sources */,
 				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
 				84E174D824841477007E6A54 /* ProfilePageView.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
@@ -409,6 +435,7 @@
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84DCE46A247A7CCE005AA691 /* SessionStore.swift in Sources */,
 				845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */,
+				845FDF192495621800A0CF33 /* CreateUser.swift in Sources */,
 				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
@@ -451,6 +478,7 @@
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				845FDF0E24912A7C00A0CF33 /* EventsApi.swift in Sources */,
+				845FDF17249561ED00A0CF33 /* ImagePicker.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
 				11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
@@ -656,6 +684,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		848609EA24956B3D00C72648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		848609EB24956B3D00C72648 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 848609EA24956B3D00C72648 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84BFF051246C1D760018296F /* Project object */;
 }
