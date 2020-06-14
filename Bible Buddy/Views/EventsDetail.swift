@@ -12,6 +12,7 @@ struct EventsDetail: View {
     
     @State var posts: EventsPost
     @State private var loading: Bool = true
+
     
     var body: some View {
         List{
@@ -25,31 +26,24 @@ struct EventsDetail: View {
                    .font(.title)
                    .fontWeight(.bold)
            }
-            Text(posts.date)
-                .font(.headline)
-                .frame(width: 380, height: 50)
-                .background(Color.gray.opacity(0.5))
-                .cornerRadius(10)
-            Text(posts.location)
-                .font(.headline)
-                .frame(width: 380, height: 50)
-                .background(Color.gray.opacity(0.5))
-                .cornerRadius(10)
-            Text(posts.description)
-                .font(.headline)
-                .frame(width: 380, height: 150)
-                .background(Color.gray.opacity(0.5))
-                .cornerRadius(10)
+            TextDescriptionEvents(descriptiontext: posts.date, height: 50 )
+               
+            TextDescriptionEvents(descriptiontext: posts.location, height: 50)
+            
+            TextDescriptionEvents(descriptiontext: posts.description, height: 150)
+            
             MapView(latitude: posts.latitude, longitude: posts.longitude, title: posts.location, subtitle: posts.name)
             . frame(width: 380, height: 180)
             
             
                 
         }
-        
         .navigationBarTitle(Text(posts.name), displayMode: .inline)
+        
     }
 }
+
+
 
 struct EventsDetail_Previews: PreviewProvider {
     static var previews: some View {

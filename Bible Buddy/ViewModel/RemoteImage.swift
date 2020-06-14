@@ -20,9 +20,10 @@ struct RemoteImage: View {
         Image(uiImage: (imageLoader.data.count == 0) ? UIImage(named: "loading1")! : imageLoader.downloadImage!)
         .resizable()
         .aspectRatio(contentMode: .fill)
-        .frame(width:380, height: 150)
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(height:150)
+        .padding(.vertical, 10)
         .cornerRadius(12)
-        
     }
     
     
@@ -47,7 +48,9 @@ struct RemoteImage2: View {
         Image(uiImage: (imageLoader.data.count == 0) ? UIImage(named: "loading")! : UIImage(data: imageLoader.data)! )
         .resizable()
         .aspectRatio(contentMode: .fill)
-        .frame(width:380, height: 250)
+        .frame(minWidth: 0, maxWidth: .infinity)
+        .frame(height:150)
+        .padding(.vertical, 10)
         .cornerRadius(12)
         
         
