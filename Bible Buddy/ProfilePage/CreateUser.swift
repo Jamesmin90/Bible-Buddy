@@ -10,7 +10,7 @@ import Foundation
 import Firebase
 
 
-func CreateUser(name: String, imagedata : Data,completion : @escaping (Bool)-> Void){
+func CreateUser(name: String,surName: String, userName: String, imagedata : Data,completion : @escaping (Bool)-> Void){
     
     let db = Firestore.firestore()
     
@@ -34,7 +34,7 @@ func CreateUser(name: String, imagedata : Data,completion : @escaping (Bool)-> V
                 return
             }
             
-            db.collection("users1").document(uid!).setData(["name":name,"pic":"\(url!)","uid":uid!]) { (err) in
+            db.collection("users").document(uid!).setData(["name":name,"profilePictureURL":"\(url!)","uid":uid!, "surName": surName, "userName":userName]) { (err) in
                 
                 if err != nil{
                     
@@ -46,11 +46,11 @@ func CreateUser(name: String, imagedata : Data,completion : @escaping (Bool)-> V
                 
                 UserDefaults.standard.set(true, forKey: "status")
                 
-                UserDefaults.standard.set(name, forKey: "UserName")
+                UserDefaults.standard.set(userName, forKey: "UserName")
                 
                 UserDefaults.standard.set(uid, forKey: "UID")
                 
-                UserDefaults.standard.set("\(url!)", forKey: "pic")
+                UserDefaults.standard.set("\(url!)", forKey: "profilePictureURL")
                 
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                     

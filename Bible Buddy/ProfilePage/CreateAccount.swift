@@ -17,12 +17,15 @@ struct AccountCreation : View {
     @State var loading = false
     @State var imagedata : Data = .init(count: 0)
     @State var alert = false
+    @State var userName = ""
+    @State var surName = ""
     
     var body : some View{
         
         VStack(alignment: .leading, spacing: 15){
             
-            Text("Awesome !!! Create An Account").font(.title)
+            TextMessage(textMessage: "Geben Sie bitte Ihren Benutzernamen und Ihr Profilbild an")
+            
             
             HStack{
                 
@@ -36,7 +39,11 @@ struct AccountCreation : View {
                     
                     if self.imagedata.count == 0{
                         
-                       Image(systemName: "person.crop.circle.badge.plus").resizable().frame(width: 90, height: 70).foregroundColor(.gray)
+                       Image("upload-image").resizable()
+                       .aspectRatio(contentMode: .fit)
+                       .frame(maxWidth: .infinity, maxHeight: 180)
+                       .padding(6)
+                        .foregroundColor(.black)
                     }
                     else{
                         
@@ -50,17 +57,28 @@ struct AccountCreation : View {
             }
             .padding(.vertical, 15)
             
-            Text("Enter User Name")
-                .font(.body)
-                .foregroundColor(.gray)
-                .padding(.top, 12)
 
+            TextField("UserName", text: self.$userName)
+                .font(.system(size: 14))
+                .padding(15)
+                .background(RoundedRectangle(cornerRadius: 5)
+                .strokeBorder(Color.black, lineWidth: 1))
+                .background(Color(.white))
+            
             TextField("Name", text: self.$name)
-                    .keyboardType(.numberPad)
-                    .padding()
-                    .background(Color("Color"))
-                    .clipShape(RoundedRectangle(cornerRadius: 10))
-                    .padding(.top, 15)
+                .font(.system(size: 14))
+                .padding(15)
+                .background(RoundedRectangle(cornerRadius: 5)
+                .strokeBorder(Color.black, lineWidth: 1))
+                .background(Color(.white))
+           
+            TextField("Surname", text: self.$surName)
+                .font(.system(size: 14))
+                .padding(15)
+                .background(RoundedRectangle(cornerRadius: 5)
+                .strokeBorder(Color.black, lineWidth: 1))
+                .background(Color(.white))
+                    
             
             
             if self.loading{
@@ -82,7 +100,7 @@ struct AccountCreation : View {
                     if self.name != "" && self.imagedata.count != 0{
                         
                         self.loading.toggle()
-                        CreateUser(name: self.name, imagedata: self.imagedata) { (status) in
+                        CreateUser(name: self.name, surName: self.surName, userName: self.userName, imagedata: self.imagedata) { (status) in
                             
                             
                             if status{
@@ -100,16 +118,24 @@ struct AccountCreation : View {
                 }) {
                     
 
-                Text("Create").frame(width: UIScreen.main.bounds.width - 30,height: 50)
+                Text("erstellen").frame(minWidth: 0, maxWidth: .infinity)
+                .frame(height: 50)
+                .font(.system(size: 13, weight: .bold))
+                .foregroundColor(.black)
+                .background(Color(#colorLiteral(red: 0.9198423028, green: 0.9198423028, blue: 0.9198423028, alpha: 1)))
+                .cornerRadius(5)
                          
-                }.foregroundColor(.white)
-                .background(Color.orange)
-                .cornerRadius(10)
+                }.padding(.top, 30)
+                
                 
             }
+            Spacer()
             
         }
-        .padding()
+        .padding(.horizontal)
+        .background(Color("basicBackgroundColor")
+        .edgesIgnoringSafeArea(.all))
+        .navigationBarTitle("Profil", displayMode: .inline)
         .sheet(isPresented: self.$picker, content: {
             
             ImagePicker(picker: self.$picker, imagedata: self.$imagedata)
