@@ -196,7 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				11FE910A24813E31000C8ED6 /* ViewModel */,
-				84DCE46B247A7E87005AA691 /* ViewController */,
+				84DCE46B247A7E87005AA691 /* Repository */,
 				84BFF070246C1D8D0018296F /* Model */,
 				84BFF05C246C1D760018296F /* AppDelegate.swift */,
 				84BFF05E246C1D760018296F /* SceneDelegate.swift */,
@@ -224,7 +224,6 @@
 				845FDF0F24912A8700A0CF33 /* MapView.swift */,
 				845FDF0D24912A7C00A0CF33 /* EventsApi.swift */,
 				845FDF0B24912A6D00A0CF33 /* Landmark.swift */,
-				845FDF0924912A6600A0CF33 /* EventsDetail.swift */,
 				11B975F32480584700680B54 /* BlogPost.swift */,
 				845FDF0724912A5700A0CF33 /* Events.swift */,
 				11FE911524868BE0000C8ED6 /* UserProfile.swift */,
@@ -242,6 +241,7 @@
 		84BFF071246C1D9F0018296F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				845FDF0924912A6600A0CF33 /* EventsDetail.swift */,
 				848CC572247534050000A1F3 /* Carousel.swift */,
 				848CC573247534050000A1F3 /* CarouselCard.swift */,
 				84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */,
@@ -277,11 +277,11 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		84DCE46B247A7E87005AA691 /* ViewController */ = {
+		84DCE46B247A7E87005AA691 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewController;
+			path = Repository;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
