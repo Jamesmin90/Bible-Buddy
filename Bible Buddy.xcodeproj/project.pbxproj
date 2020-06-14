@@ -24,6 +24,7 @@
 		11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911724868E50000C8ED6 /* FirestoreUserProfileRepository.swift */; };
 		11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */; };
 		11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911B248A8172000C8ED6 /* URLImage.swift */; };
+		842640F0249682FA00C464B4 /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640EF249682FA00C464B4 /* HTMLStringView.swift */; };
 		842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */; };
 		845FDF0824912A5700A0CF33 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0724912A5700A0CF33 /* Events.swift */; };
 		845FDF0A24912A6600A0CF33 /* EventsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0924912A6600A0CF33 /* EventsDetail.swift */; };
@@ -84,6 +85,7 @@
 		11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileVM.swift; sourceTree = "<group>"; };
 		11FE911B248A8172000C8ED6 /* URLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImage.swift; sourceTree = "<group>"; };
 		7B1D545D5132C8DC09B714C3 /* Pods-Bible Buddy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.release.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.release.xcconfig"; sourceTree = "<group>"; };
+		842640EF249682FA00C464B4 /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
 		842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemIsActive.swift; sourceTree = "<group>"; };
 		845FDF0724912A5700A0CF33 /* Events.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		845FDF0924912A6600A0CF33 /* EventsDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDetail.swift; path = "Bible Buddy/Views/EventsDetail.swift"; sourceTree = SOURCE_ROOT; };
@@ -270,6 +272,7 @@
 				11B975F92480FC5900680B54 /* BlogPostDetailView.swift */,
 				11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */,
 				11FE9111248526FC000C8ED6 /* TextView.swift */,
+				842640EF249682FA00C464B4 /* HTMLStringView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
+				842640F0249682FA00C464B4 /* HTMLStringView.swift in Sources */,
 				842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */,
 				84E174E224845523007E6A54 /* EmailField.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,
