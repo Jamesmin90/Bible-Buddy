@@ -70,8 +70,8 @@ struct Chat : View {
                             }
                             
                         }.padding()
-                        .background(Color("basicBackgroundColor")
-                        .edgesIgnoringSafeArea(.all))
+                        //.background(Color("basicBackgroundColor")
+                        //.edgesIgnoringSafeArea(.all))
                         
                     }
                 }
