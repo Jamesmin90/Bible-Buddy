@@ -18,7 +18,7 @@ struct Carousel: View {
         ScrollView(.horizontal, showsIndicators: false) {
             
             HStack {
-                NavigationLink(destination: BibleView()){
+                NavigationLink(destination: BibleContentOverview()){
                     CarouselCard(image: "bible", title: "Bibel", backgroundColorCard: Color(#colorLiteral(red: 0.2522913464, green: 0.2399643849, blue: 0.8064919099, alpha: 0.3844178082)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
                 }.padding(10)
                 NavigationLink(destination: BlogView()){
