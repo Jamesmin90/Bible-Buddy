@@ -34,7 +34,7 @@ func CreateUser(vorName: String,surName: String, userName: String, imagedata : D
                 return
             }
             
-            db.collection("users").document(uid!).setData(["name":vorName,"pic":"\(url!)","uid":uid!, "surName": surName, "userName":userName]) { (err) in
+            db.collection("users").document(uid!).setData(["vorName":vorName,"pic":"\(url!)","uid":uid!, "surName": surName, "userName":userName]) { (err) in
                 
                 if err != nil{
                     

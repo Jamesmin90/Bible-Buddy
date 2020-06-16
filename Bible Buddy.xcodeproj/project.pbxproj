@@ -173,7 +173,6 @@
 				11FE910B24814246000C8ED6 /* BlogPostListVM.swift */,
 				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
 				11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */,
-				84860A092497BE2900C72648 /* checkUser.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -203,6 +202,7 @@
 				84860A032496DAD200C72648 /* Chat.swift */,
 				84860A022496DAD200C72648 /* ChatRepository.swift */,
 				84860A042496DAD200C72648 /* Indicator.swift */,
+				84860A092497BE2900C72648 /* checkUser.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -653,6 +653,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = MXGR5AABXL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -673,6 +674,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = MXGR5AABXL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

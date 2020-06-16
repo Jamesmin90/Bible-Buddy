@@ -16,9 +16,11 @@ struct AccountCreation : View {
     @State var picker = false
     @State var loading = false
     @State var imagedata : Data = .init(count: 0)
-    @State var alert = false
     @State var userName = ""
     @State var surName = ""
+    @State var showAlert = false
+    
+    @Environment(\.presentationMode) var presMode: Binding<PresentationMode>
     
     var body : some View{
         
@@ -65,7 +67,7 @@ struct AccountCreation : View {
                 .strokeBorder(Color.black, lineWidth: 1))
                 .background(Color(.white))
             
-            TextField("Name", text: self.$name)
+            TextField("Vorname", text: self.$name)
                 .font(.system(size: 14))
                 .padding(15)
                 .background(RoundedRectangle(cornerRadius: 5)
@@ -111,7 +113,7 @@ struct AccountCreation : View {
                     }
                     else{
                         
-                        self.alert.toggle()
+                        self.showAlert.toggle()
                     }
                     
                     
@@ -140,9 +142,8 @@ struct AccountCreation : View {
             
             ImagePicker(picker: self.$picker, imagedata: self.$imagedata)
         })
-        .alert(isPresented: self.$alert) {
-            
-            Alert(title: Text("Message"), message: Text("Please Fill The Contents"), dismissButton: .default(Text("Ok")))
-        }
+        .alert(isPresented: self.$showAlert) {
+           Alert(title: Text(""), message: Text("Änderung erfolgreich abgeschlossen"), dismissButton: .default(Text("OK"), action: {self.presMode.wrappedValue.dismiss()}))
+       }
     }
 }

@@ -24,7 +24,7 @@ struct HomeView: View {
             VStack {
                 
                 WelcomeTextView()
-                NavigationLink(destination: Home().environmentObject(MainObservable())) {
+                NavigationLink(destination: Chat().environmentObject(MainObservable())) {
                     Text("ChatRoom")
                 }
                 Spacer()

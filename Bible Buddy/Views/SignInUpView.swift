@@ -33,7 +33,6 @@ struct SignInUpView: View {
             PasswordField(password: self.$password, hidePassword: self.$hidePassword)
             
             if (buttonText == "Anmelden") {
-                UserName(userName: $userName)
                 NavigationLink(destination: ForgotPasswordView(continueText: "Geben Sie bitte Ihre Email-Adresse ein", buttonText: "Passwort zurücksetzen")) {
                     HStack {
                         Text("Passwort vergessen?")
@@ -67,7 +66,7 @@ struct SignInUpView: View {
             if error != nil{
             self.signInUpCompletionHandler(error: error)
             }
-            checkUser{ (exists, userName, uid, pic) in
+            checkUser { (exists, userName, uid, pic) in
                 
                 if exists{
                      UserDefaults.standard.set(true, forKey: "status")

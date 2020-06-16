@@ -15,7 +15,7 @@ struct HomeViewLoggedIn: View {
             Color(#colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 0.22)).edgesIgnoringSafeArea(.all)
             VStack {
                 WelcomeTextView()
-                NavigationLink(destination: Home().environmentObject(MainObservable())) {
+                NavigationLink(destination: Chat().environmentObject(MainObservable())) {
                     Text("ChatRoom")
                 }
 

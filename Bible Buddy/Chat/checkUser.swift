@@ -13,7 +13,7 @@ func checkUser(completion: @escaping (Bool,String,String,String)->Void){
     
     let db = Firestore.firestore()
     
-    db.collection("user").getDocuments { (snap, err) in
+    db.collection("users").getDocuments { (snap, err) in
         
         if err != nil{
                     

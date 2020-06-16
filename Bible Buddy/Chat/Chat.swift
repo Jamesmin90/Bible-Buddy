@@ -12,7 +12,7 @@ import Firebase
 import SDWebImageSwiftUI
 import FirebaseFirestore
 
-struct Home : View {
+struct Chat : View {
     
     //@State var myuid = UserDefaults.standard.value(forKey: "UserName") as! String
     @EnvironmentObject var datas : MainObservable
@@ -70,10 +70,13 @@ struct Home : View {
                             }
                             
                         }.padding()
+                        .background(Color("basicBackgroundColor")
+                        .edgesIgnoringSafeArea(.all))
                         
                     }
                 }
-            }.navigationBarTitle("ChatRoom",displayMode: .inline)
+            }
+            .navigationBarTitle("ChatRoom",displayMode: .inline)
               .navigationBarItems(trailing:
               
                   Button(action: {
@@ -88,6 +91,8 @@ struct Home : View {
               
             )
         }
+        .background(Color("basicBackgroundColor")
+        .edgesIgnoringSafeArea(.all))
         .sheet(isPresented: self.$show) {
             
             newChatView(name: self.$name, uid: self.$uid, pic: self.$pic, show: self.$show, chat: self.$chat)
@@ -193,6 +198,8 @@ struct newChatView : View {
                     }
               }
         }.padding()
+        .background(Color("basicBackgroundColor")
+        .edgesIgnoringSafeArea(.all))
     }
 }
 
@@ -292,6 +299,7 @@ struct ChatView : View {
     @State var msgs = [Msg]()
     @State var txt = ""
     @State var nomsgs = false
+    let mypic = UserDefaults.standard.value(forKey: "pic") as! String
     
     var body : some View{
         
@@ -335,8 +343,11 @@ struct ChatView : View {
                                         .background(Color.blue)
                                         .clipShape(ChatBubble(mymsg: true))
                                         .foregroundColor(.white)
+                                    
+                                    AnimatedImage(url: URL(string: self.mypic)!).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
                                 }
                                 else{
+                                    AnimatedImage(url: URL(string: self.pic)!).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
                                     
                                     Text(i.msg).padding().background(Color.green).clipShape(ChatBubble(mymsg: false)).foregroundColor(.white)
                                     
@@ -378,6 +389,8 @@ struct ChatView : View {
                 }))
             
         }.padding()
+        .background(Color("basicBackgroundColor")
+        .edgesIgnoringSafeArea(.all))
         .onAppear {
         
             self.getMsgs()
@@ -413,8 +426,9 @@ struct ChatView : View {
                     let id = i.document.documentID
                     let msg = i.document.get("msg") as! String
                     let user = i.document.get("user") as! String
+                    let pic = i.document.get("pic") as! String
                     
-                    self.msgs.append(Msg(id: id, msg: msg, user: user))
+                    self.msgs.append(Msg(id: id, msg: msg, user: user, pic: pic))
                 }
 
             }
@@ -427,6 +441,7 @@ struct Msg : Identifiable {
     var id : String
     var msg : String
     var user : String
+    var pic : String
 }
 
 struct ChatBubble : Shape {
@@ -468,7 +483,7 @@ func sendMsg(user: String,uid: String,pic: String,date: Date,msg: String){
         }
     }
     
-    updateDB(uid: uid, msg: msg, date: date)
+    updateDB(uid: uid, msg: msg, date: date, pic: pic)
 }
 
 func setRecents(user: String,uid: String,pic: String,msg: String,date: Date){
@@ -512,13 +527,13 @@ func updateRecents(uid: String,lastmsg: String,date: Date){
      db.collection("users").document(myuid!).collection("recents").document(uid).updateData(["lastmsg":lastmsg,"date":date])
 }
 
-func updateDB(uid: String,msg: String,date: Date){
+func updateDB(uid: String,msg: String,date: Date, pic: String){
     
     let db = Firestore.firestore()
     
     let myuid = Auth.auth().currentUser?.uid
     
-    db.collection("msgs").document(uid).collection(myuid!).document().setData(["msg":msg,"user":myuid!,"date":date]) { (err) in
+    db.collection("msgs").document(uid).collection(myuid!).document().setData(["msg":msg,"user":myuid!,"date":date, "pic":pic]) { (err) in
         
         if err != nil{
             
@@ -527,7 +542,7 @@ func updateDB(uid: String,msg: String,date: Date){
         }
     }
     
-    db.collection("msgs").document(myuid!).collection(uid).document().setData(["msg":msg,"user":myuid!,"date":date]) { (err) in
+    db.collection("msgs").document(myuid!).collection(uid).document().setData(["msg":msg,"user":myuid!,"date":date, "pic": pic]) { (err) in
         
         if err != nil{
             
