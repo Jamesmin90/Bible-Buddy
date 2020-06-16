@@ -32,7 +32,7 @@
 		845FDF1024912A8700A0CF33 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF0F24912A8700A0CF33 /* MapView.swift */; };
 		845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1124912A8F00A0CF33 /* RemoteImage.swift */; };
 		845FDF1424912BE400A0CF33 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1324912BE400A0CF33 /* ImageLoader.swift */; };
-		848609F524968D3100C72648 /* TextDescriptionEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848609F424968D3100C72648 /* TextDescriptionEvents.swift */; };
+		848609F524968D3100C72648 /* TextDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848609F424968D3100C72648 /* TextDescription.swift */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
 		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
 		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
@@ -93,7 +93,7 @@
 		845FDF0F24912A8700A0CF33 /* MapView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = "Bible Buddy/ViewModel/MapView.swift"; sourceTree = SOURCE_ROOT; };
 		845FDF1124912A8F00A0CF33 /* RemoteImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 		845FDF1324912BE400A0CF33 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		848609F424968D3100C72648 /* TextDescriptionEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescriptionEvents.swift; sourceTree = "<group>"; };
+		848609F424968D3100C72648 /* TextDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescription.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
 		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
@@ -272,7 +272,7 @@
 				11B975F92480FC5900680B54 /* BlogPostDetailView.swift */,
 				11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */,
 				11FE9111248526FC000C8ED6 /* TextView.swift */,
-				848609F424968D3100C72648 /* TextDescriptionEvents.swift */,
+				848609F424968D3100C72648 /* TextDescription.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
-				848609F524968D3100C72648 /* TextDescriptionEvents.swift in Sources */,
+				848609F524968D3100C72648 /* TextDescription.swift in Sources */,
 				842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */,
 				84E174E224845523007E6A54 /* EmailField.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleView.swift in Sources */,

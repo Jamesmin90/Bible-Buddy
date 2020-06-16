@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct TextDescriptionEvents: View {
+struct TextDescription: View {
     var descriptiontext : String
     var height: CGFloat
     var body: some View {

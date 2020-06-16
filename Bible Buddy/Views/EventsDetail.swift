@@ -26,11 +26,11 @@ struct EventsDetail: View {
                    .font(.title)
                    .fontWeight(.bold)
            }
-            TextDescriptionEvents(descriptiontext: posts.date, height: 50 )
+            TextDescription(descriptiontext: posts.date, height: 50 )
                
-            TextDescriptionEvents(descriptiontext: posts.location, height: 50)
+            TextDescription(descriptiontext: posts.location, height: 50)
             
-            TextDescriptionEvents(descriptiontext: posts.description, height: 150)
+            TextDescription(descriptiontext: posts.description, height: 150)
             
             MapView(latitude: posts.latitude, longitude: posts.longitude, title: posts.location, subtitle: posts.name)
             . frame(width: 380, height: 180)
