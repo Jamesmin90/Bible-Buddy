@@ -58,6 +58,24 @@ struct ContentView: View {
     }
 }
 
+extension UINavigationController{
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        
+        let standardAppearance = UINavigationBarAppearance()
+        standardAppearance.backgroundColor = .some(UIColor(red: 0.93, green: 0.93, blue: 0.93, alpha: 1.00))
+        standardAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navigationBar.standardAppearance = standardAppearance
+        //navigationController?.navigationBar.tintColor
+        
+        UITableView.appearance().backgroundColor = UIColor(red: 0.92, green: 1.00, blue: 1.00, alpha: 1.00)
+        UITableViewCell.appearance().backgroundColor = UIColor(red: 0.92, green: 1.00, blue: 1.00, alpha: 1.00)
+        UITableView.appearance().tableFooterView = UIView()
+        
+        
+}
+}
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

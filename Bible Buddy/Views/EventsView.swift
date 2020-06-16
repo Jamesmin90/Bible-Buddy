@@ -13,6 +13,12 @@ struct EventsView: View {
     @State var posts: [EventsPost] = []
     //@State var loading: Bool = true
     
+    init(){
+        UITableView.appearance().backgroundColor = UIColor(red: 0.92, green: 1.00, blue: 1.00, alpha: 1.00)
+        UITableViewCell.appearance().backgroundColor = UIColor(red: 0.92, green: 1.00, blue: 1.00, alpha: 1.00)
+        UITableView.appearance().tableFooterView = UIView()
+    }
+    
     var body: some View {
         
             List(self.posts, id: \.name) { post in
@@ -31,7 +37,9 @@ struct EventsView: View {
                     
                 }
                 
+                
             }
+
             .onAppear{
                 
                 Api().getPosts { (posts) in
@@ -42,7 +50,7 @@ struct EventsView: View {
                 }
             }
             .navigationBarTitle(Text("Events"), displayMode: .inline)
-        
+            
     }
 }
 
