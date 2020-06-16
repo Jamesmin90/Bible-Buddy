@@ -24,7 +24,7 @@ struct BlogPostEditView: View {
     
     var body: some View {
         
-        VStack() {
+        ZStack(alignment: .bottom) {
             Form(){
                 VStack() {
                     Text("Bild").font(.headline)
@@ -57,7 +57,7 @@ struct BlogPostEditView: View {
                
                 
             }
-            Spacer()
+            //Spacer()
             Button(action: {
                 self.presentationMode.wrappedValue.dismiss()
                 ImageUploadService.upload(for: self.libraryImage!) { result in
@@ -72,10 +72,10 @@ struct BlogPostEditView: View {
             ) {
                 Text("POST")
                     .font(.headline)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
                     .padding()
                     .frame(width: 220, height: 60)
-                    .background(Color.green)
+                    .background(Color.gray)
                     .cornerRadius(6.0)
             }
         }

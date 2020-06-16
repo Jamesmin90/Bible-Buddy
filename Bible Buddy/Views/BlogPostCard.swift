@@ -18,7 +18,7 @@ struct BlogPostCard: View {
             
             Image(uiImage: UIImage(data: postVM.blogImage) ?? UIImage())
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
             
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
@@ -50,7 +50,9 @@ struct BlogPostCard: View {
                 }
             }
             .padding()
+            .background(Color(.white))
         }.cornerRadius(10)
+            .background(Color(.white))
          .overlay(
              RoundedRectangle(cornerRadius: 10)
                  .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
