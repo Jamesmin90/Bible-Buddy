@@ -45,8 +45,6 @@ struct DeleteProfileView: View {
             Spacer()
         }
         .padding(.horizontal)
-        .background(Color("basicBackgroundColor")
-        .edgesIgnoringSafeArea(.all))
         .alert(isPresented: self.$showReauthenticationAlert) {
             Alert(title: Text(""), message: Text("Wir benötigen Ihre Zugangsdaten für eine erneute Authentifizierung, um Ihr Profil entfültig löschen zu können."), dismissButton: .default(Text("OK"), action: {self.reauthenticationNecessary = true}))
         }

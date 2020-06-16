@@ -39,7 +39,6 @@ struct EventsView: View {
                 
                 
             }
-                .background(Color("basicBackgroundColor"))
 
             .onAppear{
                 
