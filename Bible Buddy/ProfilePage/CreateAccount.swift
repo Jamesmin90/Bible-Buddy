@@ -100,7 +100,7 @@ struct AccountCreation : View {
                     if self.name != "" && self.imagedata.count != 0{
                         
                         self.loading.toggle()
-                        CreateUser(name: self.name, surName: self.surName, userName: self.userName, imagedata: self.imagedata) { (status) in
+                        CreateUser(vorName: self.name, surName: self.surName, userName: self.userName, imagedata: self.imagedata) { (status) in
                             
                             
                             if status{

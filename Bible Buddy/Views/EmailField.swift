@@ -21,3 +21,17 @@ struct EmailField: View {
             .background(Color(.white))
     }
 }
+
+struct UserName: View {
+    
+    @Binding var userName: String
+    
+    var body: some View {
+        TextField("UserName", text: $userName)
+            .font(.system(size: 14))
+            .padding(15)
+            .background(RoundedRectangle(cornerRadius: 5)
+            .strokeBorder(Color.black, lineWidth: 1))
+            .background(Color(.white))
+    }
+}

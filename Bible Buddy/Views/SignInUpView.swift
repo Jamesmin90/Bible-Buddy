@@ -12,12 +12,13 @@ struct SignInUpView: View {
     
     @EnvironmentObject var session: SessionStore
     
+    @State var userName: String = ""
     @State var email: String = ""
     @State var password: String = ""
     @State var hidePassword: Bool = true
-    
     @State var error: String = ""
-    
+    @State var creation = false
+    @State var loading = false
     var continueText: String
     var buttonText: String
     
@@ -32,6 +33,7 @@ struct SignInUpView: View {
             PasswordField(password: self.$password, hidePassword: self.$hidePassword)
             
             if (buttonText == "Anmelden") {
+                UserName(userName: $userName)
                 NavigationLink(destination: ForgotPasswordView(continueText: "Geben Sie bitte Ihre Email-Adresse ein", buttonText: "Passwort zurücksetzen")) {
                     HStack {
                         Text("Passwort vergessen?")
@@ -39,6 +41,7 @@ struct SignInUpView: View {
                             .font(.system(size: 15))
                         Spacer()
                     }.padding(.horizontal, 10)
+                    
                 }.navigationBarTitle(Text(buttonText), displayMode: .inline)
             }
             
@@ -60,7 +63,28 @@ struct SignInUpView: View {
     func signIn() {
         session.signIn(email: email, password: password) {
             (result, error) in
+            
+            if error != nil{
             self.signInUpCompletionHandler(error: error)
+            }
+            checkUser{ (exists, userName, uid, pic) in
+                
+                if exists{
+                     UserDefaults.standard.set(true, forKey: "status")
+                     
+                     UserDefaults.standard.set(userName, forKey: "userName")
+                    
+                     UserDefaults.standard.set(uid, forKey: "uid")
+                    
+                     UserDefaults.standard.set(pic, forKey: "pic")
+                     
+                     NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+                }
+                else{
+                    self.loading.toggle()
+                    self.creation.toggle()
+                }
+            }
         }
     }
     
