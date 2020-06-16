@@ -27,7 +27,6 @@
 		842640F0249682FA00C464B4 /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640EF249682FA00C464B4 /* HTMLStringView.swift */; };
 		842640F82497F28900C464B4 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640F72497F28900C464B4 /* Books.swift */; };
 		842640FA2497F2D400C464B4 /* BibleContentOverview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640F92497F2D400C464B4 /* BibleContentOverview.swift */; };
-		842640FC2497F8CF00C464B4 /* Chapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640FB2497F8CF00C464B4 /* Chapter.swift */; };
 		84264102249808CC00C464B4 /* Chapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84264101249808CC00C464B4 /* Chapters.swift */; };
 		8426410424980BBA00C464B4 /* BibleChaptersContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8426410324980BBA00C464B4 /* BibleChaptersContentView.swift */; };
 		842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */; };
@@ -69,6 +68,8 @@
 		84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */; };
 		84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */; };
 		84E174E224845523007E6A54 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174E124845523007E6A54 /* EmailField.swift */; };
+		84EB63FE2498FDF400C79458 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FD2498FDF400C79458 /* LoadingView.swift */; };
+		84EB6400249908A700C79458 /* ChapterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FF249908A700C79458 /* ChapterContent.swift */; };
 		84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,7 +94,6 @@
 		842640EF249682FA00C464B4 /* HTMLStringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLStringView.swift; sourceTree = "<group>"; };
 		842640F72497F28900C464B4 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		842640F92497F2D400C464B4 /* BibleContentOverview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleContentOverview.swift; sourceTree = "<group>"; };
-		842640FB2497F8CF00C464B4 /* Chapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapter.swift; sourceTree = "<group>"; };
 		84264101249808CC00C464B4 /* Chapters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chapters.swift; sourceTree = "<group>"; };
 		8426410324980BBA00C464B4 /* BibleChaptersContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleChaptersContentView.swift; sourceTree = "<group>"; };
 		842F7D86248BAD540070900E /* SideMenuItemIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuItemIsActive.swift; sourceTree = "<group>"; };
@@ -137,6 +137,8 @@
 		84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuItem.swift; sourceTree = "<group>"; };
 		84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProfileView.swift; sourceTree = "<group>"; };
 		84E174E124845523007E6A54 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		84EB63FD2498FDF400C79458 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		84EB63FF249908A700C79458 /* ChapterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterContent.swift; sourceTree = "<group>"; };
 		84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLinkIsActive.swift; sourceTree = "<group>"; };
 		C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F045A889704DBB1F54D8EAD6 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
@@ -246,8 +248,8 @@
 				11FE911B248A8172000C8ED6 /* URLImage.swift */,
 				845FDF1324912BE400A0CF33 /* ImageLoader.swift */,
 				842640F72497F28900C464B4 /* Books.swift */,
-				842640FB2497F8CF00C464B4 /* Chapter.swift */,
 				84264101249808CC00C464B4 /* Chapters.swift */,
+				84EB63FF249908A700C79458 /* ChapterContent.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -288,6 +290,7 @@
 				842640EF249682FA00C464B4 /* HTMLStringView.swift */,
 				842640F92497F2D400C464B4 /* BibleContentOverview.swift */,
 				8426410324980BBA00C464B4 /* BibleChaptersContentView.swift */,
+				84EB63FD2498FDF400C79458 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -451,10 +454,10 @@
 				11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */,
 				11B975F2248056EA00680B54 /* BlogPostRepository.swift in Sources */,
 				11FE911624868BE0000C8ED6 /* UserProfile.swift in Sources */,
+				84EB6400249908A700C79458 /* ChapterContent.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
 				11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */,
 				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
-				842640FC2497F8CF00C464B4 /* Chapter.swift in Sources */,
 				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
@@ -470,6 +473,7 @@
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
 				11FE911824868E50000C8ED6 /* FirestoreUserProfileRepository.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
+				84EB63FE2498FDF400C79458 /* LoadingView.swift in Sources */,
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
@@ -625,13 +629,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = FJH433LJPK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PIOSE-Gruppe03.Bible-Buddy";
+				PRODUCT_BUNDLE_IDENTIFIER = "PIOSE-Gruppe03.Bible-BuddyClara";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -645,13 +650,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
+				DEVELOPMENT_TEAM = FJH433LJPK;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "PIOSE-Gruppe03.Bible-Buddy";
+				PRODUCT_BUNDLE_IDENTIFIER = "PIOSE-Gruppe03.Bible-BuddyClara";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
