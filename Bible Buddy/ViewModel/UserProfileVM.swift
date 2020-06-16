@@ -14,7 +14,7 @@ import FirebaseFirestoreSwift
 
 class UserProfileVM: ObservableObject {
 
-    @Published var profile: UserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureURL: "")
+    @Published var profile: UserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "")
     @Published var profilepicture: Data = Data()
     
     var repository: FirestoreUserProfileRepository
@@ -33,7 +33,8 @@ class UserProfileVM: ObservableObject {
         
         $profile
             .sink { profile in
-                URLImage(urlString: profile.profilePictureURL).$data
+                print("Loading profile picture from URL: \(profile.pic)")
+                URLImage(urlString: profile.pic).$data
                     .sink { data in
                         print("Profile picture data loaded.")
                         self.profilepicture = data

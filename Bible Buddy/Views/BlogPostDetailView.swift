@@ -50,7 +50,7 @@ struct BlogPostDetailView: View {
                 Spacer()
                 
                 VStack(alignment: .trailing){
-                    Text("29.05.2020")
+                    Text(postVM.dateString)
                         .font(.caption)
                         .foregroundColor(.secondary)
                     

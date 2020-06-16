@@ -12,9 +12,10 @@ import FirebaseFirestoreSwift
 
 struct UserProfile: Codable, Identifiable {
     @DocumentID var id: String?
-    var name: String
+    var vorName: String
     var surName: String
     var userName: String
-    var profilePictureURL: String
-    @ServerTimestamp var createdTime: Timestamp?
+    var pic: String
+ //   var favorites: [String]
+ //   @ServerTimestamp var createdTime: Timestamp?
 }

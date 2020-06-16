@@ -13,8 +13,8 @@ class BlogPostVM: ObservableObject, Identifiable {
     @Published var post: BlogPost
     //@Published
     var userProfileVM: UserProfileVM
-    @Published var userProfile: UserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureURL: "")
-    
+    @Published var userProfile: UserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "")
+    @Published var dateString: String
     @Published var blogImage: Data = Data()
     
     var id = ""
@@ -25,6 +25,12 @@ class BlogPostVM: ObservableObject, Identifiable {
     init(post: BlogPost) {
         self.post = post
         self.userProfileVM = UserProfileVM(userID: post.userID)
+        
+        var dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = .none
+        dateFormatter.dateStyle = .medium
+        let date = post.createdTime != nil ? post.createdTime!.dateValue() : Date()
+        self.dateString = dateFormatter.string(from: date)
         
         $post
         .map { $0.id! }

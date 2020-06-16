@@ -30,23 +30,6 @@ class FirestoreUserProfileRepository: BaseUserProfileRepository, UserProfileRepo
     
     func getUserProfileById() {
         if(userId != "") {
-            //            db.collection("users").document(userId).getDocument { (document, error) in
-            //                let result = Result {
-            //                    try document?.data(as: UserProfile.self)
-            //                }
-            //                switch result {
-            //                case .success(let p):
-            //                    if let p = p {
-            //                        self.currentUserProfile = p
-            //                    }
-            //
-            //                case .failure(let error):
-            //                    print(error)
-            //
-            //                }
-            //            }
-            
-            
             db.collection("users").document(userId)
                 .addSnapshotListener { documentSnapshot, error in
                     guard let document = documentSnapshot else {

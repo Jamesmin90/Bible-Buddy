@@ -9,7 +9,7 @@
 import Foundation
 
 class BaseUserProfileRepository {
-    @Published var currentUserProfile = UserProfile(id: "", name: "", surName: "", userName: "", profilePictureURL: "")
+    @Published var currentUserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "")
 }
 
 protocol UserProfileRepository: BaseUserProfileRepository {
