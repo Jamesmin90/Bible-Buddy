@@ -14,7 +14,6 @@ import FirebaseFirestore
 
 struct Chat : View {
     
-    //@State var myuid = UserDefaults.standard.value(forKey: "UserName") as! String
     @EnvironmentObject var datas : MainObservable
     @State var show = false
     @State var chat = false
@@ -25,8 +24,10 @@ struct Chat : View {
     
     var body : some View{
         
-        
         ZStack{
+            
+            Color("basicBackgroundColor")
+                .edgesIgnoringSafeArea(.all)
             
             NavigationLink(destination: ChatView(name: self.name, pic: self.pic, uid: self.uid, chat: self.$chat), isActive: self.$chat) {
                 
@@ -70,8 +71,6 @@ struct Chat : View {
                             }
                             
                         }.padding()
-                        //.background(Color("basicBackgroundColor")
-                        //.edgesIgnoringSafeArea(.all))
                         
                     }
                 }
@@ -91,8 +90,6 @@ struct Chat : View {
               
             )
         }
-        .background(Color("basicBackgroundColor")
-        .edgesIgnoringSafeArea(.all))
         .sheet(isPresented: self.$show) {
             
             newChatView(name: self.$name, uid: self.$uid, pic: self.$pic, show: self.$show, chat: self.$chat)

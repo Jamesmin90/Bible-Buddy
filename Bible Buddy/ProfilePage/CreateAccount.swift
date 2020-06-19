@@ -89,7 +89,7 @@ struct AccountCreation : View {
                     
                     Spacer()
                     
-                    //Indicator()
+                    Indicator()
                     
                     Spacer()
                 }
@@ -107,15 +107,10 @@ struct AccountCreation : View {
                             
                             if status{
                                 
-                                self.show.toggle()
+                                self.showAlert.toggle()
                             }
                         }
                     }
-                    else{
-                        
-                        self.showAlert.toggle()
-                    }
-                    
                     
                 }) {
                     
@@ -138,12 +133,13 @@ struct AccountCreation : View {
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .navigationBarTitle("Profil", displayMode: .inline)
+        .alert(isPresented: self.$showAlert) {
+            Alert(title: Text(""), message: Text("Benutzer erfolgreich erstellt"), dismissButton: .default(Text("OK"), action: {self.presMode.wrappedValue.dismiss()}))
+        }
+
         .sheet(isPresented: self.$picker, content: {
             
             ImagePicker(picker: self.$picker, imagedata: self.$imagedata)
         })
-        .alert(isPresented: self.$showAlert) {
-           Alert(title: Text(""), message: Text("Änderung erfolgreich abgeschlossen"), dismissButton: .default(Text("OK"), action: {self.presMode.wrappedValue.dismiss()}))
-       }
     }
 }
