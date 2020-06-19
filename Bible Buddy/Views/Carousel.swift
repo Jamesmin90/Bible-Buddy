@@ -31,7 +31,7 @@ struct Carousel: View {
                 }.padding(10)
                 
                 if (session.session != nil) {
-                    NavigationLink(destination: TestView()){
+                    NavigationLink(destination: Chat()){
                         CarouselCard(image: "chat", title: "Chat", backgroundColorCard: Color(#colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0.4465466833)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
                     }.padding(10)
                 }
