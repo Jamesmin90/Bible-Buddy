@@ -35,12 +35,12 @@ struct BlogPostEditView: View {
                             .aspectRatio(contentMode: .fit)
                             .frame(maxWidth: .infinity, maxHeight: 180) .padding(6)
                     }
-                }.listRowBackground(Color("basicBackgroundColor"))
+                }//.listRowBackground(Color("basicBackgroundColor"))
                 
                 VStack(alignment: .leading) {
                     Text("Titel").font(.headline)
                     TextField("Titel ...", text: $postVM.post.title).modifier(MyTextFieldStyle())
-                }.listRowBackground(Color("basicBackgroundColor"))
+                }//.listRowBackground(Color("basicBackgroundColor"))
                 
                 VStack(alignment: .leading) {
                     Text("Kategorie").font(.headline)
@@ -48,12 +48,12 @@ struct BlogPostEditView: View {
                         Text("reading").tag("reading")
                         Text("people").tag(" people")
                     }.pickerStyle(DefaultPickerStyle()).modifier(MyTextFieldStyle())
-                }.listRowBackground(Color("basicBackgroundColor"))
+                }//.listRowBackground(Color("basicBackgroundColor"))
                 
                 VStack(alignment: .leading) {
                     Text("Text").font(.headline)
                     TextView(text: $postVM.post.body, textStyle: $textStyle).frame(height: 300).modifier(MyTextFieldStyle())
-                }.listRowBackground(Color("basicBackgroundColor"))
+                }//.listRowBackground(Color("basicBackgroundColor"))
                
                 
             }
@@ -79,7 +79,7 @@ struct BlogPostEditView: View {
                     .cornerRadius(6.0)
             }
         }
-        .navigationBarTitle("New Post")
+        .navigationBarTitle("Neuer Post")
         .sheet(isPresented: $showingImagePicker) {
             
             ImagePicker(image: self.$libraryImage)
