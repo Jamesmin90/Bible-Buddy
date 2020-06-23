@@ -37,7 +37,7 @@ struct HomeView: View {
                         SignInUpNavigationLinkIsActive(destinationView: SignInUpView(continueText: "Melden Sie sich bitte an", buttonText: "Anmelden"), buttonText: "Anmelden", isActive: self.$isActive)
                     }
                 } else {
-                    ManageUserButton(handleButton: {self.session.signOut()}, buttonText: "Abmelden").padding(.horizontal)
+                    ManageUserButton(handleButton: {self.session.signOut()}, buttonText: "Abmelden").padding()
                 }
             }
         }

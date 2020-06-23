@@ -10,6 +10,8 @@ import SwiftUI
 
 struct Carousel: View {
     
+    @EnvironmentObject var session: SessionStore
+    
     var shadowColor =  Color(#colorLiteral(red: 0.9515599744, green: 1, blue: 0.4813389062, alpha: 0.8140517979))
     var backgroundColorTitle =  Color(#colorLiteral(red: 0.9190552344, green: 1, blue: 0.6697965896, alpha: 0.3696757277))
     
@@ -18,7 +20,7 @@ struct Carousel: View {
         ScrollView(.horizontal, showsIndicators: false) {
             
             HStack {
-                NavigationLink(destination: BibleView()){
+                NavigationLink(destination: BibleBookTableOfContents()){
                     CarouselCard(image: "bible", title: "Bibel", backgroundColorCard: Color(#colorLiteral(red: 0.2522913464, green: 0.2399643849, blue: 0.8064919099, alpha: 0.3844178082)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
                 }.padding(10)
                 NavigationLink(destination: BlogView()){
@@ -27,6 +29,12 @@ struct Carousel: View {
                 NavigationLink(destination: EventsView()){
                     CarouselCard(image: "event", title: "Events", backgroundColorCard: Color(#colorLiteral(red: 0, green: 0.5898008943, blue: 1, alpha: 0.3774614726)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
                 }.padding(10)
+                
+                if (session.session != nil) {
+                    NavigationLink(destination: Chat().environmentObject(MainObservable())){
+                        CarouselCard(image: "chat", title: "Chat", backgroundColorCard: Color(#colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0.4465466833)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
+                    }.padding(10)
+                }
             }
         }
     }

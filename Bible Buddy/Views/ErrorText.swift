@@ -13,10 +13,15 @@ struct ErrorText: View {
     var errorText: String
     
     var body: some View {
-        Text(errorText)
-            .font(.system(size: 14, weight: .semibold))
-            .foregroundColor(.red)
-            .padding()
+        
+        HStack {
+            Spacer()
+            Text(errorText)
+                .font(.system(size: 14, weight: .semibold))
+                .foregroundColor(.red)
+                .padding()
+            Spacer()
+        }
     }
 }
 

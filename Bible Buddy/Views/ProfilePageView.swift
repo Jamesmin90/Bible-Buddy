@@ -10,11 +10,16 @@ import SwiftUI
 
 struct ProfilePageView: View {
     
+    @State var creation = false
+
+    
     var body: some View {
         
         VStack {
             
             TextMessage(textMessage: "Was möchten Sie gerne in Ihrem Profil machen?")
+            
+            ProfileMenuItem(image: "profile", profileItemTitle: "Benutzername und Profilbild hinzufügen", destinationView: AccountCreation(show: self.$creation))
             
             ProfileMenuItem(image: "password", profileItemTitle: "Passwort ändern", destinationView: UpdateEmailPasswordView(continueText: "Geben Sie bitte Ihr neues Passwort ein", buttonText: "Passwort ändern"))
             
