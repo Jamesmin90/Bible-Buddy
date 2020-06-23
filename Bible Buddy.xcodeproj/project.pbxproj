@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		07746FFFC56752292BC4F921 /* Pods_Bible_Buddy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */; };
+		11030E0024A22CF8007EF743 /* SpeechSynthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */; };
+		11030E0224A232A8007EF743 /* TextWithAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0124A232A8007EF743 /* TextWithAttributedString.swift */; };
+		11030E0424A26773007EF743 /* SpeechTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0324A26773007EF743 /* SpeechTestView.swift */; };
+		11030E0624A267F5007EF743 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0524A267F5007EF743 /* TestView.swift */; };
 		11420BB32492721100C74801 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11420BB22492721100C74801 /* ImagePickerViewController.swift */; };
 		11420BB5249274A500C74801 /* ImagePicker1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11420BB4249274A500C74801 /* ImagePicker1.swift */; };
 		11420BB82492F0B800C74801 /* MyTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11420BB72492F0B800C74801 /* MyTextFieldStyle.swift */; };
@@ -53,7 +57,6 @@
 		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
 		848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC573247534050000A1F3 /* CarouselCard.swift */; };
 		848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC574247534050000A1F3 /* SideMenuView.swift */; };
-		848CC57D247534050000A1F3 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC575247534050000A1F3 /* TestView.swift */; };
 		848CC57E247534050000A1F3 /* SideMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC576247534050000A1F3 /* SideMenuItem.swift */; };
 		848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */; };
 		848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848CC582247539590000A1F3 /* GoogleService-Info.plist */; };
@@ -96,6 +99,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthVM.swift; sourceTree = "<group>"; };
+		11030E0124A232A8007EF743 /* TextWithAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithAttributedString.swift; sourceTree = "<group>"; };
+		11030E0324A26773007EF743 /* SpeechTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTestView.swift; sourceTree = "<group>"; };
+		11030E0524A267F5007EF743 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		11420BB22492721100C74801 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		11420BB4249274A500C74801 /* ImagePicker1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker1.swift; sourceTree = "<group>"; };
 		11420BB72492F0B800C74801 /* MyTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -140,7 +147,6 @@
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		848CC573247534050000A1F3 /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		848CC574247534050000A1F3 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
-		848CC575247534050000A1F3 /* TestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		848CC576247534050000A1F3 /* SideMenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuItem.swift; sourceTree = "<group>"; };
 		848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLink.swift; sourceTree = "<group>"; };
 		848CC582247539590000A1F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -224,6 +230,7 @@
 				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
 				11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */,
 				84BF3CC9249FA08A00C9C1F2 /* Bible.swift */,
+				11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -340,7 +347,6 @@
 				848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */,
 				84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */,
 				848CC58824754BE00000A1F3 /* SignInUpView.swift */,
-				848CC575247534050000A1F3 /* TestView.swift */,
 				84C574582484FF9A006057C2 /* TextMessage.swift */,
 				11FE9111248526FC000C8ED6 /* TextView.swift */,
 				84E174D9248414A1007E6A54 /* UpdateEmailPasswordView.swift */,
@@ -356,6 +362,9 @@
 				842CDD5E24AE7FE800DF90F2 /* BibleSearchResults.swift */,
 				842CDD6224AF410000DF90F2 /* BibleSearchResultsItem.swift */,
 				842CDD6424AF8EFF00DF90F2 /* BibleSearchField.swift */,
+				11030E0124A232A8007EF743 /* TextWithAttributedString.swift */,
+				11030E0324A26773007EF743 /* SpeechTestView.swift */,
+				11030E0524A267F5007EF743 /* TestView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -502,6 +511,7 @@
 			files = (
 				848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */,
 				8426410424980BBA00C464B4 /* BibleChapterTableOfContents.swift in Sources */,
+				11030E0424A26773007EF743 /* SpeechTestView.swift in Sources */,
 				84475BD124A2153D0020187A /* BlogPostRepository.swift in Sources */,
 				84E174D824841477007E6A54 /* ProfilePageView.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
@@ -517,6 +527,7 @@
 				84B3086B249CC3E9008777F2 /* CreateAccount.swift in Sources */,
 				842CDD6524AF8EFF00DF90F2 /* BibleSearchField.swift in Sources */,
 				84B30873249CC41C008777F2 /* EventsApi.swift in Sources */,
+				11030E0224A232A8007EF743 /* TextWithAttributedString.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
@@ -553,6 +564,7 @@
 				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
+				11030E0024A22CF8007EF743 /* SpeechSynthVM.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84B30877249CC426008777F2 /* Indicator.swift in Sources */,
 				845FDF1424912BE400A0CF33 /* ImageLoader.swift in Sources */,
@@ -569,6 +581,7 @@
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
 				11420BBA24930C9500C74801 /* ImageUploadService.swift in Sources */,
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
+				11030E0624A267F5007EF743 /* TestView.swift in Sources */,
 				11420BB5249274A500C74801 /* ImagePicker1.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				84B30871249CC40E008777F2 /* CreateUser.swift in Sources */,
@@ -584,7 +597,6 @@
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
 				11B975F42480584700680B54 /* BlogPost.swift in Sources */,
 				11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */,
-				848CC57D247534050000A1F3 /* TestView.swift in Sources */,
 				84475BD724A2156B0020187A /* SessionStore.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
 				845FDF0A24912A6600A0CF33 /* EventsDetail.swift in Sources */,
@@ -729,6 +741,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = MXGR5AABXL;
+				DEVELOPMENT_TEAM = L9F84YK587;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -750,6 +763,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
 				DEVELOPMENT_TEAM = MXGR5AABXL;
+				DEVELOPMENT_TEAM = L9F84YK587;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
