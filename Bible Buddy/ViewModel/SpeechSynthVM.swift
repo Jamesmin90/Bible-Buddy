@@ -12,8 +12,15 @@ import SwiftUI
 
 class SpeechSynthVM : NSObject, ObservableObject {
     @Published var attrString = NSMutableAttributedString()
+    @Published var status = SpeechSynthStatus.Stopped
     var text: String = ""
     private var speechSynthesizer = AVSpeechSynthesizer()
+    
+    enum SpeechSynthStatus {
+        case Stopped
+        case Speaking
+        case Paused
+    }
     
     init(text: String) {
         super.init()
@@ -27,6 +34,18 @@ class SpeechSynthVM : NSObject, ObservableObject {
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = voice
         speechSynthesizer.speak(utterance)
+    }
+    
+    func pause() {
+        if speechSynthesizer.isSpeaking {
+            speechSynthesizer.pauseSpeaking(at: .immediate)
+        }
+    }
+    
+    func resume() {
+        if speechSynthesizer.isPaused {
+            speechSynthesizer.continueSpeaking()
+        }
     }
     
     func stripHTML(htmlText: String) -> String {
@@ -43,22 +62,29 @@ class SpeechSynthVM : NSObject, ObservableObject {
 }
 
 extension SpeechSynthVM : AVSpeechSynthesizerDelegate {
-        func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {}
-        func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {}
-        func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didContinue utterance: AVSpeechUtterance) {}
-        func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {}
-     
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didStart utterance: AVSpeechUtterance) {
+        self.status = .Speaking
+    }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didPause utterance: AVSpeechUtterance) {
+        self.status = .Paused
+    }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didContinue utterance: AVSpeechUtterance) {
+        self.status = .Speaking
+    }
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didCancel utterance: AVSpeechUtterance) {}
+    
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, willSpeakRangeOfSpeechString characterRange: NSRange, utterance: AVSpeechUtterance) {
         print("Going to say \(utterance.speechString)")
         let mutableAttributedString = NSMutableAttributedString(string: utterance.speechString)
         mutableAttributedString.addAttribute(.foregroundColor, value: UIColor.red, range: characterRange)
         self.attrString = mutableAttributedString
     }
-
+    
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
         print("Did finish speak")
         let mutableAttributedString = NSMutableAttributedString(string: utterance.speechString)
         mutableAttributedString.removeAttribute(.foregroundColor, range: NSRange(location: 0, length: utterance.speechString.count))
         self.attrString = mutableAttributedString
+        self.status = .Stopped
     }
 }

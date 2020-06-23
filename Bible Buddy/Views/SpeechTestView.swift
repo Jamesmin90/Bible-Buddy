@@ -18,11 +18,30 @@ struct SpeechTestView: View {
                     TextWithAttributedString(attributedString: self.synthVM.attrString, width: geometry.size.width)
                 }
             }
+            playbackButton
             
-            Button(action: {
+        }
+    }
+    
+    var playbackButton: some View {
+        switch synthVM.status {
+        case .Stopped:
+            return Button(action: {
                 self.synthVM.speak()
             }) {
                 Text("speak")
+            }
+        case .Speaking:
+            return Button(action: {
+                self.synthVM.pause()
+            }) {
+                Text("pause")
+            }
+        case .Paused:
+            return Button(action: {
+                self.synthVM.resume()
+            }) {
+                Text("resume")
             }
         }
     }
