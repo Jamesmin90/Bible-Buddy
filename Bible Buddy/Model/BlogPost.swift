@@ -17,6 +17,6 @@ struct BlogPost: Codable, Identifiable {
     var userName: String
     var userID: String
     var category: String
-    var image: String
+    var imageURL: String
     @ServerTimestamp var createdTime: Timestamp?
 }

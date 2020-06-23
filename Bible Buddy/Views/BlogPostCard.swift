@@ -15,9 +15,10 @@ struct BlogPostCard: View {
     var body: some View {
         
         VStack {
-            Image(postVM.post.image)
+            
+            Image(uiImage: UIImage(data: postVM.blogImage) ?? UIImage())
                 .resizable()
-                .aspectRatio(contentMode: .fit)
+                .aspectRatio(contentMode: .fill)
             
             HStack(alignment: .top) {
                 VStack(alignment: .leading) {
@@ -38,7 +39,7 @@ struct BlogPostCard: View {
                 Spacer()
                 
                 VStack(alignment: .trailing){
-                    Text("29.05.2020")
+                    Text(postVM.dateString)
                         .font(.caption)
                         .foregroundColor(.secondary)
                     
@@ -49,7 +50,9 @@ struct BlogPostCard: View {
                 }
             }
             .padding()
+            .background(Color(.white))
         }.cornerRadius(10)
+            .background(Color(.white))
          .overlay(
              RoundedRectangle(cornerRadius: 10)
                  .stroke(Color(.sRGB, red: 150/255, green: 150/255, blue: 150/255, opacity: 0.1), lineWidth: 1)
@@ -60,6 +63,6 @@ struct BlogPostCard: View {
 
 struct BlogPostCard_Previews: PreviewProvider {
     static var previews: some View {
-        BlogPostCard(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum", userName: "Jannis G.", userID: "123", category: "Bible study", image: "people")))
+        BlogPostCard(postVM: BlogPostVM(post: BlogPost(title: "Test Überschrift", body: "Lorem ipsum", userName: "Jannis G.", userID: "123", category: "Bible study", imageURL: "people")))
     }
 }
