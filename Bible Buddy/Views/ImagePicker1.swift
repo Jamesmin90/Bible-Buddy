@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ImagePicker : View {
+struct ImagePicker1 : View {
     @Binding var image: UIImage?
     @Environment(\.presentationMode) var presentationMode
     var body: some View {

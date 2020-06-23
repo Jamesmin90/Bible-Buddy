@@ -82,7 +82,7 @@ struct BlogPostEditView: View {
         .navigationBarTitle("Neuer Post")
         .sheet(isPresented: $showingImagePicker) {
             
-            ImagePicker(image: self.$libraryImage)
+            ImagePicker1(image: self.$libraryImage)
             
         }.buttonStyle(PlainButtonStyle())
         //.background(Color("basicBackgroundColor"))
