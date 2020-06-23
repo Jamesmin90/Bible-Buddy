@@ -39,9 +39,3 @@ struct SideMenuItem<Content: View>: View {
         }
     }
 }
-
-struct SideMenuItem_Previews: PreviewProvider {
-    static var previews: some View {
-        SideMenuItem(image: "bible", title: "Bibel", destinationView: BibleView())
-    }
-}

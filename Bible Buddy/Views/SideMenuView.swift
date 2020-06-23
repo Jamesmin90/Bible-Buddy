@@ -18,7 +18,7 @@ struct SideMenuView: View {
         
         VStack(alignment: .leading) {
             
-            SideMenuItem(image: "bible", title: "Bibel", destinationView: BibleView())
+            SideMenuItem(image: "bible", title: "Bibel", destinationView: BibleBookTableOfContents())
             SideMenuItem(image: "blog", title: "Blog", destinationView: BlogView())
             SideMenuItem(image: "event", title: "Events", destinationView: EventsView())
             
