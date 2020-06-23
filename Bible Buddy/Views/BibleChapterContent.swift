@@ -35,6 +35,15 @@ struct BibleChapterContent: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
+        .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
+        )
         .onAppear() { self.bible.getDataFromUrl(urlEndpoint: "chapters/\(self.chapterId)", type: ChapterContent.self) }
+    }
+    
+    var readButton: some View {
+        NavigationLink(
+            destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
+            Image(systemName: "speaker.2")
+        }
     }
 }

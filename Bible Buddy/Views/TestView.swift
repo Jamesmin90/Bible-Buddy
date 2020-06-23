@@ -2,7 +2,7 @@
 //  TestView.swift
 //  Bible Buddy
 //
-//  Created by admin on 14.05.20.
+//  Created by jag on 23.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
