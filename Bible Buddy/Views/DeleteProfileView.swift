@@ -10,6 +10,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
+
 struct DeleteProfileView: View {
     
     @EnvironmentObject var session: SessionStore
@@ -65,6 +66,30 @@ struct DeleteProfileView: View {
             (error) in
             self.signInUpCompletionHandler(error: error)
         }
+        let id = Auth.auth().currentUser?.uid
+        let db = Firestore.firestore().collection("users")
+        db.document(id!).delete() { (err) in
+            
+            if err != nil{
+                print((err!.localizedDescription))
+                return
+            }
+            print("Erfolgreich gelöscht")
+        }
+        
+        let storageRef = Storage.storage().reference()
+        let desertRef = storageRef.child("Profiles").child(id!)
+        
+        desertRef.delete { err in
+          if err != nil{
+              
+              print((err?.localizedDescription)!)
+              return
+          }
+        }
+        
+
+        
     }
     
     func signInUpCompletionHandler(error: Error?) {
