@@ -13,11 +13,13 @@ struct SignInUpView: View {
     
     @EnvironmentObject var session: SessionStore
     
+    @State var userName: String = ""
     @State var email: String = ""
     @State var password: String = ""
     @State var hidePassword: Bool = true
-    
     @State var error: String = ""
+    @State var creation = false
+    @State var loading = false
     
     var continueText: String
     var buttonText: String
