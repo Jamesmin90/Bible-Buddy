@@ -296,7 +296,7 @@ struct ChatView : View {
     @State var msgs = [Msg]()
     @State var txt = ""
     @State var nomsgs = false
-    let mypic = UserDefaults.standard.value(forKey: "pic") as! String
+    let mypic = UserDefaults.standard.value(forKey: "pic") as? String
     
     var body : some View{
         
@@ -341,7 +341,7 @@ struct ChatView : View {
                                         .clipShape(ChatBubble(mymsg: true))
                                         .foregroundColor(.white)
                                     
-                                    AnimatedImage(url: URL(string: self.mypic)!).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
+                                    AnimatedImage(url: URL(string: self.mypic!)).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
                                 }
                                 else{
                                     AnimatedImage(url: URL(string: self.pic)!).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())

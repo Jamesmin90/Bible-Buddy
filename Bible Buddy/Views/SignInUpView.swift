@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct SignInUpView: View {
     
@@ -58,17 +59,43 @@ struct SignInUpView: View {
     }
     
     func signIn() {
+        let storage = Storage.storage().reference()
+        
+        let uid = Auth.auth().currentUser?.uid
+        
         session.signIn(email: email, password: password) {
             (result, error) in
             self.signInUpCompletionHandler(error: error)
         }
+        
+        storage.child("Profiles").child(uid!).downloadURL { (url, err) in
+        
+        if err != nil{
+            
+            print((err?.localizedDescription)!)
+            return
+        }
+        
+        checkUser { (exists, userName, uid, url) in
+            if exists{
+                UserDefaults.standard.set(true, forKey: "status")
+                UserDefaults.standard.set(userName, forKey: "userName")
+                UserDefaults.standard.set(uid, forKey: "uid")
+                UserDefaults.standard.set("\(url)", forKey: "pic")
+                NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+            }
+        }
+        }
+        
     }
     
     func signUp() {
+        
         session.signUp(email: email, password: password) {
             (result, error) in
             self.signInUpCompletionHandler(error: error)
         }
+
     }
     
     func signInUpCompletionHandler(error: Error?) {
