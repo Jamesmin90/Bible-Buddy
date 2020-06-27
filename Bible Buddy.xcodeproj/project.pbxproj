@@ -66,6 +66,7 @@
 		84BF3CCA249FA08A00C9C1F2 /* Bible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3CC9249FA08A00C9C1F2 /* Bible.swift */; };
 		84BF3CCC249FC9F400C9C1F2 /* BibleBookAndChapterNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3CCB249FC9F400C9C1F2 /* BibleBookAndChapterNavigationLink.swift */; };
 		84BF3CD0249FF1BD00C9C1F2 /* ChapterData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3CCF249FF1BD00C9C1F2 /* ChapterData.swift */; };
+		84BF3CD424A5F12E00C9C1F2 /* BasicTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF3CD324A5F12E00C9C1F2 /* BasicTextField.swift */; };
 		84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05C246C1D760018296F /* AppDelegate.swift */; };
 		84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF05E246C1D760018296F /* SceneDelegate.swift */; };
 		84BFF061246C1D760018296F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BFF060246C1D760018296F /* ContentView.swift */; };
@@ -148,6 +149,7 @@
 		84BF3CC9249FA08A00C9C1F2 /* Bible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bible.swift; sourceTree = "<group>"; };
 		84BF3CCB249FC9F400C9C1F2 /* BibleBookAndChapterNavigationLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleBookAndChapterNavigationLink.swift; sourceTree = "<group>"; };
 		84BF3CCF249FF1BD00C9C1F2 /* ChapterData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterData.swift; sourceTree = "<group>"; };
+		84BF3CD324A5F12E00C9C1F2 /* BasicTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicTextField.swift; sourceTree = "<group>"; };
 		84BFF059246C1D760018296F /* Bible Buddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bible Buddy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84BFF05C246C1D760018296F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84BFF05E246C1D760018296F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,7 +313,6 @@
 				84E174E124845523007E6A54 /* EmailField.swift */,
 				848CC5902476753F0000A1F3 /* ErrorText.swift */,
 				84BFF074246C1DDE0018296F /* EventsView.swift */,
-				84BFF076246C1E020018296F /* BibleChapterContent.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
 				84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */,
 				848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */,
@@ -335,10 +336,12 @@
 				848CC570247534050000A1F3 /* WelcomeTextView.swift */,
 				848609F424968D3100C72648 /* TextDescription.swift */,
 				842640EF249682FA00C464B4 /* HTMLStringView.swift */,
+				84BFF076246C1E020018296F /* BibleChapterContent.swift */,
 				842640F92497F2D400C464B4 /* BibleBookTableOfContents.swift */,
 				8426410324980BBA00C464B4 /* BibleChapterTableOfContents.swift */,
 				84EB63FD2498FDF400C79458 /* LoadingView.swift */,
 				84BF3CCB249FC9F400C9C1F2 /* BibleBookAndChapterNavigationLink.swift */,
+				84BF3CD324A5F12E00C9C1F2 /* BasicTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -501,6 +504,7 @@
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
 				84E174DC248414FC007E6A54 /* ForgotPasswordView.swift in Sources */,
 				84C574592484FF9A006057C2 /* TextMessage.swift in Sources */,
+				84BF3CD424A5F12E00C9C1F2 /* BasicTextField.swift in Sources */,
 				11420BB82492F0B800C74801 /* MyTextFieldStyle.swift in Sources */,
 				84E174DA248414A1007E6A54 /* UpdateEmailPasswordView.swift in Sources */,
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
