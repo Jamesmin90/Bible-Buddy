@@ -24,6 +24,7 @@
 		11FE911624868BE0000C8ED6 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911524868BE0000C8ED6 /* UserProfile.swift */; };
 		11FE911A2486A2C5000C8ED6 /* UserProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */; };
 		11FE911C248A8172000C8ED6 /* URLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE911B248A8172000C8ED6 /* URLImage.swift */; };
+		840420D824AB4951007C58FD /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 840420D724AB4951007C58FD /* IQKeyboardManagerSwift */; };
 		842640F0249682FA00C464B4 /* HTMLStringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640EF249682FA00C464B4 /* HTMLStringView.swift */; };
 		842640F82497F28900C464B4 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640F72497F28900C464B4 /* Books.swift */; };
 		842640FA2497F2D400C464B4 /* BibleBookTableOfContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842640F92497F2D400C464B4 /* BibleBookTableOfContents.swift */; };
@@ -182,6 +183,7 @@
 			files = (
 				843388A3249CC0760029A046 /* SDWebImageSwiftUI in Frameworks */,
 				07746FFFC56752292BC4F921 /* Pods_Bible_Buddy.framework in Frameworks */,
+				840420D824AB4951007C58FD /* IQKeyboardManagerSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +379,7 @@
 			name = "Bible Buddy";
 			packageProductDependencies = (
 				843388A2249CC0760029A046 /* SDWebImageSwiftUI */,
+				840420D724AB4951007C58FD /* IQKeyboardManagerSwift */,
 			);
 			productName = "Bible Buddy";
 			productReference = 84BFF059246C1D760018296F /* Bible Buddy.app */;
@@ -408,6 +411,7 @@
 			mainGroup = 84BFF050246C1D760018296F;
 			packageReferences = (
 				843388A1249CC0760029A046 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				840420D624AB4951007C58FD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 84BFF05A246C1D760018296F /* Products */;
 			projectDirPath = "";
@@ -763,6 +767,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		840420D624AB4951007C58FD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.5;
+			};
+		};
 		843388A1249CC0760029A046 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
@@ -774,6 +786,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		840420D724AB4951007C58FD /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 840420D624AB4951007C58FD /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
+		};
 		843388A2249CC0760029A046 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 843388A1249CC0760029A046 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
