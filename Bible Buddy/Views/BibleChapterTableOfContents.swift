@@ -33,7 +33,7 @@ struct BibleChapterTableOfContents: View {
                 
                 ScrollView(.vertical, showsIndicators: false) {
                     ForEach(bible.chapters.data, id: \.id) { chapter in
-                        BibleBookAndChapterNavigationLink(destinationView: BibleChapterContent(chapterId: chapter.id), text: chapter.reference)
+                        BibleBookAndChapterNavigationLink(destinationView: BibleChapterContent(chapterData: chapter), text: chapter.reference)
                     }
                 }
             }
