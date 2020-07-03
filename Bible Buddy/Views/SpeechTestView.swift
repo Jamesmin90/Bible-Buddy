@@ -13,11 +13,12 @@ struct SpeechTestView: View {
     @ObservedObject var synthVM: SpeechSynthVM
     var body: some View {
         VStack{
+            Text(self.synthVM.prevText)
             GeometryReader{ geometry in
-                ScrollView {
                     TextWithAttributedString(attributedString: self.synthVM.attrString, width: geometry.size.width)
                 }
-            }
+            
+            Text(self.synthVM.nextText)
             playbackButton
             
         }

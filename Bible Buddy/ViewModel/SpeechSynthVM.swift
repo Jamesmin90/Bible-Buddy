@@ -14,6 +14,10 @@ class SpeechSynthVM : NSObject, ObservableObject {
     @Published var attrString = NSMutableAttributedString()
     @Published var status = SpeechSynthStatus.Stopped
     var text: String = ""
+    var prevText: String = ""
+    var nextText: String = ""
+    var sentences: [String] = []
+    var position = 0
     private var speechSynthesizer = AVSpeechSynthesizer()
     
     enum SpeechSynthStatus {
@@ -25,6 +29,9 @@ class SpeechSynthVM : NSObject, ObservableObject {
     init(text: String) {
         super.init()
         self.text = self.stripHTML(htmlText: text)
+        self.sentences = self.text.components(separatedBy: "\n")
+        self.text = sentences[0]
+        self.nextText = sentences[1]
         self.attrString = NSMutableAttributedString(string: self.text)
         self.speechSynthesizer.delegate = self
     }
@@ -86,5 +93,27 @@ extension SpeechSynthVM : AVSpeechSynthesizerDelegate {
         mutableAttributedString.removeAttribute(.foregroundColor, range: NSRange(location: 0, length: utterance.speechString.count))
         self.attrString = mutableAttributedString
         self.status = .Stopped
+        
+        if (hasMore()) {
+            updateTexts()
+            speak()
+        }
+    }
+    
+    func updateTexts() {
+        if (position > 0 && hasMore()) {
+            prevText = sentences[position - 1]
+            text = sentences[position]
+            nextText = sentences[position + 1]
+            position += 1
+        }
+    }
+    
+    func hasMore() -> Bool {
+        if ((position + 1) < sentences.count) {
+            return true
+        } else {
+            return false
+        }
     }
 }
