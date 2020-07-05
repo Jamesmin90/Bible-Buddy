@@ -139,7 +139,7 @@ struct AccountCreation : View {
 
         .sheet(isPresented: self.$picker, content: {
             
-            ImagePicker(picker: self.$picker, imagedata: self.$imagedata)
+            ImagePicker(picker: self.$picker, imagedata: self.$imagedata, presentationMode: self.presMode)
         })
     }
 }
