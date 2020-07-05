@@ -34,6 +34,9 @@ struct Carousel: View {
                     NavigationLink(destination: Chat().environmentObject(MainObservable())){
                         CarouselCard(image: "chat", title: "Chat", backgroundColorCard: Color(#colorLiteral(red: 1, green: 0.5781051517, blue: 0, alpha: 0.4465466833)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
                     }.padding(10)
+                    NavigationLink(destination: TestView()){
+                        CarouselCard(image: "notes", title: "Notizen", backgroundColorCard: Color(#colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 0.5516439801)), backgroundColorTitle: backgroundColorTitle, shadowColorCard: shadowColor)
+                    }.padding(10)
                 }
             }
         }
