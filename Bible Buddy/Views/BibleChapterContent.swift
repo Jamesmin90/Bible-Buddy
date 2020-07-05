@@ -12,7 +12,7 @@ struct BibleChapterContent: View {
     
     @ObservedObject var bible = Bible()
     
-    var chapterData: ChapterData
+    var chapterId: String
     
     var body: some View {
         VStack {
@@ -34,7 +34,7 @@ struct BibleChapterContent: View {
                     
                     if (self.bible.chapterContent?.data.previous?.id != nil && self.bible.chapterContent?.data.previous?.id != "") {
                         Button(action: {
-                            self.bible.getDataFromUrl(urlEndpoint: "chapters/\((self.bible.chapterContent?.data.previous!.id)!)", type: ChapterContent.self)
+                            self.getChapterContent(chapterId: (self.bible.chapterContent?.data.previous!.id)!)
                         }) {
                             BasicTextField(text: "vorheriges Kapitel")
                         }
@@ -44,7 +44,7 @@ struct BibleChapterContent: View {
                     
                     if (self.bible.chapterContent?.data.next?.id != nil && self.bible.chapterContent?.data.next?.id != "") {
                         Button(action: {
-                            self.bible.getDataFromUrl(urlEndpoint: "chapters/\((self.bible.chapterContent?.data.next!.id)!)", type: ChapterContent.self)
+                            self.getChapterContent(chapterId: (self.bible.chapterContent?.data.next!.id)!)
                         }) {
                             BasicTextField(text: "nächstes Kapitel")
                         }
@@ -56,6 +56,13 @@ struct BibleChapterContent: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
-        .onAppear() { self.bible.getDataFromUrl(urlEndpoint: "chapters/\(self.chapterData.id)", type: ChapterContent.self) }
+        .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
+    }
+    
+    func getChapterContent(chapterId: String) {
+        
+        let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
+        
+        self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
     }
 }
