@@ -13,15 +13,14 @@ class Bible: ObservableObject {
     @Published var books: Books = Books(data: [])
     @Published var chapters: ChaptersList = ChaptersList(data: [])
     @Published var chapterContent: ChapterContent? = nil
+    @Published var searchResult: BibleSearchResult? = nil
     @Published var error: String = ""
     
     var errorMessage: String = "Es ist leider etwas schief gelaufen. Bitte versuchen Sie es später noch einmal."
     
-    var url = "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/"
-    
-    func getDataFromUrl<T: Decodable>(urlEndpoint: String, type: T.Type) {
+    func getDataFromUrl<T: Decodable>(url: URLComponents, type: T.Type) {
         
-        var request = URLRequest(url: URL(string: url + urlEndpoint)!)
+        var request = URLRequest(url: (url.url)!)
         request.setValue("ea17ec75497f6980cc7d63f8428656da", forHTTPHeaderField: "api-key")
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
@@ -55,6 +54,9 @@ class Bible: ObservableObject {
                 }
                 else if(type is Books.Type) {
                     self.books = json as! Books
+                }
+                else if(type is BibleSearchResult.Type) {
+                    self.searchResult = json as? BibleSearchResult
                 }
                 else {
                     self.error = self.errorMessage

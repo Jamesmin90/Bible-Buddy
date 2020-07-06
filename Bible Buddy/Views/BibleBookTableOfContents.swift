@@ -12,6 +12,8 @@ struct BibleBookTableOfContents: View {
     
     @ObservedObject var bible = Bible()
     
+    @State var lookUp: String = ""
+    
     var body: some View {
         
         VStack {
@@ -29,6 +31,8 @@ struct BibleBookTableOfContents: View {
             else {
                 TextMessage(textMessage: "Wählen Sie bitte ein Buch aus der Bibel, welches Sie lesen möchten.")
                 
+                BibleSearchField(lookUp: self.$lookUp)
+
                 Spacer()
                 
                 ScrollView(.vertical, showsIndicators: false) {
@@ -42,6 +46,12 @@ struct BibleBookTableOfContents: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
-        .onAppear() { self.bible.getDataFromUrl(urlEndpoint: "books", type: Books.self) }
+        .onAppear() { self.getBibleBooks() }
+    }
+    
+    func getBibleBooks() {
+        let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/books")
+        
+        self.bible.getDataFromUrl(url: urlCombined!, type: Books.self)
     }
 }
