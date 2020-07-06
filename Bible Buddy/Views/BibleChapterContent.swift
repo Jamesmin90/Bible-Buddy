@@ -59,7 +59,7 @@ struct BibleChapterContent: View {
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
         .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
         )
-        .onAppear() { self.bible.getDataFromUrl(urlEndpoint: "chapters/\(self.chapterId)", type: ChapterContent.self) }
+            .onAppear() { self.bible.getDataFromUrl(urlEndpoint: "chapters/\(self.chapterData.id)", type: ChapterContent.self) }
     }
     
     func getChapterContent(chapterId: String) {
