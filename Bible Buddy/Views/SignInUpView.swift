@@ -12,6 +12,7 @@ import Firebase
 struct SignInUpView: View {
     
     @EnvironmentObject var session: SessionStore
+    @Environment(\.presentationMode) var presMode: Binding<PresentationMode>
     
     @State var userName: String = ""
     @State var email: String = ""
@@ -20,6 +21,11 @@ struct SignInUpView: View {
     @State var error: String = ""
     @State var creation = false
     @State var loading = false
+    @State var name = ""
+    @State var picker = false
+    @State var imagedata : Data = .init(count: 0)
+    @State var surName = ""
+    @State var showAlert = false
     
     var continueText: String
     var buttonText: String
@@ -29,6 +35,61 @@ struct SignInUpView: View {
         VStack {
             
             TextMessage(textMessage: continueText)
+            
+            if(self.buttonText == "Registrieren"){
+                HStack{
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        
+                        self.picker.toggle()
+                        
+                    }) {
+                        
+                        if self.imagedata.count == 0{
+                            
+                           Image("upload-image").resizable()
+                           .aspectRatio(contentMode: .fit)
+                           .frame(maxWidth: .infinity, maxHeight: 180)
+                           .padding(6)
+                           .foregroundColor(.black)
+                           Spacer()
+                        }
+                        else{
+                            
+                            Image(uiImage: UIImage(data: self.imagedata)!).resizable().renderingMode(.original).frame(width: 90, height: 90).clipShape(Circle())
+                        }
+                        
+                        
+                    }
+                    
+                    Spacer()
+                }
+                .padding(.vertical, 15)
+                
+                TextField("UserName", text: self.$userName)
+                     .font(.system(size: 14))
+                     .padding(15)
+                     .background(RoundedRectangle(cornerRadius: 5)
+                     .strokeBorder(Color.black, lineWidth: 1))
+                     .background(Color(.white))
+                 
+                 TextField("Vorname", text: self.$name)
+                     .font(.system(size: 14))
+                     .padding(15)
+                     .background(RoundedRectangle(cornerRadius: 5)
+                     .strokeBorder(Color.black, lineWidth: 1))
+                     .background(Color(.white))
+                
+                 TextField("Surname", text: self.$surName)
+                     .font(.system(size: 14))
+                     .padding(15)
+                     .background(RoundedRectangle(cornerRadius: 5)
+                     .strokeBorder(Color.black, lineWidth: 1))
+                     .background(Color(.white))
+                
+            }
             
             EmailField(email: self.$email)
             
@@ -46,7 +107,19 @@ struct SignInUpView: View {
             }
             
             ManageUserButton(handleButton: {
-                (self.buttonText == "Registrieren") ? self.signUp() : self.signIn()
+                (self.buttonText == "Registrieren") ? self.signUp() : self.signIn();
+                if self.name != "" && self.imagedata.count != 0{
+                    
+                    self.loading.toggle()
+                    CreateUser(vorName: self.name, surName: self.surName, userName: self.userName, imagedata: self.imagedata) { (status) in
+                        
+                        
+                        if status{
+                            
+                            self.showAlert.toggle()
+                        }
+                    }
+                }
             }, buttonText: buttonText)
             
             if (error != "") {
@@ -58,6 +131,10 @@ struct SignInUpView: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
+        .sheet(isPresented: self.$picker, content: {
+            
+            ImagePicker(picker: self.$picker, imagedata: self.$imagedata, presentationMode: self.presMode)
+        })
     }
     
     func signIn() {
