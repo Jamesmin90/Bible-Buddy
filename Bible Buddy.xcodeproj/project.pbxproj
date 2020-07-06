@@ -89,6 +89,9 @@
 		84EB63FE2498FDF400C79458 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FD2498FDF400C79458 /* LoadingView.swift */; };
 		84EB6400249908A700C79458 /* ChapterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FF249908A700C79458 /* ChapterContent.swift */; };
 		84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */; };
+		84FC16C224B36CAB006BE735 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC16C124B36CAB006BE735 /* WebView.swift */; };
+		84FC16C424B36CD0006BE735 /* SignupDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC16C324B36CD0006BE735 /* SignupDescription.swift */; };
+		84FC16C624B36E73006BE735 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC16C524B36E73006BE735 /* SearchBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +177,9 @@
 		84EB63FD2498FDF400C79458 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		84EB63FF249908A700C79458 /* ChapterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterContent.swift; sourceTree = "<group>"; };
 		84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLinkIsActive.swift; sourceTree = "<group>"; };
+		84FC16C124B36CAB006BE735 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		84FC16C324B36CD0006BE735 /* SignupDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupDescription.swift; sourceTree = "<group>"; };
+		84FC16C524B36E73006BE735 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F045A889704DBB1F54D8EAD6 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -216,6 +222,7 @@
 				11FE910D2481425F000C8ED6 /* BlogPostVM.swift */,
 				11FE91192486A2C5000C8ED6 /* UserProfileVM.swift */,
 				84BF3CC9249FA08A00C9C1F2 /* Bible.swift */,
+				84FC16C524B36E73006BE735 /* SearchBar.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -344,6 +351,8 @@
 				84EB63FD2498FDF400C79458 /* LoadingView.swift */,
 				84BF3CCB249FC9F400C9C1F2 /* BibleBookAndChapterNavigationLink.swift */,
 				84BF3CD324A5F12E00C9C1F2 /* BasicTextField.swift */,
+				84FC16C124B36CAB006BE735 /* WebView.swift */,
+				84FC16C324B36CD0006BE735 /* SignupDescription.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -536,6 +545,7 @@
 				11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */,
 				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
 				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
+				84FC16C224B36CAB006BE735 /* WebView.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
@@ -547,6 +557,7 @@
 				84B3086F249CC409008777F2 /* checkUser.swift in Sources */,
 				842640F82497F28900C464B4 /* Books.swift in Sources */,
 				11B975F82480F14F00680B54 /* BlogPostCard.swift in Sources */,
+				84FC16C624B36E73006BE735 /* SearchBar.swift in Sources */,
 				848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */,
 				11420BB32492721100C74801 /* ImagePickerViewController.swift in Sources */,
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
@@ -555,6 +566,7 @@
 				11420BBA24930C9500C74801 /* ImageUploadService.swift in Sources */,
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
 				11420BB5249274A500C74801 /* ImagePicker1.swift in Sources */,
+				84FC16C424B36CD0006BE735 /* SignupDescription.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				84B30871249CC40E008777F2 /* CreateUser.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,

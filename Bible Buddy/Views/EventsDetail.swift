@@ -32,6 +32,8 @@ struct EventsDetail: View {
             
             TextDescription(descriptiontext: posts.description, height: 150)
             
+            SignupDescription(url: posts.signup, height: 50)
+            
             MapView(latitude: posts.latitude, longitude: posts.longitude, title: posts.location, subtitle: posts.name)
             . frame(width: 380, height: 180)
             
