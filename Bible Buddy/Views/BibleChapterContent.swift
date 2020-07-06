@@ -59,7 +59,6 @@ struct BibleChapterContent: View {
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
         .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
         )
-            .onAppear() { self.bible.getDataFromUrl(urlEndpoint: "chapters/\(self.chapterData.id)", type: ChapterContent.self) }
     }
     
     func getChapterContent(chapterId: String) {
@@ -67,6 +66,7 @@ struct BibleChapterContent: View {
         let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
         
         self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
+    }
     var readButton: some View {
         NavigationLink(
             destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
