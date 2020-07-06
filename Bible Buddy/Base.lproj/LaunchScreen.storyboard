@@ -15,7 +15,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bibleLaunchScreen" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-h2-Dcc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bible" translatesAutoresizingMaskIntoConstraints="NO" id="RnT-h2-Dcc">
                                 <rect key="frame" x="72" y="328.5" width="270" height="159"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="270" id="3E0-kn-XR8"/>
@@ -45,6 +45,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bibleLaunchScreen" width="512" height="512"/>
+        <image name="bible" width="512" height="512"/>
     </resources>
 </document>
