@@ -60,7 +60,6 @@ class SpeechSynthVM : NSObject, ObservableObject {
         let pattern = "<span.*?>[0-9]{1,3}</span>"
         let regex = try? NSRegularExpression(pattern: pattern)
         regex?.replaceMatches(in: value, options: .reportProgress, range: NSRange(location: 0,length: value.length), withTemplate: "\n")
-        // Prints, We are big now aa#1#**aalot of salesaa#/1#*aa the money and cards aa#2#aaRober Langdon and Ambra Vidalaa#/2#**aa.
         let pattern2 = "<.*?>"
         let regex2 = try? NSRegularExpression(pattern: pattern2)
         regex2?.replaceMatches(in: value, options: .reportProgress, range: NSRange(location: 0,length: value.length), withTemplate: "")
