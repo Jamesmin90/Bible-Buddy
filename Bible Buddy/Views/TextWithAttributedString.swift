@@ -16,16 +16,14 @@ struct TextWithAttributedString: UIViewRepresentable {
         let label = UILabel(frame: CGRect(x: 0, y:0, width: width, height: 300))
         label.lineBreakMode = .byWordWrapping
         label.numberOfLines = 0
+        label.preferredMaxLayoutWidth = width
         label.autoresizingMask = [.flexibleHeight, .flexibleWidth]
-        //label.preferredMaxLayoutWidth = width
         
         return label
     }
     
     func updateUIView(_ uiView: UILabel, context: UIViewRepresentableContext<TextWithAttributedString>){
         uiView.attributedText = attributedString
-        //uiView.frame = CGRect(x: 0, y:0, width: width, height: 300)
-
     }
     
 }

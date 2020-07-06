@@ -100,12 +100,11 @@ extension SpeechSynthVM : AVSpeechSynthesizerDelegate {
     }
     
     func updateTexts() {
-        if (position > 0 && hasMore()) {
+        // TODO text finished
+            position = position + 1
             prevText = sentences[position - 1]
             text = sentences[position]
             nextText = sentences[position + 1]
-            position += 1
-        }
     }
     
     func hasMore() -> Bool {
