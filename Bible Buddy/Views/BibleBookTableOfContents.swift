@@ -14,9 +14,9 @@ struct BibleBookTableOfContents: View {
     
     @ObservedObject var bible = Bible()
     
-    @State var lookUp: String = ""
+    @ObservedObject var bookmarkFirestore = BookmarkFirestore()
     
-    @State var bookmark: String = ""
+    @State var lookUp: String = ""
     
     var body: some View {
         
@@ -28,14 +28,17 @@ struct BibleBookTableOfContents: View {
                 Spacer()
             }
                 
+            if(bookmarkFirestore.error != "") {
+                Spacer()
+                ErrorText(errorText: bookmarkFirestore.error)
+                Spacer()
+            }
+                
             else if (bible.books.data.count == 0) {
                 LoadingView()
             }
                 
             else {
-                if (self.bookmark != "") {
-                    BibleBookAndChapterNavigationLink(destinationView: BibleChapterContent(chapterId: self.bookmark), text: "Lesezeichen öffnen")
-                }
                 
                 TextMessage(textMessage: "Wählen Sie bitte ein Buch aus der Bibel, welches Sie lesen möchten.")
                 
@@ -51,11 +54,23 @@ struct BibleBookTableOfContents: View {
             }
         }
         .navigationBarTitle("Bücher")
+        .navigationBarItems(trailing: (self.bookmarkFirestore.bookmark != "") ? AnyView(self.goToBookmark) : AnyView(EmptyView()))
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
-        .onAppear() { self.getBibleBooks()
-            self.updateRecents()
+        .onAppear() {
+            self.getBibleBooks()
+            self.bookmarkFirestore.getBookmarkOfUser()
+        }
+    }
+    
+    var goToBookmark: some View {
+        NavigationLink(destination: BibleChapterContent(chapterId: self.bookmarkFirestore.bookmark)) {
+            Image("bookmark")
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 20, height: 20)
+                .padding(.horizontal, 20)
         }
     }
     
@@ -64,33 +79,4 @@ struct BibleBookTableOfContents: View {
         
         self.bible.getDataFromUrl(url: urlCombined!, type: Books.self)
     }
-    
-func updateRecents(){
-
-    let db = Firestore.firestore()
-
-    guard let uid = Auth.auth().currentUser?.uid else {
-        print("User not found")
-        return
-    }
-
-    db.collection("users").document(uid).getDocument{ (document, error) in
-
-        if error == nil {
-
-            if document?.exists != nil && document!.exists {
-
-                let documentData = document?.data()
-
-                guard let bookmark = documentData?["bookmark"] else {
-                    return
-                }
-                self.bookmark = bookmark as! String
-            }
-        }
-        else {
-            print("Error getDocument")
-        }
-    }
-}
 }

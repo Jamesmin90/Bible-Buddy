@@ -12,7 +12,13 @@ import FirebaseFirestore
 
 struct BibleChapterContent: View {
     
+    @EnvironmentObject var session: SessionStore
+    
     @ObservedObject var bible = Bible()
+    
+    var bookmarkFirebase = BookmarkFirestore()
+    
+    @State var bookmarkWasSet: Bool = false
     
     var chapterId: String
     
@@ -30,11 +36,6 @@ struct BibleChapterContent: View {
             }
                 
             else {
-                Button(action: {
-                    self.update(bookmark: (self.bible.chapterContent?.data.id)!)
-                }) {
-                    Text("Lesezeichen hier setzen")
-                }
                 
                 HTMLStringView(htmlContent: (bible.chapterContent?.data.content)!)
                 
@@ -65,8 +66,34 @@ struct BibleChapterContent: View {
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
-        .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
-        )
+        .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView()))
+        .alert(isPresented: self.$bookmarkWasSet) {
+            Alert(title: Text(""), message: Text("Das Lesezeichen wurde erfolgreich gesetzt."), dismissButton: .default(Text("OK"), action: {self.bookmarkWasSet = false}))
+        }
+    }
+    
+    var readButton: some View {
+        
+        HStack {
+            
+            if (session.session != nil) {
+                Button(action: {
+                    self.bookmarkFirebase.updateBookMarkOfUser(bookmark: (self.bible.chapterContent?.data.id)!)
+                    self.bookmarkWasSet = true
+                }) {
+                    Image("bookmark")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .padding(.horizontal, 20)
+                }
+            }
+            
+            NavigationLink(
+            destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
+                Image(systemName: "speaker.2")
+            }
+        }
     }
     
     func getChapterContent(chapterId: String) {
@@ -74,24 +101,5 @@ struct BibleChapterContent: View {
         let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
         
         self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
-    }
-    
-    var readButton: some View {
-        NavigationLink(
-            destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
-            Image(systemName: "speaker.2")
-        }
-    }
-    
-    func update(bookmark: String) {
-        
-        let db = Firestore.firestore()
-        
-        guard let uid = Auth.auth().currentUser?.uid else {
-            print("User not found")
-            return
-        }
-        
-        db.collection("users").document(uid).setData(["bookmark" : bookmark], merge: true)
     }
 }
