@@ -7,6 +7,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct BibleChapterContent: View {
     
@@ -28,6 +30,12 @@ struct BibleChapterContent: View {
             }
                 
             else {
+                Button(action: {
+                    self.update(bookmark: (self.bible.chapterContent?.data.id)!)
+                }) {
+                    Text("Lesezeichen hier setzen")
+                }
+                
                 HTMLStringView(htmlContent: (bible.chapterContent?.data.content)!)
                 
                 HStack {
@@ -67,10 +75,23 @@ struct BibleChapterContent: View {
         
         self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
     }
+    
     var readButton: some View {
         NavigationLink(
             destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
             Image(systemName: "speaker.2")
         }
+    }
+    
+    func update(bookmark: String) {
+        
+        let db = Firestore.firestore()
+        
+        guard let uid = Auth.auth().currentUser?.uid else {
+            print("User not found")
+            return
+        }
+        
+        db.collection("users").document(uid).setData(["bookmark" : bookmark], merge: true)
     }
 }

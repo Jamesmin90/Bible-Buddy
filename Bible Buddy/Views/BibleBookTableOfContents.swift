@@ -7,12 +7,16 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 struct BibleBookTableOfContents: View {
     
     @ObservedObject var bible = Bible()
     
     @State var lookUp: String = ""
+    
+    @State var bookmark: String = ""
     
     var body: some View {
         
@@ -29,6 +33,10 @@ struct BibleBookTableOfContents: View {
             }
                 
             else {
+                if (self.bookmark != "") {
+                    BibleBookAndChapterNavigationLink(destinationView: BibleChapterContent(chapterId: self.bookmark), text: "Lesezeichen öffnen")
+                }
+                
                 TextMessage(textMessage: "Wählen Sie bitte ein Buch aus der Bibel, welches Sie lesen möchten.")
                 
                 BibleSearchField(lookUp: self.$lookUp)
@@ -46,7 +54,9 @@ struct BibleBookTableOfContents: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
-        .onAppear() { self.getBibleBooks() }
+        .onAppear() { self.getBibleBooks()
+            self.updateRecents()
+        }
     }
     
     func getBibleBooks() {
@@ -54,4 +64,33 @@ struct BibleBookTableOfContents: View {
         
         self.bible.getDataFromUrl(url: urlCombined!, type: Books.self)
     }
+    
+func updateRecents(){
+
+    let db = Firestore.firestore()
+
+    guard let uid = Auth.auth().currentUser?.uid else {
+        print("User not found")
+        return
+    }
+
+    db.collection("users").document(uid).getDocument{ (document, error) in
+
+        if error == nil {
+
+            if document?.exists != nil && document!.exists {
+
+                let documentData = document?.data()
+
+                guard let bookmark = documentData?["bookmark"] else {
+                    return
+                }
+                self.bookmark = bookmark as! String
+            }
+        }
+        else {
+            print("Error getDocument")
+        }
+    }
+}
 }
