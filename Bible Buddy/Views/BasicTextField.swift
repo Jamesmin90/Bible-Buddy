@@ -18,7 +18,7 @@ struct BasicTextField: View {
             .frame(height: 45)
             .font(.system(size: 13, weight: .bold))
             .foregroundColor(.black)
-            .background(Color(#colorLiteral(red: 0.9198423028, green: 0.9198423028, blue: 0.9198423028, alpha: 1)))
+            .background(Color("basicForegroundColor"))
             .cornerRadius(5)
             .padding(10)
     }
