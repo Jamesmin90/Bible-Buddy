@@ -15,19 +15,21 @@ struct ReferenceImageView: View {
             
             ReferenceImageItem(image: "bible", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/bible_2913087?term=bible&page=1&position=9")
         
-            ReferenceImageItem(image: "event", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/calendar_1142731?term=event&page=1&position=29%20https://www.flaticon.com/download-icon")
+            ReferenceImageItem(image: "event", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/calendar_1142731?term=event&page=1&position=29%20")
 
-            ReferenceImageItem(image: "chat", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/chat_2950581?term=chat&page=1&position=65%20https://www.flaticon.com/download-icon")
+            ReferenceImageItem(image: "chat", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/chat_2950581?term=chat&page=1&position=65%20")
             
-            ReferenceImageItem(image: "mail", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/de/kostenloses-icon/email_561127?term=email&page=1&position=1%20https://www.flaticon.com/de/download-icon")
+            ReferenceImageItem(image: "mail", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/de/kostenloses-icon/email_561127?term=email&page=1&position=1%20")
             
-            ReferenceImageItem(image: "trash", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/lock_483408?term=password&page=1&position=7%20https://www.flaticon.com/download-icon")
+            ReferenceImageItem(image: "trash", madeFrom: "Icon made by Freepik from www.flaticon.com", link: "https://www.flaticon.com/free-icon/lock_483408?term=password&page=1&position=7%20")
             
-            ReferenceImageItem(image: "password", madeFrom: "Icon made by Those Icons from www.flaticon.com", link: "https://www.flaticon.com/free-icon/delete_1345874?term=delete&page=1&position=2%20https://www.flaticon.com/download-icon")
+            ReferenceImageItem(image: "password", madeFrom: "Icon made by Those Icons from www.flaticon.com", link: "https://www.flaticon.com/free-icon/delete_1345874?term=delete&page=1&position=2%20")
             
-            ReferenceImageItem(image: "blog", madeFrom: "Icon made by Flat Icons from www.flaticon.com", link: "https://www.flaticon.com/free-icon/blog_1809216?term=blog&page=1&position=38%20https://www.flaticon.com/download-icon")
+            ReferenceImageItem(image: "blog", madeFrom: "Icon made by Flat Icons from www.flaticon.com", link: "https://www.flaticon.com/free-icon/blog_1809216?term=blog&page=1&position=38%20")
             
-            ReferenceImageItem(image: "mail", madeFrom: "Icon made by Note icon icon by Icons8", link: "https://icons8.com/icons/set/note")
+            ReferenceImageItem(image: "imageReference", madeFrom: "Icon made by Good Ware from www.flaticon.com", link: "https://www.flaticon.com/de/kostenloses-icon/bild_702697")
+
+            ReferenceImageItem(image: "notes", madeFrom: "Icon made by Note icon icon by Icons8", link: "https://icons8.com/icons/set/note")
             
         }
         .padding().padding(.top, 50)

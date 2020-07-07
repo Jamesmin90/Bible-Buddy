@@ -28,7 +28,7 @@ struct SideMenuView: View {
                 SideMenuItemIsActive(image: "profile", title: "Profil", destinationView: ProfilePageView(), isActive: self.$isActive)
             }
             
-            SideMenuItem(image: "bible", title: "Referenzen", destinationView: ReferenceImageView())
+            SideMenuItem(image: "imageReference", title: "Referenzen", destinationView: ReferenceImageView())
             
             Spacer()
             
