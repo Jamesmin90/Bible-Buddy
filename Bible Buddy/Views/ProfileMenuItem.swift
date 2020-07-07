@@ -40,7 +40,7 @@ struct ProfileMenuItem<Content: View>: View {
                 
             }
             .frame(minWidth: 0, maxWidth: .infinity)
-            .frame(height: 50)
+            .frame(height: 45)
             .background(Color(#colorLiteral(red: 0.9198423028, green: 0.9198423028, blue: 0.9198423028, alpha: 1)))
             .cornerRadius(5)
             

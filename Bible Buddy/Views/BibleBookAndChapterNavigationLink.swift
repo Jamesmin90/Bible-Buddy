@@ -22,14 +22,7 @@ struct BibleBookAndChapterNavigationLink<Content: View>: View {
     var body: some View {
         
         NavigationLink(destination: destinationView) {
-            Text(text)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .frame(height: 40)
-                .font(.system(size: 13, weight: .bold))
-                .foregroundColor(.black)
-                .background(Color(#colorLiteral(red: 0.9198423028, green: 0.9198423028, blue: 0.9198423028, alpha: 1)))
-                .cornerRadius(5)
-                .padding(10)
+            BasicTextField(text: text)
         }
     }
 }
