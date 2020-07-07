@@ -53,7 +53,7 @@
 		845FDF1424912BE400A0CF33 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845FDF1324912BE400A0CF33 /* ImageLoader.swift */; };
 		848609F524968D3100C72648 /* TextDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848609F424968D3100C72648 /* TextDescription.swift */; };
 		848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC570247534050000A1F3 /* WelcomeTextView.swift */; };
-		848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */; };
+		848CC579247534050000A1F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC571247534050000A1F3 /* HomeView.swift */; };
 		848CC57A247534050000A1F3 /* Carousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC572247534050000A1F3 /* Carousel.swift */; };
 		848CC57B247534050000A1F3 /* CarouselCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC573247534050000A1F3 /* CarouselCard.swift */; };
 		848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC574247534050000A1F3 /* SideMenuView.swift */; };
@@ -61,7 +61,6 @@
 		848CC57F247534050000A1F3 /* SignInUpNavigationLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */; };
 		848CC583247539590000A1F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848CC582247539590000A1F3 /* GoogleService-Info.plist */; };
 		848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC58824754BE00000A1F3 /* SignInUpView.swift */; };
-		848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */; };
 		848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC5902476753F0000A1F3 /* ErrorText.swift */; };
 		84B30867249CC37F008777F2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B30866249CC37F008777F2 /* ChatView.swift */; };
 		84B3086B249CC3E9008777F2 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3086A249CC3E9008777F2 /* CreateAccount.swift */; };
@@ -143,7 +142,7 @@
 		845FDF1324912BE400A0CF33 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		848609F424968D3100C72648 /* TextDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescription.swift; sourceTree = "<group>"; };
 		848CC570247534050000A1F3 /* WelcomeTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeTextView.swift; sourceTree = "<group>"; };
-		848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedOut.swift; sourceTree = "<group>"; };
+		848CC571247534050000A1F3 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		848CC572247534050000A1F3 /* Carousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Carousel.swift; sourceTree = "<group>"; };
 		848CC573247534050000A1F3 /* CarouselCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselCard.swift; sourceTree = "<group>"; };
 		848CC574247534050000A1F3 /* SideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
@@ -151,7 +150,6 @@
 		848CC577247534050000A1F3 /* SignInUpNavigationLink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLink.swift; sourceTree = "<group>"; };
 		848CC582247539590000A1F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		848CC58824754BE00000A1F3 /* SignInUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpView.swift; sourceTree = "<group>"; };
-		848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewLoggedIn.swift; sourceTree = "<group>"; };
 		848CC5902476753F0000A1F3 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		84B30866249CC37F008777F2 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		84B3086A249CC3E9008777F2 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
@@ -333,8 +331,7 @@
 				84BFF074246C1DDE0018296F /* EventsView.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
 				84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */,
-				848CC58C2475824C0000A1F3 /* HomeViewLoggedIn.swift */,
-				848CC571247534050000A1F3 /* HomeViewLoggedOut.swift */,
+				848CC571247534050000A1F3 /* HomeView.swift */,
 				11420BB4249274A500C74801 /* ImagePicker1.swift */,
 				11420BB22492721100C74801 /* ImagePickerViewController.swift */,
 				84C5745C2485008D006057C2 /* ManageUserButton.swift */,
@@ -516,7 +513,7 @@
 				84E174D824841477007E6A54 /* ProfilePageView.swift in Sources */,
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
 				842CDD6124AE82FD00DF90F2 /* BibleSearchResult.swift in Sources */,
-				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
+				848CC579247534050000A1F3 /* HomeView.swift in Sources */,
 				84264102249808CC00C464B4 /* ChaptersList.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
 				84C5745D2485008D006057C2 /* ManageUserButton.swift in Sources */,
@@ -561,9 +558,8 @@
 				848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */,
 				11FE910C24814246000C8ED6 /* BlogPostListVM.swift in Sources */,
 				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
-				848CC579247534050000A1F3 /* HomeViewLoggedOut.swift in Sources */,
+				848CC579247534050000A1F3 /* HomeView.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
-				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
 				11030E0024A22CF8007EF743 /* SpeechSynthVM.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84B30877249CC426008777F2 /* Indicator.swift in Sources */,
