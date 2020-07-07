@@ -14,12 +14,8 @@ struct BibleSearchField: View {
     
     var body: some View {
         HStack {
-            TextField("Suche nach Text in der Bibel..", text: $lookUp)
-                .font(.system(size: 14))
-                .padding(15)
-                .background(RoundedRectangle(cornerRadius: 5)
-                    .strokeBorder(Color.black, lineWidth: 1))
-                .background(Color(.white))
+            
+            UserInputTextField(userInput: self.$lookUp, textFieldText: "Suche nach Text in der Bibel...").padding(.horizontal, 10)
             
             Spacer()
             

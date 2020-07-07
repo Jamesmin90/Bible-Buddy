@@ -91,7 +91,7 @@
 		84E174DC248414FC007E6A54 /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */; };
 		84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */; };
 		84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */; };
-		84E174E224845523007E6A54 /* EmailField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174E124845523007E6A54 /* EmailField.swift */; };
+		84E174E224845523007E6A54 /* UserInputTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E174E124845523007E6A54 /* UserInputTextField.swift */; };
 		84EB63FE2498FDF400C79458 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FD2498FDF400C79458 /* LoadingView.swift */; };
 		84EB6400249908A700C79458 /* ChapterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FF249908A700C79458 /* ChapterContent.swift */; };
 		84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */; };
@@ -182,7 +182,7 @@
 		84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		84E174DD24841AFB007E6A54 /* ProfileMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMenuItem.swift; sourceTree = "<group>"; };
 		84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteProfileView.swift; sourceTree = "<group>"; };
-		84E174E124845523007E6A54 /* EmailField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailField.swift; sourceTree = "<group>"; };
+		84E174E124845523007E6A54 /* UserInputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInputTextField.swift; sourceTree = "<group>"; };
 		84EB63FD2498FDF400C79458 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		84EB63FF249908A700C79458 /* ChapterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterContent.swift; sourceTree = "<group>"; };
 		84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLinkIsActive.swift; sourceTree = "<group>"; };
@@ -326,7 +326,7 @@
 				848CC573247534050000A1F3 /* CarouselCard.swift */,
 				84BFF060246C1D760018296F /* ContentView.swift */,
 				84E174DF24841DF7007E6A54 /* DeleteProfileView.swift */,
-				84E174E124845523007E6A54 /* EmailField.swift */,
+				84E174E124845523007E6A54 /* UserInputTextField.swift */,
 				848CC5902476753F0000A1F3 /* ErrorText.swift */,
 				84BFF074246C1DDE0018296F /* EventsView.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
@@ -544,7 +544,7 @@
 				842640F0249682FA00C464B4 /* HTMLStringView.swift in Sources */,
 				84475BD924A215730020187A /* UserProfileRepository.swift in Sources */,
 				842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */,
-				84E174E224845523007E6A54 /* EmailField.swift in Sources */,
+				84E174E224845523007E6A54 /* UserInputTextField.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleChapterContent.swift in Sources */,
 				84C5745B24850020006057C2 /* PasswordField.swift in Sources */,
 				845FDF0824912A5700A0CF33 /* Events.swift in Sources */,

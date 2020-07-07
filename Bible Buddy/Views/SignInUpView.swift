@@ -30,7 +30,7 @@ struct SignInUpView: View {
             
             TextMessage(textMessage: continueText)
             
-            EmailField(email: self.$email)
+            UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")
             
             PasswordField(password: self.$password, hidePassword: self.$hidePassword)
             

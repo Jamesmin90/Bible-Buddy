@@ -31,7 +31,7 @@ struct DeleteProfileView: View {
             TextMessage(textMessage: "Möchten Sie wirklich Ihr Profil entgültig löschen?")
             
             if (reauthenticationNecessary) {
-                EmailField(email: self.$email)
+                UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")
                 PasswordField(password: self.$password, hidePassword: self.$hidePassword)
             }
             
