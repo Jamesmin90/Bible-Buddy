@@ -15,7 +15,7 @@ class BookmarkFirestore: ObservableObject {
     @Published var error: String = ""
     @Published var bookmark: String = ""
     
-    var errorMessage: String = "Es ist leider etwas schief gelaufen. Bitte versuchen Sie es später noch einmal.FIRESTORE"
+    var errorMessage: String = "Es ist leider etwas schief gelaufen. Bitte versuchen Sie es später noch einmal."
     
     func getBookmarkOfUser(){
         

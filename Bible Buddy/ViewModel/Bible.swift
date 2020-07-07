@@ -16,7 +16,7 @@ class Bible: ObservableObject {
     @Published var searchResult: BibleSearchResult? = nil
     @Published var error: String = ""
     
-    var errorMessage: String = "Es ist leider etwas schief gelaufen. Bitte versuchen Sie es später noch einmal.BIBLE"
+    var errorMessage: String = "Es ist leider etwas schief gelaufen. Bitte versuchen Sie es später noch einmal."
     
     func getDataFromUrl<T: Decodable>(url: URLComponents, type: T.Type) {
         
