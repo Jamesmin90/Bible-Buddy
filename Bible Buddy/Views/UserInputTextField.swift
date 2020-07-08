@@ -1,5 +1,5 @@
 //
-//  EmailField.swift
+//  UserInputTextField.swift
 //  Bible Buddy
 //
 //  Created by admin on 31.05.20.
@@ -8,12 +8,14 @@
 
 import SwiftUI
 
-struct EmailField: View {
+struct UserInputTextField: View {
     
-    @Binding var email: String
+    @Binding var userInput: String
+    
+    var textFieldText: String
     
     var body: some View {
-        TextField("Email-Adresse", text: $email)
+        TextField(textFieldText, text: $userInput)
             .font(.system(size: 14))
             .padding(15)
             .background(RoundedRectangle(cornerRadius: 5)

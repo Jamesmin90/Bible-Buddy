@@ -26,7 +26,7 @@ struct ForgotPasswordView: View {
             
             TextMessage(textMessage: continueText)
             
-            EmailField(email: self.$email)
+            UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")
             
             ManageUserButton(handleButton: {self.resetPassword()}, buttonText: buttonText)
             

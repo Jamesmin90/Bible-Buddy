@@ -17,13 +17,7 @@ struct ManageUserButton: View {
     var body: some View {
         
         Button(action: {self.handleButton()}) {
-            Text(buttonText)
-                .frame(minWidth: 0, maxWidth: .infinity)
-                .frame(height: 50)
-                .font(.system(size: 13, weight: .bold))
-                .foregroundColor(.black)
-                .background(Color(#colorLiteral(red: 0.9198423028, green: 0.9198423028, blue: 0.9198423028, alpha: 1)))
-                .cornerRadius(5)
+            BasicTextField(text: buttonText)
         }.padding(.top, 30)
     }
 }

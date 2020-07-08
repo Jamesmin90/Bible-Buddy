@@ -36,7 +36,7 @@ struct UpdateEmailPasswordView: View {
                 if (buttonText == "Passwort ändern") {
                     PasswordField(password: self.$password, hidePassword: self.$hidePassword)
                 } else {
-                    EmailField(email: self.$email)
+                    UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")
                 }
                 
                 ManageUserButton(handleButton: {
