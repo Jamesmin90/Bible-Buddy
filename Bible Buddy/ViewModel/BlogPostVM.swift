@@ -13,7 +13,7 @@ class BlogPostVM: ObservableObject, Identifiable {
     @Published var post: BlogPost
     //@Published
     var userProfileVM: UserProfileVM
-    @Published var userProfile: UserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "")
+    @Published var userProfile: UserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "", bookmark: "")
     @Published var dateString: String
     @Published var blogImage: Data = Data()
     

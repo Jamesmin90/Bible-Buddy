@@ -12,6 +12,8 @@ struct BibleBookTableOfContents: View {
     
     @ObservedObject var bible = Bible()
     
+    @ObservedObject var bookmarkFirestore = BookmarkFirestore()
+    
     @State var lookUp: String = ""
     
     var body: some View {
@@ -29,6 +31,7 @@ struct BibleBookTableOfContents: View {
             }
                 
             else {
+                
                 TextMessage(textMessage: "Wählen Sie bitte ein Buch aus der Bibel, welches Sie lesen möchten.")
                 
                 BibleSearchField(lookUp: self.$lookUp)
@@ -43,10 +46,24 @@ struct BibleBookTableOfContents: View {
             }
         }
         .navigationBarTitle("Bücher")
+        .navigationBarItems(trailing: (self.bookmarkFirestore.bookmark != "") ? AnyView(self.goToBookmark) : AnyView(EmptyView()))
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
-        .onAppear() { self.getBibleBooks() }
+        .onAppear() {
+            self.getBibleBooks()
+            self.bookmarkFirestore.getBookmarkOfUser()
+        }
+    }
+    
+    var goToBookmark: some View {
+        NavigationLink(destination: BibleChapterContent(chapterId: self.bookmarkFirestore.bookmark)) {
+            Image("bookmark")
+                .renderingMode(.original)
+                .resizable()
+                .frame(width: 20, height: 20)
+                .padding(.horizontal, 20)
+        }
     }
     
     func getBibleBooks() {

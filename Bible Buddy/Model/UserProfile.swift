@@ -16,6 +16,7 @@ struct UserProfile: Codable, Identifiable {
     var surName: String
     var userName: String
     var pic: String
+    var bookmark: String
  //   var favorites: [String]
  //   @ServerTimestamp var createdTime: Timestamp?
 }

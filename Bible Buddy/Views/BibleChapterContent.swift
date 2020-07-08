@@ -10,7 +10,13 @@ import SwiftUI
 
 struct BibleChapterContent: View {
     
+    @EnvironmentObject var session: SessionStore
+    
     @ObservedObject var bible = Bible()
+    
+    @ObservedObject var bookmarkFirebase = BookmarkFirestore()
+    
+    @State var bookmarkWasSet: Bool = false
     
     var chapterId: String
     
@@ -28,6 +34,7 @@ struct BibleChapterContent: View {
             }
                 
             else {
+                
                 HTMLStringView(htmlContent: (bible.chapterContent?.data.content)!)
                 
                 HStack {
@@ -57,8 +64,34 @@ struct BibleChapterContent: View {
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
-        .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
-        )
+        .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView()))
+        .alert(isPresented: self.$bookmarkWasSet) {
+            Alert(title: Text(""), message: (self.bookmarkFirebase.error == "") ? Text("Das Lesezeichen wurde erfolgreich gesetzt.") : Text(self.bookmarkFirebase.error), dismissButton: .default(Text("OK"), action: {self.bookmarkWasSet = false}))
+        }
+    }
+    
+    var readButton: some View {
+        
+        HStack {
+            
+            if (session.session != nil) {
+                Button(action: {
+                    self.bookmarkFirebase.updateBookMarkOfUser(bookmark: (self.bible.chapterContent?.data.id)!)
+                    self.bookmarkWasSet = true
+                }) {
+                    Image("bookmark")
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 20, height: 20)
+                        .padding(.horizontal, 20)
+                }
+            }
+            
+            NavigationLink(
+            destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
+                Image(systemName: "speaker.2")
+            }
+        }
     }
     
     func getChapterContent(chapterId: String) {
@@ -66,11 +99,5 @@ struct BibleChapterContent: View {
         let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
         
         self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
-    }
-    var readButton: some View {
-        NavigationLink(
-            destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
-            Image(systemName: "speaker.2")
-        }
     }
 }
