@@ -14,7 +14,7 @@ import FirebaseFirestoreSwift
 
 class UserProfileVM: ObservableObject {
 
-    @Published var profile: UserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "")
+    @Published var profile: UserProfile = UserProfile(id: "", vorName: "", surName: "", userName: "", pic: "", bookmark: "")
     @Published var profilepicture: Data = Data()
     
     var repository: FirestoreUserProfileRepository
