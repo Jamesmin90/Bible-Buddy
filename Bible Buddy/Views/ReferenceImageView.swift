@@ -32,7 +32,7 @@ struct ReferenceImageView: View {
             ReferenceImageItem(image: "notes", madeFrom: "Icon made by Note icon icon by Icons8", link: "https://icons8.com/icons/set/note")
             
         }
-        .padding().padding(.top, 50)
+        .padding()
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .navigationBarTitle("Referenzen", displayMode: .inline)
