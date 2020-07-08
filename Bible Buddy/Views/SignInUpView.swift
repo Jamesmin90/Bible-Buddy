@@ -12,6 +12,7 @@ import Firebase
 struct SignInUpView: View {
     
     @EnvironmentObject var session: SessionStore
+    @Environment(\.presentationMode) var presMode: Binding<PresentationMode>
     
     @State var userName: String = ""
     @State var email: String = ""
@@ -20,6 +21,12 @@ struct SignInUpView: View {
     @State var error: String = ""
     @State var creation = false
     @State var loading = false
+    @State var name = ""
+    @State var picker = false
+    @State var imagedata : Data = .init(count: 0)
+    @State var surName = ""
+    @State var showAlert = false
+    @State var userNameAlert = false
     
     var continueText: String
     var buttonText: String
@@ -29,6 +36,48 @@ struct SignInUpView: View {
         VStack {
             
             TextMessage(textMessage: continueText)
+            
+            if(self.buttonText == "Registrieren"){
+                HStack(alignment: .center){
+                    
+                    Spacer()
+                    
+                    Button(action: {
+                        
+                        self.picker.toggle()
+                        
+                    }) {
+                        
+                        if self.imagedata.count == 0{
+                            
+                            HStack {
+                                Spacer()
+                                Image("upload-image")
+                                 .renderingMode(.original)
+                                 .resizable()
+                                 .frame(width: 40, height: 40)
+                                Spacer()
+                            }
+                            
+                           Spacer()
+                        }
+                        else{
+                            
+                            Image(uiImage: UIImage(data: self.imagedata)!).resizable().renderingMode(.original).frame(width: 90, height: 90).clipShape(Circle())
+                        }
+                    }
+                    
+                    Spacer()
+                }
+                .padding(.bottom, 15)
+                
+                UserInputTextField(userInput: self.$userName, textFieldText: "UserName")
+                
+                UserInputTextField(userInput: self.$name, textFieldText: "Vorname")
+                
+                UserInputTextField(userInput: self.$surName, textFieldText: "Surname")
+
+            }
             
             UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")
             
@@ -46,7 +95,8 @@ struct SignInUpView: View {
             }
             
             ManageUserButton(handleButton: {
-                (self.buttonText == "Registrieren") ? self.signUp() : self.signIn()
+                (self.buttonText == "Registrieren") ? self.signUp() : self.signIn();
+                
             }, buttonText: buttonText)
             
             if (error != "") {
@@ -58,6 +108,12 @@ struct SignInUpView: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
+        .sheet(isPresented: self.$picker, content: {
+            
+            ImagePicker(picker: self.$picker, imagedata: self.$imagedata, presentationMode: self.presMode)
+        })
+        .alert(isPresented: self.$userNameAlert) {
+            Alert(title: Text(""), message: Text("The Username is already in use"), dismissButton: .default(Text("OK")))}
     }
     
     func signIn() {
@@ -90,10 +146,51 @@ struct SignInUpView: View {
     
     func signUp() {
         
-        session.signUp(email: email, password: password) {
-            (result, error) in
-            self.signInUpCompletionHandler(error: error)
+        var usernames = [String]()
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users").getDocuments { (snap, err) in
+
+        if err != nil{
+            
+            print((err?.localizedDescription)!)
+            return
         }
+            for i in snap!.documents{
+                let username1 = i.get("userName") as! String
+                usernames.append(username1)
+                }
+            if usernames.contains(self.userName){
+                self.userNameAlert.toggle()
+                return
+            } else{
+                
+                    if self.name != "" && self.imagedata.count != 0 && self.surName != ""{
+                        
+                        self.session.signUp(email: self.email, password: self.password) {
+                        (result, error) in
+                        self.signInUpCompletionHandler(error: error)
+                        
+                            if error == nil{
+                        
+                        self.loading.toggle()
+                        CreateUser(vorName: self.name, surName: self.surName, userName: self.userName, imagedata: self.imagedata) { (status) in
+                            
+                            if status{
+                                
+                                self.showAlert.toggle()
+                            }
+                        }
+                    }
+                    }
+                }
+                
+            }
+            
+        }
+        
+        
 
     }
     
@@ -113,4 +210,7 @@ struct SignInUpView_Previews: PreviewProvider {
         SignInUpView(continueText: "123", buttonText: "Sign In")
     }
 }
+
+
+
 

@@ -18,6 +18,6 @@ struct ManageUserButton: View {
         
         Button(action: {self.handleButton()}) {
             BasicTextField(text: buttonText)
-        }.padding(.top, 30)
+        }.padding(.top, 20)
     }
 }

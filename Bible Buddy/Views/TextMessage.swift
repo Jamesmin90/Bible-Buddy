@@ -1,11 +1,3 @@
-//
-//  TextMessage.swift
-//  Bible Buddy
-//
-//  Created by admin on 01.06.20.
-//  Copyright © 2020 Gruppe03. All rights reserved.
-//
-
 import SwiftUI
 
 struct TextMessage: View {
@@ -16,8 +8,8 @@ struct TextMessage: View {
         Text(textMessage)
             .font(.system(size: 18))
             .foregroundColor(Color.black)
-            .padding(.top, 70)
-            .padding(.bottom, 40)
+            .padding(.top, 60)
+            .padding(.bottom, 30)
             .multilineTextAlignment(.center)
     }
 }
