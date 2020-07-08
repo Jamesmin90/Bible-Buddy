@@ -50,46 +50,33 @@ struct SignInUpView: View {
                         
                         if self.imagedata.count == 0{
                             
-                           Image("upload-image")
-                            .renderingMode(.original)
-                            .resizable()
-                            .frame(width: 70, height: 70)
-                           
+                            HStack {
+                                Spacer()
+                                Image("upload-image")
+                                 .renderingMode(.original)
+                                 .resizable()
+                                 .frame(width: 40, height: 40)
+                                Spacer()
+                            }
+                            
                            Spacer()
                         }
                         else{
                             
                             Image(uiImage: UIImage(data: self.imagedata)!).resizable().renderingMode(.original).frame(width: 90, height: 90).clipShape(Circle())
                         }
-                        
-                        
                     }
                     
                     Spacer()
                 }
-                .padding(.vertical, 15)
+                .padding(.bottom, 15)
                 
-                TextField("UserName", text: self.$userName)
-                     .font(.system(size: 14))
-                     .padding(15)
-                     .background(RoundedRectangle(cornerRadius: 5)
-                     .strokeBorder(Color.black, lineWidth: 1))
-                     .background(Color(.white))
-                 
-                 TextField("Vorname", text: self.$name)
-                     .font(.system(size: 14))
-                     .padding(15)
-                     .background(RoundedRectangle(cornerRadius: 5)
-                     .strokeBorder(Color.black, lineWidth: 1))
-                     .background(Color(.white))
+                UserInputTextField(userInput: self.$userName, textFieldText: "UserName")
                 
-                 TextField("Surname", text: self.$surName)
-                     .font(.system(size: 14))
-                     .padding(15)
-                     .background(RoundedRectangle(cornerRadius: 5)
-                     .strokeBorder(Color.black, lineWidth: 1))
-                     .background(Color(.white))
+                UserInputTextField(userInput: self.$name, textFieldText: "Vorname")
                 
+                UserInputTextField(userInput: self.$surName, textFieldText: "Surname")
+
             }
             
             UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")

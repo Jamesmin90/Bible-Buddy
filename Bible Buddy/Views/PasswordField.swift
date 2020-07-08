@@ -39,6 +39,6 @@ struct PasswordField: View {
         .background(RoundedRectangle(cornerRadius: 5)
         .strokeBorder(Color.black, lineWidth: 1))
         .background(Color(.white))
-        .padding(.top, 15)
+        .padding(.top, 8)
     }
 }
