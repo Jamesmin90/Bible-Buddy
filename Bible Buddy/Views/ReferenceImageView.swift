@@ -32,7 +32,7 @@ struct ReferenceImageView: View {
                     
                     ReferenceImageItem(image: "imageReference", madeFrom: "Icon made by Good Ware from www.flaticon.com", link: "https://www.flaticon.com/de/kostenloses-icon/bild_702697")
                     
-                    ReferenceImageItem(image: "upload-image", madeFrom: "Icon made by Becris from www.flaticon.com", link: "https://www.flaticon.com/de/kostenloses-icon/hochladen_860826?term=hochladen&page=1&position=1")
+                    ReferenceImageItem(image: "upload-image", madeFrom: "Icon made by Kiranshastry from www.flaticon.com", link: "https://www.flaticon.com/de/kostenloses-icon/hinzufugen_1578253?term=add%20picture&page=1&position=9")
             }
             
             Group {
