@@ -145,6 +145,7 @@ struct newChatView : View {
     @Binding var pic : String
     @Binding var show : Bool
     @Binding var chat : Bool
+    @State private var searchText = ""
     
     
     var body : some View{
@@ -158,8 +159,16 @@ struct newChatView : View {
                         Text("No Users Found")
                     }
                     else{
+                        VStack{
+                            Spacer()
+                            HStack{
+                                Spacer()
+                                Indicator()
+                                Spacer()
+                            }
+                            Spacer()
+                        }
                         
-                        Indicator()
                     }
                     
                 }
@@ -167,11 +176,13 @@ struct newChatView : View {
                     
                     Text("Select To Chat").font(.title).foregroundColor(Color.black.opacity(0.5))
                     
+                    SearchBar(text: $searchText, placeholder: "Suche Benutzername")
+                    
                     ScrollView(.vertical, showsIndicators: false) {
                         
                         VStack(spacing: 12){
                             
-                            ForEach(datas.users){i in
+                            ForEach(datas.users.filter{self.searchText.isEmpty ? true:($0.userName.contains(self.searchText))}, id: \.self.id)  {i in
                                 
                                 Button(action: {
                                     
@@ -248,7 +259,7 @@ class getAllUsers : ObservableObject{
     }
 }
 
-struct User_Chat : Identifiable {
+struct User_Chat : Identifiable, Hashable {
     
     var id : String
     var userName : String
@@ -465,7 +476,7 @@ struct CustomScrollView<Content>: View where Content: View {
         .frame(height: geometry.size.height, alignment: (reversed ? .bottom : .top))
         .offset(y: contentOffset + scrollOffset)
         .animation(.easeInOut)
-        .background(Color.white)
+        .background(Color(UIColor(red: 0.92, green: 1.00, blue: 1.00, alpha: 1.00)))
         .gesture(DragGesture()
             .onChanged { self.onDragChanged($0) }
             .onEnded { self.onDragEnded($0, outerHeight: geometry.size.height) }
