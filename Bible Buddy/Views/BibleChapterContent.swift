@@ -21,8 +21,6 @@ struct BibleChapterContent: View {
     
     @State var bookmarkWasSet: Bool = false
     
-    var chapterId: String
-    
     var body: some View {
         VStack {
             
@@ -67,45 +65,43 @@ struct BibleChapterContent: View {
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
-        .navigationBarItems(
-            trailing:
-            HStack{
-            addButton
-            Button(action: { self.showNotes.toggle() }) { Image(systemName: "square.on.square") }
-            bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
-            })
-            .sheet(isPresented: $showNotes) {
-                NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterId), showAsLinks: false)
-                //Text(self.chapterId)
-        .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView()))
+        .sheet(isPresented: $showNotes) {
+            NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterId), showAsLinks: false)
+            }
+        .navigationBarItems(trailing: self.bible.chapterContent?.data.content != nil ? AnyView(self.navigationBarButtons) : AnyView(EmptyView()))
         .alert(isPresented: self.$bookmarkWasSet) {
             Alert(title: Text(""), message: (self.bookmarkFirebase.error == "") ? Text("Das Lesezeichen wurde erfolgreich gesetzt.") : Text(self.bookmarkFirebase.error), dismissButton: .default(Text("OK"), action: {self.bookmarkWasSet = false}))
         }
     }
     
-    var readButton: some View {
-        
+    var navigationBarButtons: some View {
         HStack {
-            
-            if (session.session != nil) {
-                Button(action: {
-                    self.bookmarkFirebase.updateBookMarkOfUser(bookmark: (self.bible.chapterContent?.data.id)!)
-                    self.bookmarkWasSet = true
-                }) {
-                    Image("bookmark")
-                        .renderingMode(.original)
-                        .resizable()
-                        .frame(width: 20, height: 20)
-                        .padding(.horizontal, 20)
-                }
+            if(session.session != nil) {
+                addButton
+                showNotesButton
+                bookmarkButton
             }
-            
-            NavigationLink(
-            destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!))) {
-                Image(systemName: "speaker.2")
-            }
+            readButton
+        }
+        
+        
+    }
+    
+    var bookmarkButton: some View {
+        
+        Button(action: {
+            self.bookmarkFirebase.updateBookMarkOfUser(bookmark: (self.bible.chapterContent?.data.id)!)
+            self.bookmarkWasSet = true
+        }) {
+            Image(systemName: "bookmark")
+                //.renderingMode(.original)
+                //.resizable()
+                //.frame(width: 20, height: 20)
+                .padding(.horizontal, 5)
+                .accentColor(.blue)
         }
     }
+    
     
     func getChapterContent(chapterId: String) {
         
@@ -113,10 +109,12 @@ struct BibleChapterContent: View {
         
         self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
     }
+    
     var readButton: some View {
         NavigationLink(
         destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!), chapterRef: self.$chapterId)) {
             Image(systemName: "speaker.2")
+            .padding(.horizontal, 5)
         }
     }
     
@@ -124,15 +122,23 @@ struct BibleChapterContent: View {
         HStack{
             NavigationLink(
                 destination: NoteAddView(showSelf: $showAddNote, chapterRef: self.$chapterId), 
-            isActive: $showAddNote) {
-                //Text("Add")
-                EmptyView()
+                isActive: $showAddNote) {
+                    //Text("Add")
+                    EmptyView()
             }
             Button(action: {
                 self.showAddNote.toggle()
             }) {
                 Image(systemName: "square.and.pencil")
+                .padding(.horizontal, 5)
             }
+        }
+    }
+    
+    var showNotesButton: some View {
+        Button(action: { self.showNotes.toggle() }) {
+            Image(systemName: "square.on.square")
+                .padding(.horizontal, 5)
         }
     }
 }
