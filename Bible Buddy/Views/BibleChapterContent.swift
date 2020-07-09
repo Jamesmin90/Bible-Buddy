@@ -94,11 +94,7 @@ struct BibleChapterContent: View {
             self.bookmarkWasSet = true
         }) {
             Image(systemName: "bookmark")
-                //.renderingMode(.original)
-                //.resizable()
-                //.frame(width: 20, height: 20)
                 .padding(.horizontal, 5)
-                .accentColor(.blue)
         }
     }
     
@@ -123,7 +119,6 @@ struct BibleChapterContent: View {
             NavigationLink(
                 destination: NoteAddView(showSelf: $showAddNote, chapterRef: self.$chapterId), 
                 isActive: $showAddNote) {
-                    //Text("Add")
                     EmptyView()
             }
             Button(action: {
