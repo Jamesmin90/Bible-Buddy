@@ -99,6 +99,8 @@
 		84EB6400249908A700C79458 /* ChapterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EB63FF249908A700C79458 /* ChapterContent.swift */; };
 		84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */; };
 		84FC16CC24B5C693006BE735 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC16CB24B5C693006BE735 /* SearchBar.swift */; };
+		84FC16D024B74046006BE735 /* EventsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC16CF24B74046006BE735 /* EventsResponse.swift */; };
+		84FC16D224B74073006BE735 /* EventsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC16D124B74073006BE735 /* EventsButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -194,6 +196,8 @@
 		84EB63FF249908A700C79458 /* ChapterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterContent.swift; sourceTree = "<group>"; };
 		84F387D4248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpNavigationLinkIsActive.swift; sourceTree = "<group>"; };
 		84FC16CB24B5C693006BE735 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		84FC16CF24B74046006BE735 /* EventsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsResponse.swift; sourceTree = "<group>"; };
+		84FC16D124B74073006BE735 /* EventsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsButton.swift; sourceTree = "<group>"; };
 		C2D10F635B0740AC0E7B46ED /* Pods_Bible_Buddy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bible_Buddy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F045A889704DBB1F54D8EAD6 /* Pods-Bible Buddy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bible Buddy.debug.xcconfig"; path = "Target Support Files/Pods-Bible Buddy/Pods-Bible Buddy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -330,8 +334,6 @@
 				11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */,
 				84B3086A249CC3E9008777F2 /* CreateAccount.swift */,
 				84B30866249CC37F008777F2 /* ChatView.swift */,
-				84B3086C249CC403008777F2 /* ChatRepository.swift */,
-				845FDF0924912A6600A0CF33 /* EventsDetail.swift */,
 				848CC572247534050000A1F3 /* Carousel.swift */,
 				848CC573247534050000A1F3 /* CarouselCard.swift */,
 				84BFF060246C1D760018296F /* ContentView.swift */,
@@ -339,6 +341,9 @@
 				84E174E124845523007E6A54 /* UserInputTextField.swift */,
 				848CC5902476753F0000A1F3 /* ErrorText.swift */,
 				84BFF074246C1DDE0018296F /* EventsView.swift */,
+				845FDF0924912A6600A0CF33 /* EventsDetail.swift */,
+				84FC16CF24B74046006BE735 /* EventsResponse.swift */,
+				84FC16D124B74073006BE735 /* EventsButton.swift */,
 				84BFF078246C1E220018296F /* BlogView.swift */,
 				84E174DB248414FC007E6A54 /* ForgotPasswordView.swift */,
 				848CC571247534050000A1F3 /* HomeView.swift */,
@@ -381,6 +386,7 @@
 		84DCE46B247A7E87005AA691 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				84B3086C249CC403008777F2 /* ChatRepository.swift */,
 				84475BD224A215420020187A /* FirestoreBlogPostRepository.swift */,
 				84475BD824A215730020187A /* UserProfileRepository.swift */,
 				84475BD624A2156B0020187A /* SessionStore.swift */,
@@ -542,6 +548,7 @@
 				84BFF079246C1E220018296F /* BlogView.swift in Sources */,
 				84E174DC248414FC007E6A54 /* ForgotPasswordView.swift in Sources */,
 				84C574592484FF9A006057C2 /* TextMessage.swift in Sources */,
+				84FC16D224B74073006BE735 /* EventsButton.swift in Sources */,
 				84BF3CD424A5F12E00C9C1F2 /* BasicTextField.swift in Sources */,
 				11420BB82492F0B800C74801 /* MyTextFieldStyle.swift in Sources */,
 				84E174DA248414A1007E6A54 /* UpdateEmailPasswordView.swift in Sources */,
@@ -610,6 +617,7 @@
 				11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */,
 				84475BD724A2156B0020187A /* SessionStore.swift in Sources */,
 				84BFF061246C1D760018296F /* ContentView.swift in Sources */,
+				84FC16D024B74046006BE735 /* EventsResponse.swift in Sources */,
 				845FDF0A24912A6600A0CF33 /* EventsDetail.swift in Sources */,
 				842CDD5F24AE7FE800DF90F2 /* BibleSearchResults.swift in Sources */,
 				845FDF0C24912A6D00A0CF33 /* Landmark.swift in Sources */,
@@ -752,7 +760,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
-				DEVELOPMENT_TEAM = L9F84YK587;
+				DEVELOPMENT_TEAM = MXGR5AABXL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -773,7 +781,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Bible Buddy/Preview Content\"";
-				DEVELOPMENT_TEAM = L9F84YK587;
+				DEVELOPMENT_TEAM = MXGR5AABXL;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "Bible Buddy/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
