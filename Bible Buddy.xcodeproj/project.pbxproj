@@ -12,6 +12,14 @@
 		11030E0224A232A8007EF743 /* TextWithAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0124A232A8007EF743 /* TextWithAttributedString.swift */; };
 		11030E0424A26773007EF743 /* SpeechTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0324A26773007EF743 /* SpeechTestView.swift */; };
 		11030E0624A267F5007EF743 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0524A267F5007EF743 /* TestView.swift */; };
+		110D6E6A24B3822A000A6562 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6924B3822A000A6562 /* Note.swift */; };
+		110D6E6C24B38393000A6562 /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6B24B38393000A6562 /* NoteRepository.swift */; };
+		110D6E6E24B3840C000A6562 /* FirestoreNoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6D24B3840B000A6562 /* FirestoreNoteRepository.swift */; };
+		110D6E7024B385C6000A6562 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6F24B385C6000A6562 /* NoteView.swift */; };
+		110D6E7224B3869D000A6562 /* NoteVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E7124B3869D000A6562 /* NoteVM.swift */; };
+		110D6E7424B4B44C000A6562 /* NoteListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E7324B4B44C000A6562 /* NoteListVM.swift */; };
+		110D6E7624B4BE81000A6562 /* NoteCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E7524B4BE81000A6562 /* NoteCard.swift */; };
+		110D6E7824B5DEC7000A6562 /* NoteAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E7724B5DEC7000A6562 /* NoteAddView.swift */; };
 		11420BB32492721100C74801 /* ImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11420BB22492721100C74801 /* ImagePickerViewController.swift */; };
 		11420BB5249274A500C74801 /* ImagePicker1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11420BB4249274A500C74801 /* ImagePicker1.swift */; };
 		11420BB82492F0B800C74801 /* MyTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11420BB72492F0B800C74801 /* MyTextFieldStyle.swift */; };
@@ -106,6 +114,14 @@
 		11030E0124A232A8007EF743 /* TextWithAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithAttributedString.swift; sourceTree = "<group>"; };
 		11030E0324A26773007EF743 /* SpeechTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTestView.swift; sourceTree = "<group>"; };
 		11030E0524A267F5007EF743 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		110D6E6924B3822A000A6562 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		110D6E6B24B38393000A6562 /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
+		110D6E6D24B3840B000A6562 /* FirestoreNoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreNoteRepository.swift; sourceTree = "<group>"; };
+		110D6E6F24B385C6000A6562 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
+		110D6E7124B3869D000A6562 /* NoteVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteVM.swift; sourceTree = "<group>"; };
+		110D6E7324B4B44C000A6562 /* NoteListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteListVM.swift; sourceTree = "<group>"; };
+		110D6E7524B4BE81000A6562 /* NoteCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCard.swift; sourceTree = "<group>"; };
+		110D6E7724B5DEC7000A6562 /* NoteAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteAddView.swift; sourceTree = "<group>"; };
 		11420BB22492721100C74801 /* ImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerViewController.swift; sourceTree = "<group>"; };
 		11420BB4249274A500C74801 /* ImagePicker1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker1.swift; sourceTree = "<group>"; };
 		11420BB72492F0B800C74801 /* MyTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -239,6 +255,8 @@
 				11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */,
 				84B7A83F24B5079200C3E27E /* BookmarkFirestore.swift */,
 				84FC16CB24B5C693006BE735 /* SearchBar.swift */,
+				110D6E7124B3869D000A6562 /* NoteVM.swift */,
+				110D6E7324B4B44C000A6562 /* NoteListVM.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -318,6 +336,7 @@
 				84EB63FF249908A700C79458 /* ChapterContent.swift */,
 				84BF3CCF249FF1BD00C9C1F2 /* ChapterData.swift */,
 				842CDD6024AE82FD00DF90F2 /* BibleSearchResult.swift */,
+				110D6E6924B3822A000A6562 /* Note.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,6 +393,9 @@
 				11030E0524A267F5007EF743 /* TestView.swift */,
 				84B7A83924B45C6100C3E27E /* ReferenceImageItem.swift */,
 				84B7A83B24B4630000C3E27E /* ReferenceImageView.swift */,
+				110D6E6F24B385C6000A6562 /* NoteView.swift */,
+				110D6E7524B4BE81000A6562 /* NoteCard.swift */,
+				110D6E7724B5DEC7000A6562 /* NoteAddView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -388,6 +410,8 @@
 				84475BD024A2153D0020187A /* BlogPostRepository.swift */,
 				84B30870249CC40E008777F2 /* CreateUser.swift */,
 				84B3086E249CC409008777F2 /* checkUser.swift */,
+				110D6E6B24B38393000A6562 /* NoteRepository.swift */,
+				110D6E6D24B3840B000A6562 /* FirestoreNoteRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -528,13 +552,16 @@
 				848CC579247534050000A1F3 /* HomeView.swift in Sources */,
 				84264102249808CC00C464B4 /* ChaptersList.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
+				110D6E6C24B38393000A6562 /* NoteRepository.swift in Sources */,
 				84C5745D2485008D006057C2 /* ManageUserButton.swift in Sources */,
 				84E174DE24841AFB007E6A54 /* ProfileMenuItem.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */,
 				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
 				84B3086B249CC3E9008777F2 /* CreateAccount.swift in Sources */,
+				110D6E7024B385C6000A6562 /* NoteView.swift in Sources */,
 				842CDD6524AF8EFF00DF90F2 /* BibleSearchField.swift in Sources */,
+				110D6E6A24B3822A000A6562 /* Note.swift in Sources */,
 				84B30873249CC41C008777F2 /* EventsApi.swift in Sources */,
 				11030E0224A232A8007EF743 /* TextWithAttributedString.swift in Sources */,
 				848CC57A247534050000A1F3 /* Carousel.swift in Sources */,
@@ -549,8 +576,10 @@
 				84BF3CCA249FA08A00C9C1F2 /* Bible.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				84E174E024841DF7007E6A54 /* DeleteProfileView.swift in Sources */,
+				110D6E6E24B3840C000A6562 /* FirestoreNoteRepository.swift in Sources */,
 				848CC578247534050000A1F3 /* WelcomeTextView.swift in Sources */,
 				848609F524968D3100C72648 /* TextDescription.swift in Sources */,
+				110D6E7624B4BE81000A6562 /* NoteCard.swift in Sources */,
 				84BF3CCC249FC9F400C9C1F2 /* BibleBookAndChapterNavigationLink.swift in Sources */,
 				842CDD6324AF410000DF90F2 /* BibleSearchResultsItem.swift in Sources */,
 				842640F0249682FA00C464B4 /* HTMLStringView.swift in Sources */,
@@ -559,6 +588,8 @@
 				84B7A83A24B45C6100C3E27E /* ReferenceImageItem.swift in Sources */,
 				842F7D87248BAD540070900E /* SideMenuItemIsActive.swift in Sources */,
 				84E174E224845523007E6A54 /* UserInputTextField.swift in Sources */,
+				110D6E7224B3869D000A6562 /* NoteVM.swift in Sources */,
+				84E174E224845523007E6A54 /* EmailField.swift in Sources */,
 				84BFF077246C1E020018296F /* BibleChapterContent.swift in Sources */,
 				84C5745B24850020006057C2 /* PasswordField.swift in Sources */,
 				845FDF0824912A5700A0CF33 /* Events.swift in Sources */,
@@ -575,6 +606,8 @@
 				11FE910E2481425F000C8ED6 /* BlogPostVM.swift in Sources */,
 				848CC579247534050000A1F3 /* HomeView.swift in Sources */,
 				848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */,
+				110D6E7424B4B44C000A6562 /* NoteListVM.swift in Sources */,
+				848CC58D2475824C0000A1F3 /* HomeViewLoggedIn.swift in Sources */,
 				11030E0024A22CF8007EF743 /* SpeechSynthVM.swift in Sources */,
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				84B30877249CC426008777F2 /* Indicator.swift in Sources */,
@@ -606,6 +639,7 @@
 				84B3086D249CC403008777F2 /* ChatRepository.swift in Sources */,
 				842640FA2497F2D400C464B4 /* BibleBookTableOfContents.swift in Sources */,
 				84BFF05F246C1D760018296F /* SceneDelegate.swift in Sources */,
+				110D6E7824B5DEC7000A6562 /* NoteAddView.swift in Sources */,
 				11B975F42480584700680B54 /* BlogPost.swift in Sources */,
 				11FE91102482B009000C8ED6 /* BlogPostEditView.swift in Sources */,
 				84475BD724A2156B0020187A /* SessionStore.swift in Sources */,
