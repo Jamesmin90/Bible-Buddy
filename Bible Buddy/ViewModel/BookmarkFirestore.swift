@@ -2,7 +2,7 @@
 //  BookmarkFirestore.swift
 //  Bible Buddy
 //
-//  Created by admin on 07.07.20.
+//  Created by Jannis Gutleben on 07.07.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

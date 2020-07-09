@@ -2,14 +2,14 @@
 //  SpeechTestView.swift
 //  Bible Buddy
 //
-//  Created by jag on 23.06.20.
+//  Created by Jannis Gutleben on 23.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
 
 import SwiftUI
 
-struct SpeechTestView: View {
+struct SpeechTextView: View {
     @EnvironmentObject var session: SessionStore
     @ObservedObject var synthVM: SpeechSynthVM
     @State var showNotes: Bool = false
@@ -40,7 +40,6 @@ struct SpeechTestView: View {
             })
             .sheet(isPresented: $showNotes) {
                 NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterRef), showAsLinks: false)
-                //Text(self.chapterId)
         }
     }
     

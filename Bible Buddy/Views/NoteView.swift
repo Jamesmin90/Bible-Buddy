@@ -2,7 +2,7 @@
 //  NoteView.swift
 //  Bible Buddy
 //
-//  Created by jag on 06.07.20.
+//  Created by Jannis Gutleben on 06.07.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

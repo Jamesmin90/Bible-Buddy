@@ -2,7 +2,7 @@
 //  UserProfile.swift
 //  Bible Buddy
 //
-//  Created by jag on 02.06.20.
+//  Created by Jannis Gutleben on 02.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
@@ -17,6 +17,4 @@ struct UserProfile: Codable, Identifiable {
     var userName: String
     var pic: String
     var bookmark: String
- //   var favorites: [String]
- //   @ServerTimestamp var createdTime: Timestamp?
 }

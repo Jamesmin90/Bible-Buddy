@@ -108,7 +108,7 @@ struct BibleChapterContent: View {
     
     var readButton: some View {
         NavigationLink(
-        destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!), chapterRef: self.$chapterId)) {
+        destination: SpeechTextView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!), chapterRef: self.$chapterId)) {
             Image(systemName: "speaker.2")
             .padding(.horizontal, 5)
         }

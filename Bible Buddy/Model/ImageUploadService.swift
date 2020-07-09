@@ -2,7 +2,7 @@
 //  FirestorageImageUploader.swift
 //  Bible Buddy
 //
-//  Created by jag on 12.06.20.
+//  Created by Jannis Gutleben on 12.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

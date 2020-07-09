@@ -2,7 +2,7 @@
 //  BlogPostDetailView.swift
 //  Bible Buddy
 //
-//  Created by jag on 29.05.20.
+//  Created by Jannis Gutleben on 29.05.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
@@ -17,7 +17,6 @@ struct BlogPostDetailView: View {
             VStack() {
                 Image(uiImage: UIImage(data: postVM.blogImage) ?? UIImage())
                 .resizable()
-                    //.edgesIgnoringSafeArea(.top)
                     .frame(height: 300)
                     .cornerRadius(10)
                 
@@ -61,7 +60,7 @@ struct BlogPostDetailView: View {
                         .padding()
                         
                     }
-                } //.padding()
+                }
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(10)
                 .background(Color.gray.opacity(0.5))

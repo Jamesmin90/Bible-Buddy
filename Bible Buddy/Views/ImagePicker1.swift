@@ -2,7 +2,7 @@
 //  ImagePicker.swift
 //  Bible Buddy
 //
-//  Created by jag on 11.06.20.
+//  Created by Jannis Gutleben on 11.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

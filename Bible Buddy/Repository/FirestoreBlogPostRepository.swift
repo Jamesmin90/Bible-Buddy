@@ -2,7 +2,7 @@
 //  File.swift
 //  Bible Buddy
 //
-//  Created by jag on 28.05.20.
+//  Created by Jannis Gutleben on 28.05.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
