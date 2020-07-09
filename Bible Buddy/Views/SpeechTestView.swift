@@ -10,7 +10,13 @@
 import SwiftUI
 
 struct SpeechTestView: View {
+    @EnvironmentObject var session: SessionStore
     @ObservedObject var synthVM: SpeechSynthVM
+    @State var showNotes: Bool = false
+    @State var showAddNote: Bool = false
+    
+    @Binding var chapterRef: String
+    
     var body: some View {
         ZStack{
             Color("basicBackgroundColor").edgesIgnoringSafeArea(.all)
@@ -25,6 +31,16 @@ struct SpeechTestView: View {
             playbackButton
             
         }
+        }
+        .navigationBarItems(
+            trailing:
+            HStack{
+            addButton
+            Button(action: { self.showNotes.toggle() }) { Image(systemName: "square.on.square") }
+            })
+            .sheet(isPresented: $showNotes) {
+                NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterRef), showAsLinks: false)
+                //Text(self.chapterId)
         }
     }
     
@@ -47,6 +63,22 @@ struct SpeechTestView: View {
                 self.synthVM.resume()
             }) {
                 Image(systemName: "play.circle.fill").font(.system(size: 42))
+            }
+        }
+    }
+    
+    var addButton: some View {
+        HStack{
+            NavigationLink(
+                destination: NoteAddView(showSelf: $showAddNote, chapterRef: $chapterRef),
+            isActive: $showAddNote) {
+                //Text("Add")
+                EmptyView()
+            }
+            Button(action: {
+                self.showAddNote.toggle()
+            }) {
+                Image(systemName: "square.and.pencil")
             }
         }
     }

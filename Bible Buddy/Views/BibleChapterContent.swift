@@ -13,6 +13,9 @@ struct BibleChapterContent: View {
     @EnvironmentObject var session: SessionStore
     
     @ObservedObject var bible = Bible()
+    @State var showNotes: Bool = false
+    @State var showAddNote: Bool = false
+    @State var chapterId: String
     
     @ObservedObject var bookmarkFirebase = BookmarkFirestore()
     
@@ -64,6 +67,16 @@ struct BibleChapterContent: View {
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
+        .navigationBarItems(
+            trailing:
+            HStack{
+            addButton
+            Button(action: { self.showNotes.toggle() }) { Image(systemName: "square.on.square") }
+            bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView())
+            })
+            .sheet(isPresented: $showNotes) {
+                NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterId), showAsLinks: false)
+                //Text(self.chapterId)
         .navigationBarItems(trailing: bible.chapterContent?.data.content != nil ? AnyView(self.readButton) : AnyView(EmptyView()))
         .alert(isPresented: self.$bookmarkWasSet) {
             Alert(title: Text(""), message: (self.bookmarkFirebase.error == "") ? Text("Das Lesezeichen wurde erfolgreich gesetzt.") : Text(self.bookmarkFirebase.error), dismissButton: .default(Text("OK"), action: {self.bookmarkWasSet = false}))
@@ -99,5 +112,27 @@ struct BibleChapterContent: View {
         let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
         
         self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
+    }
+    var readButton: some View {
+        NavigationLink(
+        destination: SpeechTestView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!), chapterRef: self.$chapterId)) {
+            Image(systemName: "speaker.2")
+        }
+    }
+    
+    var addButton: some View {
+        HStack{
+            NavigationLink(
+                destination: NoteAddView(showSelf: $showAddNote, chapterRef: self.$chapterId), 
+            isActive: $showAddNote) {
+                //Text("Add")
+                EmptyView()
+            }
+            Button(action: {
+                self.showAddNote.toggle()
+            }) {
+                Image(systemName: "square.and.pencil")
+            }
+        }
     }
 }
