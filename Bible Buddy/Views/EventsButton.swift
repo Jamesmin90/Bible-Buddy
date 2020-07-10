@@ -9,18 +9,10 @@
 import SwiftUI
 import Firebase
 
-struct EventsButton<JMButton: View>: View {
+struct EventsButton : View {
     
-    let action: () -> Void
-    let content: JMButton
-    @State var isSelected = false
-    var postName: String
-    
-    init(action: @escaping () -> Void, @ViewBuilder content: () -> JMButton, postName: String){
-        self.action = action
-        self.content = content()
-        self.postName = postName
-    }
+    @Binding var isSelected : Bool
+    @Binding var postName: String
     
     var body: some View {
         Button(action: {
@@ -28,8 +20,8 @@ struct EventsButton<JMButton: View>: View {
             let db = Firestore.firestore()
             let Username = UserDefaults.standard.value(forKey: "userName") as! String
             if self.isSelected == true{
-            
-                db.collection("events").document("\(self.postName)").collection("Interessiert").document("\(Username)").setData(["Interessiert":Username]) { (err) in
+                
+                db.collection("events").document("\(self.postName)").collection("Interessiert").document("\(Username)").setData(["Besuchen":Username]) { (err) in
                     
                     if err != nil{
                         
@@ -38,6 +30,17 @@ struct EventsButton<JMButton: View>: View {
                         return
                     }
                 }
+                db.collection("events").document("\(self.postName)").collection("Besuchen").document("\(Username)").delete(){
+                    (err) in
+                    
+                    if err != nil{
+                        
+                        print((err?.localizedDescription)!)
+                        print("fail")
+                        return
+                    }
+                }
+                
             } else{
                 db.collection("events").document("\(self.postName)").collection("Interessiert").document("\(Username)").delete(){
                     (err) in
@@ -49,31 +52,41 @@ struct EventsButton<JMButton: View>: View {
                         return
                     }
                 }
+                
+                self.BesuchenSelected()
             }
         }){
-            content
-            .padding()
-            .accentColor(isSelected ? .blue: .black)
-            .background(isSelected ? Color.blue.opacity(0.2): Color.gray.opacity(0.5))
-            .mask(Circle())
+            Image(systemName: "flag")
+            .frame(width: 40, height: 40)
+        }
+        .padding()
+        .accentColor(isSelected ? .blue: .black)
+        .background(isSelected ? Color.blue.opacity(0.2): Color.gray.opacity(0.5))
+        .mask(Circle())
+    }
+    func BesuchenSelected(){
+        let Username = UserDefaults.standard.value(forKey: "userName") as! String
+        let db = Firestore.firestore()
+        db.collection("events").document(postName).collection("Besuchen").document(Username).addSnapshotListener { (document, err) in
+            
+            if let document = document, document.exists {
+                //self.isSelected = true
+                print("Document did not get deleted")
+            }else{
+                self.isSelected = false
+            }
+            
+            
             
         }
-            
     }
 }
 
-struct EventsButton2<JMButton2: View>: View {
+
+struct EventsButton2 : View {
     
-    let action: () -> Void
-    let content: JMButton2
-    @State var isSelected = false
-    var postName: String
-    
-    init(action: @escaping () -> Void, @ViewBuilder content: () -> JMButton2, postName: String){
-        self.action = action
-        self.content = content()
-        self.postName = postName
-    }
+    @Binding var isSelected : Bool
+    @Binding var postName: String
     
     var body: some View {
         Button(action: {
@@ -91,6 +104,17 @@ struct EventsButton2<JMButton2: View>: View {
                         return
                     }
                 }
+                db.collection("events").document("\(self.postName)").collection("Interessiert").document("\(Username)").delete(){
+                    (err) in
+                    
+                    if err != nil{
+                        
+                        print((err?.localizedDescription)!)
+                        print("fail")
+                        return
+                    }
+                }
+                
             } else{
                 db.collection("events").document("\(self.postName)").collection("Besuchen").document("\(Username)").delete(){
                     (err) in
@@ -102,13 +126,30 @@ struct EventsButton2<JMButton2: View>: View {
                         return
                     }
                 }
+                self.interresiertSelected()
+                
             }
         }){
-            content
-            .padding()
-            .accentColor(isSelected ? .blue: .black)
-            .background(isSelected ? Color.blue.opacity(0.2): Color.gray.opacity(0.5))
-            .mask(Circle())
+            Image(systemName: "checkmark")
+            .frame(width: 40, height: 40)
+        }
+        .padding()
+        .accentColor(isSelected ? .blue: .black)
+        .background(isSelected ? Color.blue.opacity(0.2): Color.gray.opacity(0.5))
+        .mask(Circle())
+    }
+    func interresiertSelected(){
+    let Username = UserDefaults.standard.value(forKey: "userName") as! String
+    let db = Firestore.firestore()
+    db.collection("events").document(postName).collection("Interessiert").document(Username).addSnapshotListener { (document, err) in
+        
+        if let document = document, document.exists {
+            print("Document did not get deleted")
+        }else{
+            self.isSelected = false
+        }
+        
+            
             
         }
     }

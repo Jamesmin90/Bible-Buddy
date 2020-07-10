@@ -14,13 +14,14 @@ struct EventsDetail: View {
     @State var posts: EventsPost
     @State private var loading: Bool = true
     @EnvironmentObject var session: SessionStore
-    @State var resp = [Response]()
-    @State var resp2 = [Response2]()
     @State var icount = ""
     @State var bcount = ""
-    
+    @State var isSelectedb = false
+    @State var isSelectedi = false
+    @State var x = false
     
     var body: some View {
+        
         List{
             
             
@@ -32,23 +33,17 @@ struct EventsDetail: View {
                     .font(.title)
                     .fontWeight(.bold)
             }
+            
             if (session.session != nil){
                 HStack(spacing: 1){
                     Spacer()
                     VStack{
-                        EventsButton(action: {}, content: {
-                            Image(systemName: "flag")
-                                .frame(width: 40, height: 40)
-                        }, postName: posts.name)
+                        EventsButton(isSelected: self.$isSelectedi, postName: $posts.name)
                         Text("Interessiert")
-                        
                     }
                     Spacer()
                     VStack{
-                        EventsButton2(action: {}, content: {
-                            Image(systemName: "checkmark")
-                                .frame(width: 40, height: 40)
-                        }, postName: posts.name)
+                        EventsButton2(isSelected: self.$isSelectedb, postName: $posts.name)
                         Text("Besuchen")
                     }
                     Spacer()
@@ -67,8 +62,6 @@ struct EventsDetail: View {
             
             TextDescription(descriptiontext: posts.description, height: 150)
             
-            //SignupDescription(url: posts.signup, height: 50)
-            
             MapView(latitude: posts.latitude, longitude: posts.longitude, title: posts.location, subtitle: posts.name)
                 . frame(width: 380, height: 180)
             
@@ -77,13 +70,17 @@ struct EventsDetail: View {
         }
         .navigationBarTitle(Text(posts.name), displayMode: .inline)
         .onAppear{
+            self.BesuchenSelected()
+            self.interresiertSelected()
             self.besuchen()
             self.interessiert()
+            
         }
         
     }
     
     func besuchen() {
+        //let Username = UserDefaults.standard.value(forKey: "userName") as! String
         let db = Firestore.firestore()
         db.collection("events").document("\(posts.name)").collection("Besuchen").addSnapshotListener{
             DocumentsSnapshot, error in guard let documents = DocumentsSnapshot else {
@@ -92,11 +89,12 @@ struct EventsDetail: View {
             }
             
             self.bcount = String(documents.count)
-            
+           
         }
     }
     
     func interessiert() {
+        
         let db = Firestore.firestore()
         db.collection("events").document("\(posts.name)").collection("Interessiert").addSnapshotListener{
             DocumentsSnapshot, error in guard let documents = DocumentsSnapshot else {
@@ -105,23 +103,51 @@ struct EventsDetail: View {
             }
             
             self.icount = String(documents.count)
+        }
+    }
+    
+    func interresiertSelected(){
+        let Username = UserDefaults.standard.value(forKey: "userName") as! String
+        let db = Firestore.firestore()
+        db.collection("events").document("\(posts.name)").collection("Interessiert").document(Username).addSnapshotListener { (document, err) in
+            
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                self.isSelectedi = true
+            }else{
+                self.isSelectedi = false
+                print("Document does not exist")
+            }
+            
+                
+                
+            }
+        }
+    
+    func BesuchenSelected(){
+        let Username = UserDefaults.standard.value(forKey: "userName") as! String
+        let db = Firestore.firestore()
+        db.collection("events").document("\(posts.name)").collection("Besuchen").document(Username).addSnapshotListener { (document, err) in
+            
+            if let document = document, document.exists {
+                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+                print("Document data: \(dataDescription)")
+                self.isSelectedb = true
+            }else{
+                self.isSelectedb = false
+                print("Document does not exist")
+            }
+            
+            
             
         }
-        
     }
-}
 
-struct Response{
-    
-    var bcount : Int
-}
-
-struct Response2 {
-    
-    var icount : String
 }
 
 
+/*
 struct EventsDetail_Previews: PreviewProvider {
     static var previews: some View {
         EventsDetail(posts: EventsPost(
@@ -135,3 +161,4 @@ struct EventsDetail_Previews: PreviewProvider {
         longitude: 11.594266891479492))
     }
 }
+*/
