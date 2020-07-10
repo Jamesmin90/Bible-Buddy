@@ -21,6 +21,8 @@ struct BlogPostEditView: View {
     @State private var showingImagePicker = false
     @State private var libraryImage: UIImage?
     
+    @State private var showImageWarning = false
+    @State private var showTitleWarning = false
     
     var body: some View {
         
@@ -36,12 +38,16 @@ struct BlogPostEditView: View {
                             .frame(maxWidth: .infinity, maxHeight: 180) .padding(6)
                     }
                 }//.listRowBackground(Color("basicBackgroundColor"))
-                
+                if(self.showImageWarning) {
+                    ErrorText(errorText: "Bitte wählen Sie ein Bild aus!")
+                }
                 VStack(alignment: .leading) {
                     Text("Titel").font(.headline)
                     TextField("Titel ...", text: $postVM.post.title).modifier(MyTextFieldStyle())
                 }//.listRowBackground(Color("basicBackgroundColor"))
-                
+                if(self.showTitleWarning) {
+                    ErrorText(errorText: "Bitte geben Sie einen Titel ein!")
+                }
                 VStack(alignment: .leading) {
                     Text("Kategorie").font(.headline)
                     Picker(selection: $postVM.post.category, label: Text("Kategorie")){
@@ -54,18 +60,30 @@ struct BlogPostEditView: View {
                     Text("Text").font(.headline)
                     TextView(text: $postVM.post.body, textStyle: $textStyle).frame(height: 300).modifier(MyTextFieldStyle())
                 }//.listRowBackground(Color("basicBackgroundColor"))
-               
+                
                 
             }
             //Spacer()
             Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-                ImageUploadService.upload(for: self.libraryImage!) { result in
-                    print("Image uploaded to URL: \(result)")
-                    self.postVM.post.imageURL = result
-                    self.postVM.post.userID = self.session.session != nil ? self.session.session!.uid : ""
-                    self.postlistVM.addPost(post: self.postVM.post)
-                    
+                if (self.libraryImage == nil) {
+                    self.showImageWarning = true
+                } else {
+                    self.showImageWarning = false
+                }
+                if (self.postVM.post.title == "") {
+                    self.showTitleWarning = true
+                } else {
+                    self.showTitleWarning = false
+                }
+                
+                if(self.libraryImage != nil && self.postVM.post.title != "") {
+                    self.presentationMode.wrappedValue.dismiss()
+                    ImageUploadService.upload(for: self.libraryImage!) { result in
+                        print("Image uploaded to URL: \(result)")
+                        self.postVM.post.imageURL = result
+                        self.postVM.post.userID = self.session.session != nil ? self.session.session!.uid : ""
+                        self.postlistVM.addPost(post: self.postVM.post)
+                    }
                 }
             }
                 
@@ -86,7 +104,7 @@ struct BlogPostEditView: View {
             
         }.buttonStyle(PlainButtonStyle())
         //.background(Color("basicBackgroundColor"))
-            
+        
     }
     
     
