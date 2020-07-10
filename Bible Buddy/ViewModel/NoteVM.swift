@@ -20,7 +20,7 @@ class NoteVM: ObservableObject, Identifiable {
     init(note: Note) {
         self.note = note
         
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .none
         dateFormatter.dateStyle = .medium
         let date = note.createdTime != nil ? note.createdTime!.dateValue() : Date()

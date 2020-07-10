@@ -26,7 +26,7 @@ class BlogPostVM: ObservableObject, Identifiable {
         self.post = post
         self.userProfileVM = UserProfileVM(userID: post.userID)
         
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.timeStyle = .none
         dateFormatter.dateStyle = .medium
         let date = post.createdTime != nil ? post.createdTime!.dateValue() : Date()
