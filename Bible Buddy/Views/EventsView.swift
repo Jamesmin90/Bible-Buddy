@@ -11,7 +11,6 @@ import Combine
 
 struct EventsView: View {
     @State var posts: [EventsPost] = []
-    //@State var loading: Bool = true
     
     init(){
         UITableView.appearance().backgroundColor = UIColor(red: 0.92, green: 1.00, blue: 1.00, alpha: 1.00)
@@ -27,7 +26,6 @@ struct EventsView: View {
                     ZStack(alignment: .bottomLeading){
                         
                         RemoteImage(imageUrl: post.imageURL)
-                        //ActivitiyIndicatorView (loading: self.$loading, style: .large)
                         Text(post.name)
                             .foregroundColor(.white)
                             .font(.title)
@@ -43,10 +41,9 @@ struct EventsView: View {
             .onAppear{
                 
                 Api().getPosts { (posts) in
-                    //differentiate post from above and the post we get from the api call
+                    //differentiates post from above and the post we get from the api call
                     
                     self.posts = posts
-                    //self.loading = false
                 }
             }
             .navigationBarTitle(Text("Events"), displayMode: .inline)

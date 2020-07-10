@@ -148,18 +148,3 @@ struct EventsDetail: View {
 }
 
 
-/*
-struct EventsDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        EventsDetail(posts: EventsPost(
-        name: "",
-        location: "",
-        date: "",
-        imageURL: "",
-        description: "",
-        signup: "",
-        latitude: 48.149996544187985,
-        longitude: 11.594266891479492))
-    }
-}
-*/
