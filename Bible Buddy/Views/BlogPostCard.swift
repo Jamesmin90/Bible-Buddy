@@ -43,9 +43,6 @@ struct BlogPostCard: View {
                         .font(.caption)
                         .foregroundColor(.secondary)
                     
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.yellow)
-                    .padding()
                     
                 }
             }

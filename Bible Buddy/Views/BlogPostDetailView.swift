@@ -54,18 +54,13 @@ struct BlogPostDetailView: View {
                         Text(postVM.dateString)
                             .font(.caption)
                             .foregroundColor(.secondary)
-                        
-                        Image(systemName: "star.fill")
-                            .foregroundColor(Color.yellow)
-                        .padding()
-                        
                     }
                 }
                 .frame(minWidth: 0, maxWidth: .infinity)
                 .padding(10)
                 .background(Color.gray.opacity(0.5))
                 .cornerRadius(10)
-                
+                Spacer()
                 HStack(){
                     Text(postVM.post.body)
                         .multilineTextAlignment(.leading)
