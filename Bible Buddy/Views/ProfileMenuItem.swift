@@ -48,8 +48,3 @@ struct ProfileMenuItem<Content: View>: View {
     }
 }
 
-struct ProfileMenuItem_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileMenuItem(image: "mail", profileItemTitle: "Update email", destinationView: TestView())
-    }
-}

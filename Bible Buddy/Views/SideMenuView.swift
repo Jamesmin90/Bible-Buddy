@@ -24,7 +24,7 @@ struct SideMenuView: View {
             
             if (session.session != nil) {
                 SideMenuItem(image: "chat", title: "Chat", destinationView: Chat().environmentObject(MainObservable()))
-                SideMenuItem(image: "notes", title: "Notizen", destinationView: TestView())
+                SideMenuItem(image: "notes", title: "Notizen", destinationView: NoteView(notelistVM: NoteListVM(session: session), showAsLinks: true))
                 SideMenuItemIsActive(image: "profile", title: "Profil", destinationView: ProfilePageView(), isActive: self.$isActive)
             }
             
