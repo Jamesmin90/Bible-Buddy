@@ -133,7 +133,7 @@ struct SignInUpView: View {
                      UserDefaults.standard.set(uid, forKey: "uid")
                     
                      UserDefaults.standard.set(pic, forKey: "pic")
-                     
+                    
                      NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
                 }
                 else{

@@ -2,7 +2,7 @@
 //  SearchBar.swift
 //  Bible Buddy
 //
-//  Created by admin on 06.07.20.
+//  Created by James on 06.07.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
