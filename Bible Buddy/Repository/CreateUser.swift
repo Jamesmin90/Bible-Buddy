@@ -2,7 +2,7 @@
 //  CreateUser.swift
 //  Bible Buddy
 //
-//  Created by admin on 13.06.20.
+//  Created by James on 13.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
