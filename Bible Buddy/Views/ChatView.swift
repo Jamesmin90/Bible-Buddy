@@ -20,7 +20,7 @@ struct Chat : View {
     @State var uid = ""
     @State var name = ""
     @State var pic = ""
-    @EnvironmentObject var session: SessionStore
+    //@EnvironmentObject var session: SessionStore
     
     var body : some View{
         
