@@ -58,11 +58,7 @@ struct BibleBookTableOfContents: View {
     
     var goToBookmark: some View {
         NavigationLink(destination: BibleChapterContent(chapterId: self.bookmarkFirestore.bookmark)) {
-            Image("bookmark")
-                .renderingMode(.original)
-                .resizable()
-                .frame(width: 20, height: 20)
-                .padding(.horizontal, 20)
+            Image(systemName: "bookmark")
         }
     }
     
