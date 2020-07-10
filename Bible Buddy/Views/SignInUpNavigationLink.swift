@@ -31,11 +31,3 @@ struct SignInUpNavigationLink<Content: View>: View {
     }
 }
 
-
-struct SignInUpNavigationLink_Previews: PreviewProvider {
-    static var previews: some View {
-        SignInUpNavigationLink(destinationView: TestView(), buttonText: "Anmelden")
-    }
-}
-
-
