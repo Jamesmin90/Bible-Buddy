@@ -63,7 +63,6 @@
 		848CC58924754BE00000A1F3 /* SignInUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC58824754BE00000A1F3 /* SignInUpView.swift */; };
 		848CC5912476753F0000A1F3 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848CC5902476753F0000A1F3 /* ErrorText.swift */; };
 		84B30867249CC37F008777F2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B30866249CC37F008777F2 /* ChatView.swift */; };
-		84B3086B249CC3E9008777F2 /* CreateAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3086A249CC3E9008777F2 /* CreateAccount.swift */; };
 		84B3086D249CC403008777F2 /* ChatRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3086C249CC403008777F2 /* ChatRepository.swift */; };
 		84B3086F249CC409008777F2 /* checkUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B3086E249CC409008777F2 /* checkUser.swift */; };
 		84B30871249CC40E008777F2 /* CreateUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B30870249CC40E008777F2 /* CreateUser.swift */; };
@@ -158,7 +157,6 @@
 		848CC58824754BE00000A1F3 /* SignInUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInUpView.swift; sourceTree = "<group>"; };
 		848CC5902476753F0000A1F3 /* ErrorText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		84B30866249CC37F008777F2 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		84B3086A249CC3E9008777F2 /* CreateAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccount.swift; sourceTree = "<group>"; };
 		84B3086C249CC403008777F2 /* ChatRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatRepository.swift; path = "Bible Buddy/Repository/ChatRepository.swift"; sourceTree = SOURCE_ROOT; };
 		84B3086E249CC409008777F2 /* checkUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = checkUser.swift; sourceTree = "<group>"; };
 		84B30870249CC40E008777F2 /* CreateUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUser.swift; sourceTree = "<group>"; };
@@ -332,7 +330,6 @@
 				11B975F72480F14F00680B54 /* BlogPostCard.swift */,
 				11B975F92480FC5900680B54 /* BlogPostDetailView.swift */,
 				11FE910F2482B009000C8ED6 /* BlogPostEditView.swift */,
-				84B3086A249CC3E9008777F2 /* CreateAccount.swift */,
 				84B30866249CC37F008777F2 /* ChatView.swift */,
 				848CC572247534050000A1F3 /* Carousel.swift */,
 				848CC573247534050000A1F3 /* CarouselCard.swift */,
@@ -539,7 +536,6 @@
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */,
 				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
-				84B3086B249CC3E9008777F2 /* CreateAccount.swift in Sources */,
 				842CDD6524AF8EFF00DF90F2 /* BibleSearchField.swift in Sources */,
 				84B30873249CC41C008777F2 /* EventsApi.swift in Sources */,
 				11030E0224A232A8007EF743 /* TextWithAttributedString.swift in Sources */,

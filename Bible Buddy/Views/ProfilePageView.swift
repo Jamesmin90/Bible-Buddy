@@ -19,8 +19,6 @@ struct ProfilePageView: View {
             
             TextMessage(textMessage: "Was möchten Sie gerne in Ihrem Profil machen?")
             
-            ProfileMenuItem(image: "profile", profileItemTitle: "Benutzername und Profilbild hinzufügen", destinationView: AccountCreation(show: self.$creation))
-            
             ProfileMenuItem(image: "password", profileItemTitle: "Passwort ändern", destinationView: UpdateEmailPasswordView(continueText: "Geben Sie bitte Ihr neues Passwort ein", buttonText: "Passwort ändern"))
             
             ProfileMenuItem(image: "mail", profileItemTitle: "Email-Adresse ändern", destinationView: UpdateEmailPasswordView(continueText: "Geben Sie bitte Ihre neue Email ein", buttonText: "Email-Adresse ändern"))
