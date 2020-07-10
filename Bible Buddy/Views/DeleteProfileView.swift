@@ -68,13 +68,11 @@ struct DeleteProfileView: View {
         }
 // Clara
 
-// Created by James
-        
+
         
 
         
     }
-// James
 
 // Created by Clara
     func signInUpCompletionHandler(error: Error?) {
@@ -90,6 +88,7 @@ struct DeleteProfileView: View {
             if (reauthenticationNecessary) {
                 deleteUser()
             }
+// Created by James
             let id = UserDefaults.standard.value(forKey: "uid") as? String
             let db = Firestore.firestore().collection("users")
             db.document(id!).delete() { (err) in
@@ -111,6 +110,7 @@ struct DeleteProfileView: View {
                   return
               }
             }
+// James
         }
     }
 }
