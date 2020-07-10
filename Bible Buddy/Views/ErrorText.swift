@@ -2,7 +2,7 @@
 //  ErrorText.swift
 //  Bible Buddy
 //
-//  Created by admin on 21.05.20.
+//  Created by Clara Schönberger on 21.05.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

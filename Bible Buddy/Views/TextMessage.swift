@@ -1,3 +1,11 @@
+//
+//  TextMessage.swift
+//  Bible Buddy
+//
+//  Created by Clara Schönberger on 06.06.20.
+//  Copyright © 2020 Gruppe03. All rights reserved.
+//
+
 import SwiftUI
 
 struct TextMessage: View {

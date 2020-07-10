@@ -2,7 +2,7 @@
 //  UpdateEmailPasswordView.swift
 //  Bible Buddy
 //
-//  Created by admin on 31.05.20.
+//  Created by TextMessage on 31.05.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

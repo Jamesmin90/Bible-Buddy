@@ -2,7 +2,7 @@
 //  ChapterContent.swift
 //  Bible Buddy
 //
-//  Created by admin on 16.06.20.
+//  Created by Clara Schönberger on 16.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
