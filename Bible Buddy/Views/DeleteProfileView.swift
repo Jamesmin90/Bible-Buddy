@@ -10,7 +10,7 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
-
+// Created by Clara
 struct DeleteProfileView: View {
     
     @EnvironmentObject var session: SessionStore
@@ -66,6 +66,9 @@ struct DeleteProfileView: View {
             (error) in
             self.signInUpCompletionHandler(error: error)
         }
+// Clara
+
+// Created by James
         let id = Auth.auth().currentUser?.uid
         let db = Firestore.firestore().collection("users")
         db.document(id!).delete() { (err) in
@@ -91,7 +94,9 @@ struct DeleteProfileView: View {
 
         
     }
-    
+// James
+
+// Created by Clara
     func signInUpCompletionHandler(error: Error?) {
         if (error != nil) {
             guard let errorCode = AuthErrorCode(rawValue: error!._code) else { return }
@@ -115,3 +120,5 @@ struct DeleteProfileView_Previews: PreviewProvider {
         DeleteProfileView()
     }
 }
+
+// Clara

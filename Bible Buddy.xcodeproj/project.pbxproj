@@ -11,7 +11,6 @@
 		11030E0024A22CF8007EF743 /* SpeechSynthVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */; };
 		11030E0224A232A8007EF743 /* TextWithAttributedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0124A232A8007EF743 /* TextWithAttributedString.swift */; };
 		11030E0424A26773007EF743 /* SpeechTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0324A26773007EF743 /* SpeechTextView.swift */; };
-		11030E0624A267F5007EF743 /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11030E0524A267F5007EF743 /* TestView.swift */; };
 		110D6E6A24B3822A000A6562 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6924B3822A000A6562 /* Note.swift */; };
 		110D6E6C24B38393000A6562 /* NoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6B24B38393000A6562 /* NoteRepository.swift */; };
 		110D6E6E24B3840C000A6562 /* FirestoreNoteRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110D6E6D24B3840B000A6562 /* FirestoreNoteRepository.swift */; };
@@ -114,7 +113,6 @@
 		11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthVM.swift; sourceTree = "<group>"; };
 		11030E0124A232A8007EF743 /* TextWithAttributedString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextWithAttributedString.swift; sourceTree = "<group>"; };
 		11030E0324A26773007EF743 /* SpeechTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechTextView.swift; sourceTree = "<group>"; };
-		11030E0524A267F5007EF743 /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		110D6E6924B3822A000A6562 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		110D6E6B24B38393000A6562 /* NoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRepository.swift; sourceTree = "<group>"; };
 		110D6E6D24B3840B000A6562 /* FirestoreNoteRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreNoteRepository.swift; sourceTree = "<group>"; };
@@ -393,7 +391,6 @@
 				842CDD6424AF8EFF00DF90F2 /* BibleSearchField.swift */,
 				11030E0124A232A8007EF743 /* TextWithAttributedString.swift */,
 				11030E0324A26773007EF743 /* SpeechTextView.swift */,
-				11030E0524A267F5007EF743 /* TestView.swift */,
 				84B7A83924B45C6100C3E27E /* ReferenceImageItem.swift */,
 				84B7A83B24B4630000C3E27E /* ReferenceImageView.swift */,
 				110D6E6F24B385C6000A6562 /* NoteView.swift */,
@@ -561,7 +558,6 @@
 				84BFF075246C1DDE0018296F /* EventsView.swift in Sources */,
 				845FDF1224912A8F00A0CF33 /* RemoteImage.swift in Sources */,
 				84F387D5248B9C3B00AF85D1 /* SignInUpNavigationLinkIsActive.swift in Sources */,
-				84B3086B249CC3E9008777F2 /* CreateAccount.swift in Sources */,
 				110D6E7024B385C6000A6562 /* NoteView.swift in Sources */,
 				842CDD6524AF8EFF00DF90F2 /* BibleSearchField.swift in Sources */,
 				110D6E6A24B3822A000A6562 /* Note.swift in Sources */,
@@ -628,7 +624,6 @@
 				848CC57C247534050000A1F3 /* SideMenuView.swift in Sources */,
 				11420BBA24930C9500C74801 /* ImageUploadService.swift in Sources */,
 				11FE9112248526FC000C8ED6 /* TextView.swift in Sources */,
-				11030E0624A267F5007EF743 /* TestView.swift in Sources */,
 				11420BB5249274A500C74801 /* ImagePicker1.swift in Sources */,
 				84BFF05D246C1D760018296F /* AppDelegate.swift in Sources */,
 				84B30871249CC40E008777F2 /* CreateUser.swift in Sources */,

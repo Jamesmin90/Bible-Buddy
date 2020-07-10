@@ -5,22 +5,22 @@
 //  Created by admin on 12.05.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
-
+// Created by Clara
 import SwiftUI
 
 struct BibleChapterContent: View {
     
     @EnvironmentObject var session: SessionStore
-    
+    @ObservedObject var bookmarkFirebase = BookmarkFirestore()
     @ObservedObject var bible = Bible()
+    @State var bookmarkWasSet: Bool = false
+    @State var chapterId: String
+// Clara
+// Created by Jannis
     @State var showNotes: Bool = false
     @State var showAddNote: Bool = false
-    @State var chapterId: String
-    
-    @ObservedObject var bookmarkFirebase = BookmarkFirestore()
-    
-    @State var bookmarkWasSet: Bool = false
-    
+// Jannis
+// Created by Clara
     var body: some View {
         VStack {
             
@@ -65,15 +65,20 @@ struct BibleChapterContent: View {
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
         .onAppear() { self.getChapterContent(chapterId: self.chapterId) }
+// Clara
+// Created by Jannis
         .sheet(isPresented: $showNotes) {
             NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterId), showAsLinks: false)
             }
         .navigationBarItems(trailing: self.bible.chapterContent?.data.content != nil ? AnyView(self.navigationBarButtons) : AnyView(EmptyView()))
+// Jannis
+// Created by Clara
         .alert(isPresented: self.$bookmarkWasSet) {
             Alert(title: Text(""), message: (self.bookmarkFirebase.error == "") ? Text("Das Lesezeichen wurde erfolgreich gesetzt.") : Text(self.bookmarkFirebase.error), dismissButton: .default(Text("OK"), action: {self.bookmarkWasSet = false}))
         }
     }
-    
+// Clara
+// Created by Jannis & Clara
     var navigationBarButtons: some View {
         HStack {
             if(session.session != nil) {
@@ -97,15 +102,7 @@ struct BibleChapterContent: View {
                 .padding(.horizontal, 5)
         }
     }
-    
-    
-    func getChapterContent(chapterId: String) {
-        
-        let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
-        
-        self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
-    }
-    
+  
     var readButton: some View {
         NavigationLink(
         destination: SpeechTextView(synthVM: SpeechSynthVM(text: (bible.chapterContent?.data.content)!), chapterRef: self.$chapterId)) {
@@ -136,4 +133,13 @@ struct BibleChapterContent: View {
                 .padding(.horizontal, 5)
         }
     }
+// Jannis & Clara
+// Created by Clara
+    func getChapterContent(chapterId: String) {
+        
+        let urlCombined = URLComponents(string: "https://api.scripture.api.bible/v1/bibles/542b32484b6e38c2-01/chapters/\(chapterId)")
+        
+        self.bible.getDataFromUrl(url: urlCombined!, type: ChapterContent.self)
+    }
 }
+//Clara

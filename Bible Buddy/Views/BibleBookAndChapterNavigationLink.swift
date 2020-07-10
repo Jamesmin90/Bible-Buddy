@@ -2,7 +2,7 @@
 //  BibleBookAndChapterNavigationLink.swift
 //  Bible Buddy
 //
-//  Created by TextMessage on 21.06.20.
+//  Created by Clara Schönberger on 21.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

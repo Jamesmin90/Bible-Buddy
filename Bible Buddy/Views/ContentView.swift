@@ -7,7 +7,7 @@
 //
 
 import SwiftUI
-
+// Created by Clara
 struct ContentView: View {
     
     @EnvironmentObject var session: SessionStore
@@ -57,7 +57,9 @@ struct ContentView: View {
         }.onAppear(perform: session.listen)
     }
 }
+// Clara
 
+//Created by James
 extension UINavigationController{
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -74,6 +76,7 @@ extension UINavigationController{
         
         
 }
+// James
 }
 
 

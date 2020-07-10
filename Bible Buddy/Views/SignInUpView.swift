@@ -9,25 +9,32 @@
 import SwiftUI
 import Firebase
 
+// Created by Clara
+
 struct SignInUpView: View {
     
     @EnvironmentObject var session: SessionStore
+// Clara
+
+//Created by James
     @Environment(\.presentationMode) var presMode: Binding<PresentationMode>
     
     @State var userName: String = ""
-    @State var email: String = ""
-    @State var password: String = ""
-    @State var hidePassword: Bool = true
-    @State var error: String = ""
     @State var creation = false
     @State var loading = false
     @State var name = ""
     @State var picker = false
     @State var imagedata : Data = .init(count: 0)
     @State var surName = ""
-    @State var showAlert = false
     @State var userNameAlert = false
+    @State var showAlert = false
+// James
     
+// Created by Clara
+    @State var email: String = ""
+    @State var password: String = ""
+    @State var hidePassword: Bool = true
+    @State var error: String = ""
     var continueText: String
     var buttonText: String
     
@@ -41,7 +48,9 @@ struct SignInUpView: View {
                 HStack(alignment: .center){
                     
                     Spacer()
+// Clara
                     
+//Created by James
                     Button(action: {
                         
                         self.picker.toggle()
@@ -78,7 +87,9 @@ struct SignInUpView: View {
                 UserInputTextField(userInput: self.$surName, textFieldText: "Surname")
 
             }
+// James
             
+// Created by Clara
             UserInputTextField(userInput: self.$email, textFieldText: "Email-Adresse")
             
             PasswordField(password: self.$password, hidePassword: self.$hidePassword)
@@ -108,6 +119,8 @@ struct SignInUpView: View {
         .padding(.horizontal)
         .background(Color("basicBackgroundColor")
         .edgesIgnoringSafeArea(.all))
+//Clara
+// Created by James
         .sheet(isPresented: self.$picker, content: {
             
             ImagePicker(picker: self.$picker, imagedata: self.$imagedata, presentationMode: self.presMode)
@@ -115,7 +128,8 @@ struct SignInUpView: View {
         .alert(isPresented: self.$userNameAlert) {
             Alert(title: Text(""), message: Text("The Username is already in use"), dismissButton: .default(Text("OK")))}
     }
-    
+// James
+// Created by Clara
     func signIn() {
         session.signIn(email: email, password: password) {
             (result, error) in
@@ -123,6 +137,8 @@ struct SignInUpView: View {
             if error != nil{
             self.signInUpCompletionHandler(error: error)
             }
+// Clara
+// Created by James
             checkUser { (exists, userName, uid, pic) in
                 
                 if exists{
@@ -167,11 +183,13 @@ struct SignInUpView: View {
             } else{
                 
                     if self.name != "" && self.imagedata.count != 0 && self.surName != ""{
-                        
+//James
+// Created by Clara
                         self.session.signUp(email: self.email, password: self.password) {
                         (result, error) in
                         self.signInUpCompletionHandler(error: error)
-                        
+// Clara
+// Created by James
                             if error == nil{
                         
                         self.loading.toggle()
@@ -187,13 +205,10 @@ struct SignInUpView: View {
                 }
                 
             }
-            
         }
-        
-        
-
     }
-    
+// James
+// Created by Clara
     func signInUpCompletionHandler(error: Error?) {
         if let error = error {
             self.error = error.localizedDescription
@@ -210,7 +225,7 @@ struct SignInUpView_Previews: PreviewProvider {
         SignInUpView(continueText: "123", buttonText: "Sign In")
     }
 }
-
+// Clara
 
 
 

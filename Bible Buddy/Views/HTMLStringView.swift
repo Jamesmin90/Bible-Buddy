@@ -2,7 +2,7 @@
 //  HTMLStringView.swift
 //  Bible Buddy
 //
-//  Created by TextMessage on 14.06.20.
+//  Created by Clara Schönberger on 14.06.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 

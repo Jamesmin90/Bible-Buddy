@@ -2,7 +2,7 @@
 //  ReferenceImageView.swift
 //  Bible Buddy
 //
-//  Created by TextMessage on 07.07.20.
+//  Created by Clara Schönberger on 07.07.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
