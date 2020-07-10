@@ -23,7 +23,7 @@ struct EventsView: View {
         
             List(self.posts, id: \.name) { post in
                 
-                NavigationLink(destination: EventsDetail(posts: post)) {
+                NavigationLink(destination: EventsDetail(posts: post, image: RemoteImage2(imageUrl: post.imageURL))) {
                     ZStack(alignment: .bottomLeading){
                         
                         RemoteImage(imageUrl: post.imageURL)

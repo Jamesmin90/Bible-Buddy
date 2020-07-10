@@ -19,6 +19,7 @@ struct EventsDetail: View {
     @State var isSelectedb = false
     @State var isSelectedi = false
     @State var x = false
+    @State var image: RemoteImage2
     
     var body: some View {
         
@@ -26,8 +27,8 @@ struct EventsDetail: View {
             
             
             ZStack(alignment: .bottomLeading){
-                RemoteImage2(imageUrl: posts.imageURL)
-                //ActivitiyIndicatorView(animating: self.$loading, style: .large)
+                //RemoteImage2(imageUrl: posts.imageURL)
+                image
                 Text(posts.name)
                     .foregroundColor(.white)
                     .font(.title)
