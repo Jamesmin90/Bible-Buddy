@@ -2,7 +2,7 @@
 //  WelcomeTextView.swift
 //  Bible Buddy
 //
-//  Created by admin on 15.05.20.
+//  Created by TextMessage on 15.05.20.
 //  Copyright © 2020 Gruppe03. All rights reserved.
 //
 
