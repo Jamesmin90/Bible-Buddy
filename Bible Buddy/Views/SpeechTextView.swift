@@ -34,10 +34,8 @@ struct SpeechTextView: View {
         }
         .navigationBarItems(
             trailing:
-            HStack{
-            addButton
-            Button(action: { self.showNotes.toggle() }) { Image(systemName: "square.on.square") }
-            })
+            navigationBarButtons
+        )
             .sheet(isPresented: $showNotes) {
                 NoteView(notelistVM: NoteListVM(session: self.session, chapterRef: self.chapterRef), showAsLinks: false)
         }
@@ -66,6 +64,17 @@ struct SpeechTextView: View {
         }
     }
     
+    var navigationBarButtons: some View {
+        HStack {
+            if(session.session != nil) {
+                addButton
+                showNotesButton
+            }
+        }
+        
+        
+    }
+    
     var addButton: some View {
         HStack{
             NavigationLink(
@@ -79,6 +88,13 @@ struct SpeechTextView: View {
             }) {
                 Image(systemName: "square.and.pencil")
             }
+        }
+    }
+    
+    var showNotesButton: some View {
+        Button(action: { self.showNotes.toggle() }) {
+            Image(systemName: "square.on.square")
+                .padding(.horizontal, 5)
         }
     }
 }
