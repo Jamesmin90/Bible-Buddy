@@ -254,6 +254,7 @@
 				84BF3CC9249FA08A00C9C1F2 /* Bible.swift */,
 				11030DFF24A22CF8007EF743 /* SpeechSynthVM.swift */,
 				84B7A83F24B5079200C3E27E /* BookmarkFirestore.swift */,
+				84475BD624A2156B0020187A /* SessionStore.swift */,
 				84FC16CB24B5C693006BE735 /* SearchBar.swift */,
 				110D6E7124B3869D000A6562 /* NoteVM.swift */,
 				110D6E7324B4B44C000A6562 /* NoteListVM.swift */,
@@ -405,7 +406,6 @@
 			children = (
 				84475BD224A215420020187A /* FirestoreBlogPostRepository.swift */,
 				84475BD824A215730020187A /* UserProfileRepository.swift */,
-				84475BD624A2156B0020187A /* SessionStore.swift */,
 				84475BD424A2155D0020187A /* FirestoreUserProfileRepository.swift */,
 				84475BD024A2153D0020187A /* BlogPostRepository.swift */,
 				84B30870249CC40E008777F2 /* CreateUser.swift */,
