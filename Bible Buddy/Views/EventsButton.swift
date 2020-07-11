@@ -53,7 +53,6 @@ struct EventsButton : View {
                     }
                 }
                 
-                self.BesuchenSelected()
             }
         }){
             Image(systemName: "flag")
@@ -63,22 +62,6 @@ struct EventsButton : View {
         .accentColor(isSelected ? .blue: .black)
         .background(isSelected ? Color.blue.opacity(0.2): Color.gray.opacity(0.5))
         .mask(Circle())
-    }
-    func BesuchenSelected(){
-        let Username = UserDefaults.standard.value(forKey: "userName") as! String
-        let db = Firestore.firestore()
-        db.collection("events").document(postName).collection("Besuchen").document(Username).addSnapshotListener { (document, err) in
-            
-            if let document = document, document.exists {
-                //self.isSelected = true
-                print("Document did not get deleted")
-            }else{
-                self.isSelected = false
-            }
-            
-            
-            
-        }
     }
 }
 
@@ -126,7 +109,6 @@ struct EventsButton2 : View {
                         return
                     }
                 }
-                self.interresiertSelected()
                 
             }
         }){
@@ -137,20 +119,5 @@ struct EventsButton2 : View {
         .accentColor(isSelected ? .blue: .black)
         .background(isSelected ? Color.blue.opacity(0.2): Color.gray.opacity(0.5))
         .mask(Circle())
-    }
-    func interresiertSelected(){
-    let Username = UserDefaults.standard.value(forKey: "userName") as! String
-    let db = Firestore.firestore()
-    db.collection("events").document(postName).collection("Interessiert").document(Username).addSnapshotListener { (document, err) in
-        
-        if let document = document, document.exists {
-            print("Document did not get deleted")
-        }else{
-            self.isSelected = false
-        }
-        
-            
-            
-        }
     }
 }

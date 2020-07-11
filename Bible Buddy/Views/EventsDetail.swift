@@ -27,7 +27,6 @@ struct EventsDetail: View {
             
             
             ZStack(alignment: .bottomLeading){
-                //RemoteImage2(imageUrl: posts.imageURL)
                 image
                 Text(posts.name)
                     .foregroundColor(.white)

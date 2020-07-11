@@ -68,33 +68,11 @@ struct DeleteProfileView: View {
         }
 // Clara
 
-// Created by James
-        let id = Auth.auth().currentUser?.uid
-        let db = Firestore.firestore().collection("users")
-        db.document(id!).delete() { (err) in
-            
-            if err != nil{
-                print((err!.localizedDescription))
-                return
-            }
-            print("Erfolgreich gelöscht")
-        }
-        
-        let storageRef = Storage.storage().reference()
-        let desertRef = storageRef.child("Profiles").child(id!)
-        
-        desertRef.delete { err in
-          if err != nil{
-              
-              print((err?.localizedDescription)!)
-              return
-          }
-        }
+
         
 
         
     }
-// James
 
 // Created by Clara
     func signInUpCompletionHandler(error: Error?) {
@@ -110,6 +88,31 @@ struct DeleteProfileView: View {
             if (reauthenticationNecessary) {
                 deleteUser()
             }
+// Clara
+// Created by James
+            let id = UserDefaults.standard.value(forKey: "uid") as? String
+            let db = Firestore.firestore()
+            db.collection("users").document(id!).delete() { (err) in
+                
+                if err != nil{
+                    print((err!.localizedDescription))
+                    return
+                }
+                print("Erfolgreich gelöscht")
+            }
+            
+            let storageRef = Storage.storage().reference()
+            let desertRef = storageRef.child("Profiles").child(id!)
+            
+            desertRef.delete { err in
+              if err != nil{
+                  
+                  print((err?.localizedDescription)!)
+                  return
+              }
+            }
+// James
+// Created by Clara
         }
     }
 }
