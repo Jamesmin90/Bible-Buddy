@@ -90,8 +90,8 @@ struct DeleteProfileView: View {
             }
 // Created by James
             let id = UserDefaults.standard.value(forKey: "uid") as? String
-            let db = Firestore.firestore().collection("users")
-            db.document(id!).delete() { (err) in
+            let db = Firestore.firestore()
+            db.collection("users").document(id!).delete() { (err) in
                 
                 if err != nil{
                     print((err!.localizedDescription))
