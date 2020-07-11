@@ -88,6 +88,7 @@ struct DeleteProfileView: View {
             if (reauthenticationNecessary) {
                 deleteUser()
             }
+// Clara
 // Created by James
             let id = UserDefaults.standard.value(forKey: "uid") as? String
             let db = Firestore.firestore()
@@ -111,6 +112,7 @@ struct DeleteProfileView: View {
               }
             }
 // James
+// Created by Clara
         }
     }
 }
