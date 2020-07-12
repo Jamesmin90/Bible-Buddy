@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             .font: UIFont.monospacedSystemFont(ofSize: 36, weight: .black)]
         appearance.largeTitleTextAttributes = attrs
         UINavigationBar.appearance().scrollEdgeAppearance = appearance
+        // Created by Bible Buddy Team
+        FirebaseApp.configure()
+        // Bible Buddy Team
+        //created by James
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        // James
         return true
     }
 
