@@ -178,6 +178,7 @@ struct ChatView : View {
     @State var msgs = [Msg]()
     @State var txt = ""
     @State var nomsgs = false
+    @State var desiredHeight: [CGFloat] = [0,0]
     let mypic = UserDefaults.standard.value(forKey: "pic") as? String
     
     var body : some View{
@@ -204,7 +205,7 @@ struct ChatView : View {
             }
             else{
                 
-                CustomScrollView(scrollToEnd: true) {
+                CustomScrollView{
                     
                     VStack(spacing: 8){
                         
@@ -218,17 +219,22 @@ struct ChatView : View {
                                     Spacer()
                                     
                                     Text(i.msg)
+                                    .fixedSize(horizontal: false, vertical: true)
                                         .padding()
                                         .background(Color.blue)
                                         .clipShape(ChatBubble(mymsg: true))
                                         .foregroundColor(.white)
+                                    
+                                    //ChatText(text: i.msg, attributedText: .constant(nil), desiredHeight: self.$desiredHeight[i])
+                                    
+                                    //BubbleView(message: i.msg)
                                     
                                     AnimatedImage(url: URL(string: self.mypic!)).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
                                 }
                                 else{
                                     AnimatedImage(url: URL(string: self.pic)!).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
                                     
-                                    Text(i.msg).padding().background(Color.green).clipShape(ChatBubble(mymsg: false)).foregroundColor(.white)
+                                    Text(i.msg).fixedSize(horizontal: false, vertical: true).padding().background(Color.green).clipShape(ChatBubble(mymsg: false)).foregroundColor(.white)
                                     
                                     Spacer()
                                 }
