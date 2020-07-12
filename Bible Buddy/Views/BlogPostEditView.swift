@@ -24,6 +24,9 @@ struct BlogPostEditView: View {
     @State private var showImageWarning = false
     @State private var showTitleWarning = false
     
+    @State var userID: String = ""
+    @State var userVM: UserProfileVM = UserProfileVM(userID: "")
+    
     var body: some View {
         
         ZStack(alignment: .bottom) {
@@ -51,8 +54,9 @@ struct BlogPostEditView: View {
                 VStack(alignment: .leading) {
                     Text("Kategorie").font(.headline)
                     Picker(selection: $postVM.post.category, label: Text("Kategorie")){
-                        Text("reading").tag("reading")
-                        Text("people").tag(" people")
+                        Text("Bibel").tag("Bibel")
+                        Text("Menschen").tag("Menschen")
+                        Text("Gebet").tag("Gebet")
                     }.pickerStyle(DefaultPickerStyle()).modifier(MyTextFieldStyle())
                 }//.listRowBackground(Color("basicBackgroundColor"))
                 
@@ -81,7 +85,9 @@ struct BlogPostEditView: View {
                     ImageUploadService.upload(for: self.libraryImage!) { result in
                         print("Image uploaded to URL: \(result)")
                         self.postVM.post.imageURL = result
-                        self.postVM.post.userID = self.session.session != nil ? self.session.session!.uid : ""
+                        let userID = self.session.session != nil ? self.session.session!.uid : ""
+                        self.postVM.post.userID = userID
+                        self.postVM.post.userName = self.userVM.profile.userName
                         self.postlistVM.addPost(post: self.postVM.post)
                     }
                 }
@@ -103,22 +109,12 @@ struct BlogPostEditView: View {
             ImagePicker1(image: self.$libraryImage)
             
         }.buttonStyle(PlainButtonStyle())
-        //.background(Color("basicBackgroundColor"))
+            .onAppear() {
+                self.userID = self.session.session != nil ? self.session.session!.uid : ""
+                self.userVM = UserProfileVM(userID: self.userID)
+        }
         
     }
     
-    
-    
-    
-    
-    
-    struct BlogPostEditView_Previews: PreviewProvider {
-        @State static var show = true
-        static var previews: some View {
-            
-            BlogPostEditView(showSelf: $show, postlistVM: BlogPostListVM())
-            //Text("dummy")
-        }
-    }
-    
 }
+
