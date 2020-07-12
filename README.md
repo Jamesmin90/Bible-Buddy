@@ -8,8 +8,8 @@ The project uses CocoaPods which can be installed with:
 
 `$ sudo gem install cocoapods`
 
-After installing CocoaPods switch to the prject folder and run: 
+After installing CocoaPods switch to the project folder and run: 
 
-`pod install`
+`$ pod install`
 
 Afterwards all dependencies should be installed. 
