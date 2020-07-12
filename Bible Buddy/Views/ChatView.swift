@@ -218,6 +218,7 @@ struct ChatView : View {
                                     Spacer()
                                     
                                     Text(i.msg)
+                                        .fixedSize(horizontal: false, vertical: true)
                                         .padding()
                                         .background(Color.blue)
                                         .clipShape(ChatBubble(mymsg: true))
@@ -228,7 +229,12 @@ struct ChatView : View {
                                 else{
                                     AnimatedImage(url: URL(string: self.pic)!).resizable().renderingMode(.original).frame(width: 55, height: 55).clipShape(Circle())
                                     
-                                    Text(i.msg).padding().background(Color.green).clipShape(ChatBubble(mymsg: false)).foregroundColor(.white)
+                                    Text(i.msg)
+                                        .fixedSize(horizontal: false, vertical: true)
+                                        .padding()
+                                        .background(Color.green)
+                                        .clipShape(ChatBubble(mymsg: false))
+                                        .foregroundColor(.white)
                                     
                                     Spacer()
                                 }
