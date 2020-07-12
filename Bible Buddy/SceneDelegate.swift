@@ -25,7 +25,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView)
+            //Created by Jannis & Clara
+            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(SessionStore()).environmentObject(FirestoreBlogPostRepository()))
+            //Jannis & Clara
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -62,3 +64,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+struct SceneDelegate_Previews: PreviewProvider {
+    static var previews: some View {
+        /*@START_MENU_TOKEN@*/Text("Hello, World!")/*@END_MENU_TOKEN@*/
+    }
+}
